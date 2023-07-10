@@ -40,6 +40,9 @@
         data-mobile-columns="2"
       >
         {%- for product in recommendations.products limit: max_products -%}
+          <script>
+          console.log( "1",{{product | json }})
+          </script>
           <div class="main-body-related">
             <div class="itemproduct">
           {%-

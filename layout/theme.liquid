@@ -213,7 +213,10 @@
     </a>
 
     <off-canvas-root class="off-canvas--viewport" data-off-canvas--state="closed">
-      <transition-root class="off-canvas--overlay"></transition-root>
+      {% render 'popUp' %}
+      <transition-root class="off-canvas--overlay"> </transition-root>
+      
+      
       <transition-root aria-label="{{ 'general.a11y.close' | t }}" data-off-canvas--close>
         {%- render 'icons', icon: 'cross' -%}
       </transition-root>
@@ -291,6 +294,7 @@
     <script>
                 window.addEventListener('theme:cart:updated', ({ detail: cart }) => {
                   console.log('update')
+                  console.log('2')
         setTimeout(function(){
           if($('.cart--item[data-upsell-id]').length){
           $('.cart--item[data-upsell-id]').each(function(){

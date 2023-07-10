@@ -115,8 +115,10 @@
   {% comment %} 
     Replace 'test' below with prefered tag 
   {% endcomment %}
+  <script>
+    console.log( "2",{{product | json }})
+    </script>
   {% if current_product.tags %} 
-
             <div class="itemproduct">
           {%-
             render 'product--item',

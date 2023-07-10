@@ -1,24 +1,47 @@
 <style>
   .cart--item--variant-name {
     line-height: normal;
-}
-  .cart--footer{
-    flex-wrap:wrap;
   }
-.cart--footer p.cstm-discount-text {
+  .cart--footer {
+    flex-wrap: wrap;
+  }
+  .cart--footer p.cstm-discount-text {
     width: 100%;
     text-align: right;
     margin: 10px 0px;
-}
-  .cart--root:not([data-view=desktop]) .cart--footer p.cstm-discount-text {
+  }
+  .cart--root:not([data-view='desktop']) .cart--footer p.cstm-discount-text {
     text-align: center;
-}
-  @media only screen and (max-width: 480px){
-  .cart--root:not([data-view=desktop]) .cart--item--image {
-    width: 35%;
-    padding-left: 0;
-    align-self: auto !important;
-}
+  }
+
+  
+
+  {% comment %} @media  screen and (max-width: 875px) {
+    .popup__custom__less100.active,.popup__custom__more100.active{
+      left: -50px;
+      top: 180px;
+    }
+
+  }
+  @media  screen and (max-width: 580px) {
+    .popup__custom__less100.active,.popup__custom__more100.active{
+      left: -15px;
+      top: 150px;
+    }
+
+  }
+  @media  screen and (max-width: 400px) {
+    .popup__custom__less100.active,.popup__custom__more100.active{
+      left: -32px;
+    }
+
+  } {% endcomment %}
+  @media only screen and (max-width: 480px) {
+    .cart--root:not([data-view='desktop']) .cart--item--image {
+      width: 35%;
+      padding-left: 0;
+      align-self: auto !important;
+    }
   }
 </style>
 
@@ -41,7 +64,7 @@
     assign shipping_taxes_t = 'cart.shipping_taxes_included' | t
   endif
 
-  assign show_cart_note = settings.cart--show-note
+  assign show_cart_note = settings['cart--show-note']
 
   assign has_items = false
   if cart.item_count > 0
@@ -49,7 +72,8 @@
   endif
 -%}
 
-{%- for item in cart.items -%}
+{%- assign cart_items = cart.items -%}
+{%- for item in cart_items -%}
   {%- liquid
     if item.variant.featured_media.preview_image
       assign preview_image = item.variant.featured_media.preview_image
@@ -456,13 +480,13 @@ data-upsell-id="{{ property.last }}"
     </div>
   {%- endcapture -%}
 {%- endfor -%}
-
 <cart-root
   class="cart--root"
   data-section-id="{{ section.id }}"
   data-view="{{ view }}"
   data-has-items="{{ has_items }}"
 >
+
   <div class="cart--header">
     <h2 class="cart--title" data-item="section-heading">
       {{- your_cart_t -}}
@@ -470,48 +494,53 @@ data-upsell-id="{{ property.last }}"
     </h2>
   </div>
   <div class="fsb_wrap" id="shipping_bar">
-        <div class="shipping_badges">
-          <div class="badge_col">
-            <div class="badgeone"> 
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 1024 1024" version="1.1"><path d="M511.322571 63.620993c-246.971881 0-447.189925 200.206788-447.189925 447.184809s200.218044 447.184809 447.189925 447.184809c246.978021 0 447.189925-200.206788 447.189925-447.184809S758.300592 63.620993 511.322571 63.620993L511.322571 63.620993zM767.82041 394.804834 478.605426 684.031075l-0.011256 0.016373c-13.331633 13.331633-33.667797 15.410991-49.185212 6.249331-2.87856-1.699712-5.584182-3.790326-8.055466-6.249331-0.005117-0.005117-0.005117-0.005117-0.005117-0.005117L254.825756 517.519714c-15.796778-15.808034-15.796778-41.432645 0-57.245795 15.808034-15.808034 41.437761-15.808034 57.245795 0l137.90279 137.90279 260.611529-260.611529c15.802918-15.802918 41.437761-15.802918 57.240679 0C783.628444 353.378329 783.628444 379.001917 767.82041 394.804834L767.82041 394.804834zM767.82041 394.804834"/></svg>
-              <p>Free Shipping</p>  
-            </div>                
-          </div>
-          <div class="badge_col">
-            <div class="badgetwo"> 
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 1024 1024" version="1.1"><path d="M511.322571 63.620993c-246.971881 0-447.189925 200.206788-447.189925 447.184809s200.218044 447.184809 447.189925 447.184809c246.978021 0 447.189925-200.206788 447.189925-447.184809S758.300592 63.620993 511.322571 63.620993L511.322571 63.620993zM767.82041 394.804834 478.605426 684.031075l-0.011256 0.016373c-13.331633 13.331633-33.667797 15.410991-49.185212 6.249331-2.87856-1.699712-5.584182-3.790326-8.055466-6.249331-0.005117-0.005117-0.005117-0.005117-0.005117-0.005117L254.825756 517.519714c-15.796778-15.808034-15.796778-41.432645 0-57.245795 15.808034-15.808034 41.437761-15.808034 57.245795 0l137.90279 137.90279 260.611529-260.611529c15.802918-15.802918 41.437761-15.802918 57.240679 0C783.628444 353.378329 783.628444 379.001917 767.82041 394.804834L767.82041 394.804834zM767.82041 394.804834"/></svg>
-              <p>Gua Sha Tool</p>  
-            </div>                
-          </div>
-          <div class="badge_col">
-            <div class="badgethree"> 
-              <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 1024 1024" version="1.1"><path d="M511.322571 63.620993c-246.971881 0-447.189925 200.206788-447.189925 447.184809s200.218044 447.184809 447.189925 447.184809c246.978021 0 447.189925-200.206788 447.189925-447.184809S758.300592 63.620993 511.322571 63.620993L511.322571 63.620993zM767.82041 394.804834 478.605426 684.031075l-0.011256 0.016373c-13.331633 13.331633-33.667797 15.410991-49.185212 6.249331-2.87856-1.699712-5.584182-3.790326-8.055466-6.249331-0.005117-0.005117-0.005117-0.005117-0.005117-0.005117L254.825756 517.519714c-15.796778-15.808034-15.796778-41.432645 0-57.245795 15.808034-15.808034 41.437761-15.808034 57.245795 0l137.90279 137.90279 260.611529-260.611529c15.802918-15.802918 41.437761-15.802918 57.240679 0C783.628444 353.378329 783.628444 379.001917 767.82041 394.804834L767.82041 394.804834zM767.82041 394.804834"/></svg>
-              <p>Cosmetic Bag</p>  
-            </div>                
-          </div>
+    <div class="shipping_badges">
+      <div class="badge_col">
+        <div class="badgeone">
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 1024 1024" version="1.1">
+            <path d="M511.322571 63.620993c-246.971881 0-447.189925 200.206788-447.189925 447.184809s200.218044 447.184809 447.189925 447.184809c246.978021 0 447.189925-200.206788 447.189925-447.184809S758.300592 63.620993 511.322571 63.620993L511.322571 63.620993zM767.82041 394.804834 478.605426 684.031075l-0.011256 0.016373c-13.331633 13.331633-33.667797 15.410991-49.185212 6.249331-2.87856-1.699712-5.584182-3.790326-8.055466-6.249331-0.005117-0.005117-0.005117-0.005117-0.005117-0.005117L254.825756 517.519714c-15.796778-15.808034-15.796778-41.432645 0-57.245795 15.808034-15.808034 41.437761-15.808034 57.245795 0l137.90279 137.90279 260.611529-260.611529c15.802918-15.802918 41.437761-15.802918 57.240679 0C783.628444 353.378329 783.628444 379.001917 767.82041 394.804834L767.82041 394.804834zM767.82041 394.804834"/>
+          </svg>
+          <p>Free Shipping</p>
         </div>
-      <div class="progressbar">
-        <progress id="myProgress" max="100" value=""></progress>
-       
-        <div class="progress_wrap">
-      	<div class="bar">&nbsp;</div>
+      </div>
+      <div class="badge_col">
+        <div class="badgetwo">
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 1024 1024" version="1.1">
+            <path d="M511.322571 63.620993c-246.971881 0-447.189925 200.206788-447.189925 447.184809s200.218044 447.184809 447.189925 447.184809c246.978021 0 447.189925-200.206788 447.189925-447.184809S758.300592 63.620993 511.322571 63.620993L511.322571 63.620993zM767.82041 394.804834 478.605426 684.031075l-0.011256 0.016373c-13.331633 13.331633-33.667797 15.410991-49.185212 6.249331-2.87856-1.699712-5.584182-3.790326-8.055466-6.249331-0.005117-0.005117-0.005117-0.005117-0.005117-0.005117L254.825756 517.519714c-15.796778-15.808034-15.796778-41.432645 0-57.245795 15.808034-15.808034 41.437761-15.808034 57.245795 0l137.90279 137.90279 260.611529-260.611529c15.802918-15.802918 41.437761-15.802918 57.240679 0C783.628444 353.378329 783.628444 379.001917 767.82041 394.804834L767.82041 394.804834zM767.82041 394.804834"/>
+          </svg>
+          <p>Gua Sha Tool</p>
         </div>
-        
       </div>
-      <div class="fspmsg">
-        <span class="msgone"><strong>spend over $75 and get a free award winning gua sha tool</strong></span>
-        <span class="msgtwo"><strong>spend over $100 and get a free velvet Cosmetic Bag</strong></span>
-        <span class="msgthree"><strong>you have unlocked a free Cosmetic Bag!</strong></span>
+      <div class="badge_col">
+        <div class="badgethree">
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 1024 1024" version="1.1">
+            <path d="M511.322571 63.620993c-246.971881 0-447.189925 200.206788-447.189925 447.184809s200.218044 447.184809 447.189925 447.184809c246.978021 0 447.189925-200.206788 447.189925-447.184809S758.300592 63.620993 511.322571 63.620993L511.322571 63.620993zM767.82041 394.804834 478.605426 684.031075l-0.011256 0.016373c-13.331633 13.331633-33.667797 15.410991-49.185212 6.249331-2.87856-1.699712-5.584182-3.790326-8.055466-6.249331-0.005117-0.005117-0.005117-0.005117-0.005117-0.005117L254.825756 517.519714c-15.796778-15.808034-15.796778-41.432645 0-57.245795 15.808034-15.808034 41.437761-15.808034 57.245795 0l137.90279 137.90279 260.611529-260.611529c15.802918-15.802918 41.437761-15.802918 57.240679 0C783.628444 353.378329 783.628444 379.001917 767.82041 394.804834L767.82041 394.804834zM767.82041 394.804834"/>
+          </svg>
+          <p>Cosmetic Bag</p>
+        </div>
       </div>
+    </div>
+    <div class="progressbar">
+      <progress id="myProgress" max="100" value=""></progress>
+
+      <div class="progress_wrap">
+        <div class="bar">&nbsp;</div>
       </div>
+    </div>
+    <div class="fspmsg">
+      <span class="msgone"><strong>spend over $50 and get a free award winning gua sha tool</strong></span>
+      <span class="msgtwo"><strong>spend over $100 and get a free velvet Cosmetic Bag</strong></span>
+      <span class="msgthree"><strong>you have unlocked a free Cosmetic Bag!</strong></span>
+    </div>
+  </div>
   <form class="cart--form" action="{{ routes.cart_url }}" method="post" novalidate="">
- {%- for item in cart.items -%}
-        {% for property in item.properties %}
-          {% if property.first == "Discount" %}
-            <input type="hidden" name="discount" id="discount_bogo" value="BOGO Shaper" >
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
+    {%- for item in cart_items -%}
+      {% for property in item.properties %}
+        {% if property.first == 'Discount' %}
+          <input type="hidden" name="discount" id="discount_bogo" value="BOGO Shaper">
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
     <div class="cart--body">
       {%- case view -%}
         {%- when 'desktop' -%}
@@ -564,8 +593,7 @@ data-upsell-id="{{ property.last }}"
                 <li>
                   <div data-item="accent-text">{{ discount_application.title }}</div>
                   <span data-item="light-accent-text">
-                    –<span class="money">{{ discount_application.total_allocated_amount | money }}
-                    </span>
+                    –<span class="money">{{ discount_application.total_allocated_amount | money }} </span>
                   </span>
                 </li>
               {%- endfor -%}
@@ -613,8 +641,10 @@ data-upsell-id="{{ property.last }}"
 
         {%- if additional_checkout_buttons -%}
           <div
-            class="cart--additional-buttons additional-checkout-buttons
-            {% unless view == 'desktop' %} additional-checkout-buttons--vertical{% endunless %}"
+            class="
+              cart--additional-buttons additional-checkout-buttons
+              {% unless view == 'desktop' %} additional-checkout-buttons--vertical{% endunless %}
+            "
           >
             {{- content_for_additional_checkout_buttons -}}
           </div>

@@ -1,53 +1,107 @@
-{%- liquid
-  assign placeholder_t = 'layout.footer.newsletter_placeholder' | t
-  assign button_t = 'layout.footer.newsletter_button' | t
-  assign shopify_disclaimer_t = 'shopify.online_store.spam_detection.disclaimer_html' | t
+<div class="popup__custom__wrapper">
 
-  render 'section-assets', name: 'popup', type: 'script'
--%}
+  <style>
 
-<popup-root class="popup--root" data-js-class="Popup">
-  {%- if settings.popup--newsletter--heading != blank -%}
-    <div class="popup--heading" data-item="block-heading">
-      {{- settings.popup--newsletter--heading -}}
-    </div>
-  {%- endif -%}
+    .popup__custom__wrapper{
+      display:none;
+    }
+    .popup__custom__wrapper.active{
+      display:block;
+    height:calc(100% + 100px);
+    width: 100%;
+    position:fixed;
+    z-index:102;
+    top:-100px;
+   background: rgb(0, 0 , 0,0.5)
+    }
+    .popup__custom__more100, .popup__custom__less100{
+    display:none;
+  }
+  .popup__custom__more100 button, .popup__custom__less100 button{
+    position: absolute;
+    bottom:10px;
+    width:70%;
+    left:50%;
+    transform:translate(-50%);
+    border-radius:30px;
+    color:white;
+    font-weight:500;
 
-  {%- form 'customer', id: 'popup_form' -%}
-    <input type="hidden" name="contact[tags]" value="newsletter" />
-    <input type="hidden" name="contact[first_name]" value="Newsletter" />
-    <input type="hidden" name="contact[last_name]" value="Subscriber" />
-    <label for="contact[email]" data-item='hidden-text'>
-      {{- placeholder_t -}}
-    </label>
-    <input
-      class="small"
-      type="email"
-      placeholder="{{ placeholder_t }}"
-      autocomplete="email"
-      name="contact[email]"
-      id="contact[email]"
-      required
-    />
-    <div data-item='button'>
-      <button type="submit" value="{{ button_t }}">
-        {{- button_t -}}
-      </button>
-    </div>
+  }
+  .popup__custom__more100 span, .popup__custom__less100 span{
+    display:block;
+    position:absolute;
+    top:12px;
+    right:15px;
+    height:13px;
+    width:13px;
+    cursor:pointer;
+  }
+  .popup__custom__more100 span svg, .popup__custom__less100 span svg{
+    height:13px;
+    width:13px;
+  }
+ 
+  .popup__custom__more100.active {
+    display:block;
+    position: fixed;
+    z-index: 100;
+    height: 350px;
+    width: 300px;
+    top: 300px;
+    border-radius: 10px;
+    z-index:5000;
+    background-image: url('https://cdn.shopify.com/s/files/1/0787/5330/0800/files/2_Free_Gifts_1.jpg?v=1688382952');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    left:50%;
+    transform:translate(-50%);
+  }
+  .popup__custom__less100.active {
+    display:block;
+    position: fixed;
+    z-index: 100;
+    height: 325px;
+    width: 300px;
+    border-radius: 10px;
+    z-index:5000;
+    top: 300px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0787/5330/0800/files/1_Free_Gift.jpg?v=1688382951');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    left:50%;
+    transform:translate(-50%);
+  }
+  .popup__custom__btn{
+  max-height:38px;
+  max-width:170px;
+  }
 
-    {%- if form.posted_successfully? or form.errors -%}
-      <script>window.location.hash = '#feedback-bar--newsletter';</script>
-    {%- endif -%}
+</style>
 
-    <div data-item="hidden-text">
-      {% comment %} remove the below line to display reCAPTCHA badge {% endcomment %}
-      {{- shopify_disclaimer_t -}}
-    </div>
-  {%- endform -%}
-</popup-root>
 
-<div class="popup-modal-close" aria-label="{{ 'general.a11y.close' | t }}" tabindex="0">
-  {%- render 'icons', icon: 'cross' -%}
+
+<div class="popup__custom__more100"><span><?xml version="1.0" encoding="iso-8859-1"?>
+    <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+       viewBox="0 0 490 490" xml:space="preserve">
+    <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 
+      489.292,457.678 277.331,245.004 489.292,32.337 "/>
+    </svg></span>
+  <button class="product-buy-buttons--cta popup__custom__btn">Don't show</button>
+  </div>
+  <div class="popup__custom__less100"><span><?xml version="1.0" encoding="iso-8859-1"?>
+    <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+       viewBox="0 0 490 490" xml:space="preserve">
+    <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 
+      489.292,457.678 277.331,245.004 489.292,32.337 "/>
+    </svg></span>
+    <button class="product-buy-buttons--cta popup__custom__btn">Don't show</button>
+  </div>
+
+  
 </div>
 
-<div class="popup-modal-mask"></div>
