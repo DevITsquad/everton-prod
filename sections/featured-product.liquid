@@ -147,7 +147,7 @@
                 <a href="{{ product.url }}">{{ title[0] }}</a>
               </h2>
                {% else %}
-          <a href="{{ product.url }}"><h1>{{ title[0] }}</h1></a>
+          <a href="{{ product.url }}"><h1 >{{ title[0] }}</h1></a>
              {% if title[1] != blank %}
                <h2 class="featured-product--heading" data-item="section-heading">
                 <a href="{{ product.url }}">{{ title[1] }}</a>
@@ -161,7 +161,7 @@
             </div>
             </div>
             {%- when 'prodescription' -%}
-            <div id="fp_description">
+            <div class="fp_description">
                 {{ product.description | strip_html | truncatewords: 12, "" }}
             </div>
             {%- when 'vendor' -%}
@@ -332,8 +332,12 @@ document.addEventListener("shopify:section:load", featureproduct);
       color: #000 !important;
 }  
 @media screen and (min-width: 768px) {
-  .featued_wrap_home * {
+  .featued_wrap_home * , .featured-product--block h1{
       text-align: left !important;
+     
+  }
+  .featured-product--block .product-buy-buttons--cta{
+    margin: 0 !important;
   }
   .featued_wrap_home .product-buy-buttons--cta {
       margin-left: unset !important;

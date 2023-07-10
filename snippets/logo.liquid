@@ -31,11 +31,7 @@
       <img
         class="logo--image"
         src="{{ logo_to_render | image_url: width: twice_width }}"
-        srcset="{{ logo_to_render | image_url: width: width }} 1x, {{ logo_to_render | image_url: width: twice_width }} 2x"
         alt="{{ logo_to_render.alt | default: shop.name }}"
-        itemprop="logo"
-        width="{{ twice_width }}"
-        height="{{ height | times: 2 }}"
       >
       <style>
         .logo--image {

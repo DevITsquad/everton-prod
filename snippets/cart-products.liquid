@@ -1,36 +1,36 @@
 <style>
-.container_cp {
+  .container_cp {
     background-color: #f9f9f9;
     margin-left: -15px !important;
     margin-right: -15px !important;
     padding: 30px 15px;
     border-top: 2px solid #f3f3f3;
     margin-top: 1rem;
-}
-.container_cp .heading {
+  }
+  .container_cp .heading {
     text-align: center;
     margin-bottom: 2rem;
-}
-.container_cp .heading h2 {
+  }
+  .container_cp .heading h2 {
     font-size: 20px;
     font-weight: 400;
-}  
-.product_box {
+  }
+  .product_box {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-.cart__table:not(:last-child) .product_box {
+  }
+  .cart__table:not(:last-child) .product_box {
     padding-bottom: 15px;
-}
-.product_img {
+  }
+  .product_img {
     display: flex;
     width: calc(35% - 6px);
-}
-.product_title {
+  }
+  .product_title {
     width: calc(50% - 6px);
-}
-.cart__product-title {
+  }
+  .cart__product-title {
     border-bottom: none;
     color: #000;
     text-transform: capitalize;
@@ -39,13 +39,13 @@
     font-family: 'Karla', sans-serif;
     margin-bottom: 0.8rem;
     word-break: break-word;
-}
+  }
 
-.product_box input#quantity {
+  .product_box input#quantity {
     display: none;
-}
+  }
 
-.product_box .add_to_cart {
+  .product_box .add_to_cart {
     background: #ca507f;
     border-radius: 5px;
     min-width: 80px;
@@ -57,122 +57,200 @@
     color: #fff;
     font-family: 'Karla';
     font-size: 14px;
-}
-.product_box .add_to_cart:hover{
-  background: #ca507f;
-}
-.product_box .product_price {
+  }
+  .product_box .add_to_cart:hover {
+    background: #ca507f;
+  }
+  .product_box .product_price {
     width: auto;
-}
-.product_price strike {
+  }
+  .product_price strike {
     color: #a1a1a1;
-}
-.product_box .product_price h2 {
+  }
+  .product_box .product_price h2 {
     font-size: 14px;
     font-family: 'Karla', sans-serif;
     font-weight: 400;
     color: #8bbe8c;
-}
-.product_box .add_to_cart.disabled {
-    pointer-events: none;
-} 
-@media only screen and (max-width: 600px) {
-  .product_box {
-      gap: 5px;
   }
-  .cart__product-title {
+  .product_box .add_to_cart.disabled {
+    pointer-events: none;
+  }
+  @media only screen and (max-width: 600px) {
+    .product_box {
+      gap: 5px;
+    }
+    .cart__product-title {
       font-size: 14px;
       margin-bottom: 5px;
-  }
-  .product_box .product_price h2 {
+    }
+    .product_box .product_price h2 {
       font-size: 13px;
-  } 
-  .product_box .add_to_cart {
+    }
+    .product_box .add_to_cart {
       min-width: 60px;
       height: 30px;
       line-height: 30px;
       font-size: 13px;
-  }  
-}  
+    }
+  }
 </style>
-{% if settings.cart-how-products %}
-<div class="container_cp">
-  {% if settings.heading_one != blank %}
-  <div class="heading">
-    <h2>{{settings.heading_one}}</h2>
-  </div>
-  {% endif %}
-  {% assign product_one = all_products[settings.free_product_one] %}
-  <div class="col_md_12 cart__table" data-id="{{ product_one.id }}">
-    <div class="product_box">
-      <div class="product_img cart__image-wrapper">
-        <img src="{{ product_one.featured_image | product_img_url: 'master' }}" alt="{{ product_one.title | escape }}" width="" height="">
+{% if settings['cart-how-products'] %}
+  <div class="container_cp">
+    {% if settings.heading_one != blank %}
+      <div class="heading">
+        <h2>{{ settings.heading_one }}</h2>
       </div>
-      <div class="product_title">
-        <h2 class="cart__product-title">{{product_one.title}}</h2>
-        <div class="product_price">
-          <h2>{{product_one.price | money }} <strike>{{ product_one.compare_at_price | money }}</strike></h2>
-        </div>
-      </div>
-      <button type="submit" class="add_to_cart {% unless product_one.variants.first.available %}disabled{% endunless %}">{% if product_one.variants.first.available%}<span class="addtxt">{{settings.free_atc_btn_text}}</span><span class="product-buy-buttons--spinner">{%- render 'loading-spinner', size: '41px' -%}</span>{% else %}{{settings.free_so_btn_text}}{% endif%}</button>
-      <input class="variant_id ad_to_cart_id" value="{{ product_one.variants.first.id }}" var_id="{{ product_one.variants.first.id }}" cmp_price="{{ product_one.compare_at_price | money }}" type="hidden" />
-      {% comment %}
-      <form method="post" action="/cart/add">
-          <input class="variant_id" name="id" value="{{ product_one.variants.first.id }}" type="hidden" />
-          <input min="1" max="1" type="number" id="quantity" name="quantity" value="1"/>
-          <input class="add_to_cart" name="add" value="{% if product_one.variants.first.available%}{{settings.free_atc_btn_text}}{% else %}{{settings.free_so_btn_text}}{% endif%}" type="submit" data-id="{{ product_one.variants.first.id }}" {% unless product_one.variants.first.available %}disabled{% endunless %} />
-      </form>
-  {% endcomment %}
-    </div>
-  </div> 
+    {% endif %}
+    {%- assign cart_items_titles = cart.items | map: 'title' -%}
+    {% assign product_one = all_products[settings.free_product_one] %}
 
-  {% assign product_two = all_products[settings.free_product_two] %}
-  <div class="col_md_12 cart__table" data-id="{{ product_two.id }}">
-    <div class="product_box">
-      <div class="product_img cart__image-wrapper">
-        <img src="{{ product_two.featured_image | product_img_url: 'master' }}" alt="{{ product_two.title | escape }}" width="" height="">
-      </div>
-      <div class="product_title">
-        <h2 class="cart__product-title">{{product_two.title}}</h2>
-        <div class="product_price">
-          <h2>{{product_two.price | money }} <strike>{{ product_two.compare_at_price | money }}</strike></h2>
-        </div>
-      </div>
-      <button type="submit" class="add_to_cart {% unless product_two.variants.first.available %}disabled{% endunless %}">{% if product_two.variants.first.available%}<span class="addtxt">{{settings.free_atc_btn_text}}</span><span class="product-buy-buttons--spinner">{%- render 'loading-spinner', size: '41px' -%}</span>{% else %}{{settings.free_so_btn_text}}{% endif%}</button>
-      <input class="variant_id ad_to_cart_id" value="{{ product_two.variants.first.id }}" var_id="{{ product_two.variants.first.id }}" cmp_price="{{ product_two.compare_at_price | money }}" type="hidden" />
-       {% comment %}
-      <form method="post" action="/cart/add">
-          <input class="variant_id" name="id" value="{{ product_two.variants.first.id }}" type="hidden" />
-          <input min="1" max="1" type="number" id="quantity" name="quantity" value="1"/>
-          <input class="add_to_cart" name="add" value="{% if product_two.variants.first.available%}{{settings.free_atc_btn_text}}{% else %}{{settings.free_so_btn_text}}{% endif%}" type="submit" data-id="{{ product_two.variants.first.id }}" {% unless product_two.variants.first.available %}disabled{% endunless %} />
-      </form>
-  {% endcomment %}
-    </div>
-  </div> 
+    {% comment %} <script src="jquery-3.6.4.min.js"></script> {% endcomment %}
+   
 
-  {% assign p_three = all_products[settings.fp_three] %}
-  <div class="col_md_12 cart__table" data-id="{{ p_three.id }}"> 
-    <div class="product_box">
-      <div class="product_img cart__image-wrapper">
-        <img src="{{ p_three.featured_image | product_img_url: 'master' }}" alt="{{ p_three.title | escape }}" width="" height="">
-      </div>
-      <div class="product_title">
-        <h2 class="cart__product-title">{{p_three.title}}</h2>
-        <div class="product_price">
-          <h2>{{p_three.price | money }} <strike>{{ p_three.compare_at_price | money }}</strike></h2>
+    {%- unless cart_items_titles contains product_one.title -%}
+      <div class="col_md_12 cart__table" data-id="{{ product_one.id }}">
+        <div class="product_box">
+          <div class="product_img cart__image-wrapper">
+            <img
+              src="{{ product_one.featured_image | product_img_url: 'master' }}"
+              alt="{{ product_one.title | escape }}"
+              width=""
+              height=""
+            >
+          </div>
+          <div class="product_title">
+            <h2 class="cart__product-title">{{ product_one.title }}</h2>
+            <div class="product_price">
+              <h2>
+                {{ product_one.price | money }}
+                <strike>{{ product_one.compare_at_price | money }}</strike>
+              </h2>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="add_to_cart {% unless product_one.variants.first.available %}disabled{% endunless %}"
+          >
+            {% if product_one.variants.first.available -%}
+              <span class="addtxt">{{ settings.free_atc_btn_text }}</span
+              ><span class="product-buy-buttons--spinner">{%- render 'loading-spinner', size: '41px' -%}</span>
+            {%- else -%}
+              {{- settings.free_so_btn_text -}}
+            {%- endif %}
+          </button>
+          <input
+            class="variant_id ad_to_cart_id"
+            value="{{ product_one.variants.first.id }}"
+            var_id="{{ product_one.variants.first.id }}"
+            cmp_price="{{ product_one.compare_at_price | money }}"
+            type="hidden"
+          >
         </div>
       </div>
-      <button type="submit" class="add_to_cart" {% unless p_three.variants.first.available %}disabled{% endunless %}>{% if p_three.variants.first.available%}<span class="addtxt">{{settings.free_atc_btn_text}}</span><span class="product-buy-buttons--spinner">{%- render 'loading-spinner', size: '41px' -%}</span>{% else %}{{settings.free_so_btn_text}}{% endif%}</button>
-      <input class="variant_id ad_to_cart_id" value="{{ p_three.variants.first.id }}" var_id="{{ p_three.variants.first.id }}" cmp_price="{{ p_three.compare_at_price | money }}"  type="hidden" />
-   {% comment %}
-      <form method="post" action="/cart/add">
-        <input class="variant_id" name="id" value="{{ p_three.variants.first.id }}" type="hidden" />
-        <input min="1" max="1" type="number" id="quantity" name="quantity" value="1"/>
-        <input class="add_to_cart" name="add" value="{% if p_three.variants.first.available%}{{settings.free_atc_btn_text}}{% else %}{{settings.free_so_btn_text}}{% endif%}" type="submit" data-id="{{ p_three.variants.first.id }}" {% unless p_three.variants.first.available %}disabled{% endunless %} />
-      </form>
-   {% endcomment %}
-    </div>
+    {%- endunless -%}
+
+    {% assign product_two = all_products[settings.free_product_two] %}
+    {%- unless cart_items_titles contains product_two.title -%}
+      <div class="col_md_12 cart__table" data-id="{{ product_two.id }}">
+        <div class="product_box">
+          <div class="product_img cart__image-wrapper">
+            <img
+              src="{{ product_two.featured_image | product_img_url: 'master' }}"
+              alt="{{ product_two.title | escape }}"
+              width=""
+              height=""
+            >
+          </div>
+          <div class="product_title">
+            <h2 class="cart__product-title">{{ product_two.title }}</h2>
+            <div class="product_price">
+              <h2>
+                {{ product_two.price | money }}
+                <strike>{{ product_two.compare_at_price | money }}</strike>
+              </h2>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="add_to_cart {% unless product_two.variants.first.available %}disabled{% endunless %}"
+          >
+            {% if product_two.variants.first.available -%}
+              <span class="addtxt">{{ settings.free_atc_btn_text }}</span
+              ><span class="product-buy-buttons--spinner">{%- render 'loading-spinner', size: '41px' -%}</span>
+            {%- else -%}
+              {{- settings.free_so_btn_text -}}
+            {%- endif %}
+          </button>
+          <input
+            class="variant_id ad_to_cart_id"
+            value="{{ product_two.variants.first.id }}"
+            var_id="{{ product_two.variants.first.id }}"
+            cmp_price="{{ product_two.compare_at_price | money }}"
+            type="hidden"
+          >
+          {% comment %}
+            <form method="post" action="/cart/add">
+                <input class="variant_id" name="id" value="{{ product_two.variants.first.id }}" type="hidden" />
+                <input min="1" max="1" type="number" id="quantity" name="quantity" value="1"/>
+                <input class="add_to_cart" name="add" value="{% if product_two.variants.first.available%}{{settings.free_atc_btn_text}}{% else %}{{settings.free_so_btn_text}}{% endif%}" type="submit" data-id="{{ product_two.variants.first.id }}" {% unless product_two.variants.first.available %}disabled{% endunless %} />
+            </form>
+          {% endcomment %}
+        </div>
+      </div>
+    {%- endunless -%}
+
+    {% assign p_three = all_products[settings.fp_three] %}
+    {%- unless cart_items_titles contains p_three.title -%}
+      <div class="col_md_12 cart__table" data-id="{{ p_three.id }}">
+        <div class="product_box">
+          <div class="product_img cart__image-wrapper">
+            <img
+              src="{{ p_three.featured_image | product_img_url: 'master' }}"
+              alt="{{ p_three.title | escape }}"
+              width=""
+              height=""
+            >
+          </div>
+          <div class="product_title">
+            <h2 class="cart__product-title">{{ p_three.title }}</h2>
+            <div class="product_price">
+              <h2>
+                {{ p_three.price | money }}
+                <strike>{{ p_three.compare_at_price | money }}</strike>
+              </h2>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="add_to_cart"
+            {% unless p_three.variants.first.available %}
+              disabled
+            {% endunless %}
+          >
+            {% if p_three.variants.first.available -%}
+              <span class="addtxt">{{ settings.free_atc_btn_text }}</span
+              ><span class="product-buy-buttons--spinner">{%- render 'loading-spinner', size: '41px' -%}</span>
+            {%- else -%}
+              {{- settings.free_so_btn_text -}}
+            {%- endif %}
+          </button>
+          <input
+            class="variant_id ad_to_cart_id"
+            value="{{ p_three.variants.first.id }}"
+            var_id="{{ p_three.variants.first.id }}"
+            cmp_price="{{ p_three.compare_at_price | money }}"
+            type="hidden"
+          >
+          {% comment %}
+            <form method="post" action="/cart/add">
+              <input class="variant_id" name="id" value="{{ p_three.variants.first.id }}" type="hidden" />
+              <input min="1" max="1" type="number" id="quantity" name="quantity" value="1"/>
+              <input class="add_to_cart" name="add" value="{% if p_three.variants.first.available%}{{settings.free_atc_btn_text}}{% else %}{{settings.free_so_btn_text}}{% endif%}" type="submit" data-id="{{ p_three.variants.first.id }}" {% unless p_three.variants.first.available %}disabled{% endunless %} />
+            </form>
+          {% endcomment %}
+        </div>
+      </div>
+    {%- endunless -%}
   </div>
-  
-</div>
 {% endif %}
