@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections",
+      "disabled": true,
+      "settings": {
+        "collection-list": [
+
+        ],
+        "view": "collection-thumbnails",
+        "spacing-above": true,
+        "spacing-below": true,
+        "heading": "Collections",
+        "aspect-ratio": "square",
+        "image-type": "product",
+        "text-style": "light-with-overlay",
+        "spacing": true,
+        "mobile-overlay": true,
+        "container-width": 4,
+        "width": 4,
+        "mobile-width": "2"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

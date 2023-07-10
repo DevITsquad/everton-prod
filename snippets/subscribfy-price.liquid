@@ -1,0 +1,130 @@
+{%- comment -%} V5
+This snippet is generated and updated by Subscribfy
+Do not modify or remove this snippet, we reserve the right to overwrite it at any moment to add improvements or new features so that customizations you made might be lost.
+{%- endcomment -%}
+
+
+{% if product.id == blank and product_id %}
+  {% for tmp_product in collections.all.products %}
+     {% case tmp_product.id %}
+        {% when product_id %}
+           {% assign product = tmp_product %}
+     {% endcase %}
+  {% endfor %}
+{% endif %}
+
+
+{% if product %}
+
+  {% if content_for_header contains "previewBarInjector.init();" %}
+    {% assign preview-mode = 1 %}
+  {% elsif content_for_header contains "Shopify.designMode" %}
+    {% assign preview-mode = 1 %}
+  {% else %}
+    {% assign preview-mode = 0 %}
+  {% endif %}
+
+
+  {% assign subscribfy_subscription_product = '' %}
+  {% if product.type ==  "subscribfy_subscription_product" %}
+  	{% assign subscribfy_subscription_product = product.selected_or_first_available_variant.id  %}
+  {% endif %}
+  
+  {% assign item = product.selected_or_first_available_variant %}
+  
+  {% if subscribfy_subscription_product == blank %} 
+  
+      {% assign exm_discount1 = 0 %}
+      {% if shop.metafields.exison.exison_plan_settings.dp ==  "1" %}
+          {% if shop.metafields.exison.exison_plan_settings.dat ==  "collection" %}
+              {% for item2 in  product.collections %}
+		      {% if shop.metafields.exison.exison_plan_settings.dcollection contains item2.id %}
+                          {% assign exm_discount1 = 1 %}
+                      {% endif %}
+              {% endfor %}
+          {% endif %}
+          {% if shop.metafields.exison.exison_plan_settings.dat ==  "product" %}
+              {% if shop.metafields.exison.exison_plan_settings.dproduct contains product.id  %}
+                  {% assign exm_discount1 = 1 %}
+              {% endif %}
+          {% endif %}  
+          {% if shop.metafields.exison.exison_plan_settings.dat ==  "all" %}
+          		{% assign exm_discount1 = 1 %}
+          {% endif %}
+  
+      {% endif %}  
+  
+      {% assign old_price = item.compare_at_price | default: item.price %}
+      {% if shop.metafields.exison.exison_plan_settings.dct == "2" %}
+      	{% assign old_price = item.price %}
+      {% endif %} 
+  
+      {% assign new_price = "" %}
+      {% assign discount1_amount = "" %}
+      {% assign discount1_amount_value = shop.metafields.exison.exison_plan_settings.dv %}
+      {% assign ds_label = "" %}
+    
+      {% if shop.metafields.exison.exison_plan_settings.ds == "1" %}
+          {% assign discount1_amount_value = 0 %}
+          {% assign ds_label = shop.metafields.exison.exison_plan_settings.ds_info.ds_label %}
+  
+          {% for rule in shop.metafields.exison.exison_plan_settings.ds_info.rules %}
+              {% if rule.ds_value > discount1_amount_value  %}
+                  {% assign discount1_amount_value = rule.ds_value | times: 1.0 %}
+              {% endif %}
+          {% endfor %}
+      {% endif %}
+  
+      {% if exm_discount1 == 1 %}
+  		{% if shop.metafields.exison.exison_plan_settings.dt == "percentage" %}
+  			{% assign discount1_amount = discount1_amount_value | divided_by: 100 | times: old_price %}
+          {% endif %}				
+  
+  		{% if shop.metafields.exison.exison_plan_settings.dt == "fixed" %}
+  			{% assign discount1_amount = discount1_amount_value | times: 100 %}
+          {% endif %}	
+  
+  		{% assign new_price = old_price | minus: discount1_amount %}
+  
+  		{% if new_price <= 0 %}
+  			{% assign new_price = 0 %}
+  			{% assign discount1_amount = item.price %}
+  		{% endif %}
+  
+  		{% if new_price > item.price %}
+  			{% assign new_price = "" %}
+  			{% assign exm_discount1 = 0 %}
+  		{% endif %}
+      {% endif %} 
+  
+  {% endif %}
+
+  
+  {% if shop.metafields.exison.exison_plan_settings.status == "1" or preview-mode == 1 %}
+                
+      {% if exm_discount1 == 1 and new_price != blank %}
+        {%- if new_price != blank and new_price < old_price -%}
+          {% assign new_price2 = new_price | split : '.' %}
+          {% assign new_price_final = new_price2[0] %}
+        {%- endif -%} 
+        
+        <div class="exm_price_all exison_new_price" style="display:none;" 
+        {% if subscribfy_subscription_product != blank%} exm_subscription_product="{{subscribfy_subscription_product}}" {% endif %}
+        {% if exm_discount1 == 1 %} data-discount1="{{exm_discount1}}" {% endif %}   
+        data-price="{{item.price}}" 
+        {% if item.compare_at_price != blank %} compare_at_price="{{item.compare_at_price}}" {% endif %} 
+        old-price="{{old_price}}"  
+        {%- if new_price != blank and new_price < old_price -%} new-price="{{new_price_final | money}}" {%- endif -%} 
+          new-price2="{{new_price}}"
+        >  
+        {%- if new_price != blank and new_price < old_price -%} {{ ds_label }} {{new_price_final | money}} {{shop.metafields.exison.exison_plan_settings.tier_name}} {%- endif -%} 
+        </div>
+      {% endif %}
+    
+  {% endif %}
+
+{% endif %}
+
+
+
+

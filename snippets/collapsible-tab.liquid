@@ -1,0 +1,58 @@
+{%- liquid
+  assign heading = block.settings.heading
+  assign page_content = block.settings.page-content
+  assign description = block.settings.description
+   assign ingredient = block.settings.ingredient
+
+  render 'section-assets', name: 'collapsible-tab'
+-%}
+
+{%- if heading != blank -%}
+  <collapsible-tab-root class="collapsible-tab--root" style="display:block;">
+    <div class="collapsible-tab--wrapper">
+      <div
+        class="collapsible-tab--toggle"
+        aria-expanded="false"
+        tabindex="0"
+      >
+        <label
+          class="collapsible-tab--heading"
+          data-item="accent-text"
+          for="collapsible-tab-content"
+        >
+          {{- heading -}}
+        </label>
+
+        {%- liquid
+          render 'icons', icon: 'chevron-up'
+          render 'icons', icon: 'chevron-down'
+        -%}
+      </div>
+
+      {%- if page_content != blank or description != blank -%}
+        <transition-root class="collapsible-tab--content-wrapper">
+          <div
+            id="collapsible-tab-content"
+            class="collapsible-tab--content"
+            data-item="rte-content"
+            data-transition="fade-out"
+          >
+            {%- liquid
+              if page_content != blank
+               echo pages[page_content].content
+              elsif description != blank
+                echo description
+              endif
+            -%}
+            {%- if block.settings.faq_content_img != blank -%}
+              <div class="chart_img">
+                <img src="{{ block.settings.faq_content_img | img_url: 'master' }}" alt="image" width="" height="">
+              </div>
+            {% endif %}
+          </div>
+        </transition-root>
+      {%- endif -%}
+
+    </div>
+  </collapsible-tab-root>
+{% endif %}

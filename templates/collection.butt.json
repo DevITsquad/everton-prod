@@ -1,0 +1,204 @@
+{
+  "sections": {
+    "0d555e91-98b1-4f58-9bc2-8bda1ada1e80": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "text-color": "auto",
+        "background-color": "none",
+        "container-width": 6,
+        "spacing-above": false,
+        "spacing-below": false,
+        "image-height": 4,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "medium",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": true,
+        "overline": "",
+        "title": "Tighter body tactics",
+        "description": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "collection-header": {
+      "type": "collection--header",
+      "disabled": true,
+      "settings": {
+        "enable-header": true,
+        "show-title": false,
+        "title-alignment": "center",
+        "show-description": false,
+        "description-alignment": "with-title",
+        "show-image": true,
+        "use-image-fallback": true,
+        "image-height": "large",
+        "alt-color": true,
+        "apply-overlay": false,
+        "parallax-enabled": false
+      }
+    },
+    "navigation": {
+      "type": "collection--navigation",
+      "disabled": true,
+      "settings": {
+        "show-browse-button": false,
+        "show-sort-button": true,
+        "show-refine-button": true,
+        "show-layout-buttons": false,
+        "show-collections-list": true,
+        "custom-list-collections": "",
+        "show-sort-list": true,
+        "show-refine-list": true,
+        "swatches-enabled": false,
+        "show-search-link": true
+      }
+    },
+    "5048ac17-35ea-4fcb-bdb8-95a263190ae6": {
+      "type": "text-columns-1",
+      "blocks": {
+        "456c50a7-c95a-4d69-bbee-835c7e7c3c4c": {
+          "type": "image",
+          "settings": {
+            "product": "firm-booty-bundle-butt",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Firm Booty Bundle",
+            "description": "<p>Toning and Firming Booty Routine<\/p>",
+            "link-url": "shopify:\/\/products\/firm-booty-bundle-butt",
+            "link-text": "View more"
+          }
+        },
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-0": {
+          "type": "image",
+          "settings": {
+            "product": "body-firmer",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body Firmer",
+            "description": "<p>Anti-Cellulite Masque<\/p>",
+            "link-url": "shopify:\/\/products\/body-firmer",
+            "link-text": "View more"
+          }
+        },
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "keepin-it-taut",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Final Stretch",
+            "description": "<p>Anti-Stretch Mark Bundle<\/p>",
+            "link-url": "shopify:\/\/products\/keepin-it-taut",
+            "link-text": "View more"
+          }
+        },
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "complete-skin-recovery-bundle",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Complete Skin Recovery",
+            "description": "<p>Anti-Cellulite + Anti-StretchMark Bundle <\/p>",
+            "link-url": "shopify:\/\/products\/complete-skin-recovery-bundle",
+            "link-text": "View more"
+          }
+        },
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-3": {
+          "type": "image",
+          "settings": {
+            "product": "body-shaper",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body Shaper",
+            "description": "<p>Anti-Cellulite Cream<\/p>",
+            "link-url": "shopify:\/\/products\/body-shaper",
+            "link-text": "View more"
+          }
+        },
+        "bab3ff77-0f24-4da4-988f-53c17d9fa08d": {
+          "type": "image",
+          "settings": {
+            "product": "body-gua-sha-tool",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body Sculpter",
+            "description": "<p>Body Gua Sha Tool<\/p>",
+            "link-url": "shopify:\/\/products\/body-gua-sha-tool",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "456c50a7-c95a-4d69-bbee-835c7e7c3c4c",
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-0",
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-1",
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-2",
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-3",
+        "bab3ff77-0f24-4da4-988f-53c17d9fa08d"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 2,
+        "aspect-ratio": "natural",
+        "image-width": 0,
+        "mobile-width": "1",
+        "text-alignment": "center",
+        "heading": "Butt",
+        "subtitle": "We lift spirits, and butts.",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "main": {
+      "type": "collection--body",
+      "disabled": true,
+      "blocks": {
+        "01876aa0-d8e6-483b-81bb-9ff7efa0a398": {
+          "type": "promotion",
+          "settings": {
+            "row-number": 1,
+            "column-number": 1,
+            "promo-width": 2,
+            "background-color": "light",
+            "text-color": "light",
+            "darken-image": true,
+            "image": "shopify:\/\/shop_images\/DSC08010_c3e574b2-53ac-45a9-95f7-88f1576d669b.png",
+            "image-size": "fit-to-container",
+            "overline": "Limited time!",
+            "title": "Bundle & Save!",
+            "description": "",
+            "link-url": "",
+            "link-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "01876aa0-d8e6-483b-81bb-9ff7efa0a398"
+      ],
+      "settings": {
+        "products-per-row--desktop": 4,
+        "products-per-row--mobile": "1",
+        "number-of-rows": 2
+      }
+    }
+  },
+  "order": [
+    "0d555e91-98b1-4f58-9bc2-8bda1ada1e80",
+    "collection-header",
+    "navigation",
+    "5048ac17-35ea-4fcb-bdb8-95a263190ae6",
+    "main"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "sections": {
+    "7af45965-05ed-414f-aa3d-bbc27bae697b": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 3,
+        "spacing-above": true,
+        "spacing-below": true,
+        "overline": "",
+        "heading": "HOW TO USE",
+        "text": "<p>Learn how to effectively use your Cellulite Care and Stretch Mark Care products to maximize your results.<\/p>"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "show-title": true,
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 1,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "163247330191cc65e8": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "dark",
+        "background-color": "none",
+        "container-width": 3,
+        "spacing-above": true,
+        "spacing-below": true,
+        "image-height": 3,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "right",
+        "text-width": "small",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "image": "shopify:\/\/shop_images\/DSC08010_c3e574b2-53ac-45a9-95f7-88f1576d669b.png",
+        "overline": "BOUNCE BACK",
+        "title": "Anti-Cellulite Body Care Routine",
+        "description": "<p><strong>Step 1:<\/strong> Alternate uses between the Body Firmer masque and Body Exfoliator scrub every other day<\/p><p><strong>Body FIRMER: <\/strong>Apply a thick layer over clean skin focusing on areas with cellulite.Leave on for 15 minutes and remove with damp soft cloth or sponge. Massage remaining masque into skin in circular motions, then rinse well with warm water.<br\/><\/p><p><strong>BODY EXFOLIATOR:<\/strong> Apply onto damp skin with fingertips in a circular motion to gently exfoliate skin focusing on areas with cellulite. Rinse off with lukewarm water.<\/p><p><strong>Step 2:<\/strong> Finish off daily with the BODY SHAPER. Apply a generous layer focusing on areas with cellulite and massage into skin using a circular motion until absorbed into skin.<\/p>",
+        "link-url": "shopify:\/\/products\/bounce-back",
+        "link-text": "SHOP ANTI-CELLULITE BUNDLE"
+      }
+    },
+    "1632473305029b8e81": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "dark",
+        "background-color": "light",
+        "container-width": 1,
+        "spacing-above": true,
+        "spacing-below": true,
+        "image-height": 0,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "right",
+        "text-width": "small",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "image": "shopify:\/\/shop_images\/Sculpting-Tool.png",
+        "overline": "",
+        "title": "How to use your Gua Sha Tool for Cellulite",
+        "description": "<p>After applying Body Shaper, hold the Gua Sha tool at a flat angle and use pressure on the skin as you apply long, lifted strokes upward and outward. Repeat each area 6-8 times. We recommend a body massage at least once a week.<\/p>",
+        "link-url": "shopify:\/\/products\/body-gua-sha-tool",
+        "link-text": "shop gua sha tool"
+      }
+    },
+    "3c57f5da-ef6f-4ec2-bcb3-8a1f6da0163f": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "auto",
+        "background-color": "none",
+        "container-width": 3,
+        "spacing-above": true,
+        "spacing-below": true,
+        "image-height": 3,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "right",
+        "text-width": "medium",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "image": "shopify:\/\/shop_images\/DSC09124.png",
+        "overline": "FINAL STRETCH",
+        "title": "Anti-Stretch Mark Routine",
+        "description": "<p><\/p><p><strong>Body Detoxifier:<br\/><\/strong>Apply a thick layer over clean skin focusing on areas with stretch marks. Leave on for 10-15 minutes. Rinse well with warm water. Use 2-3 times a week.<br\/><br\/><strong>Body Refresher<\/strong>:<br\/>Apply to dry skin and massage thoroughly into skin using a circular motion. Add water and work through again. Rinse well with lukewarm water.<br\/><br\/><strong>Body Smoother:<br\/><\/strong>Apply a generous layer focusing on areas with stretch marks. Massage into skin using a circular motion until absorbed into skin. Use once daily at nighttime.<\/p>",
+        "link-url": "shopify:\/\/products\/keepin-it-taut",
+        "link-text": "SHOP ANTI-STRETCH MARK BUNDLE"
+      }
+    },
+    "5bf3181f-18c9-4c77-b4bd-7227a8358225": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "auto",
+        "background-color": "light",
+        "container-width": 1,
+        "spacing-above": true,
+        "spacing-below": true,
+        "image-height": 0,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "left",
+        "text-width": "medium",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "image": "shopify:\/\/shop_images\/Tool-Purple-Back.png",
+        "overline": "",
+        "title": "How to use your Gua Sha Tool for Stretch Marks",
+        "description": "<p>After applying Body Smoother, hold the Gua Sha tool at a flat angle and use pressure on the skin as you apply long, lifted strokes upward and outward. Continue these motions for 3-4 minutes. We recommend a gua sha body massage at least once a week.<\/p>",
+        "link-url": "shopify:\/\/products\/body-gua-sha-tool",
+        "link-text": "SHOP GUA SHA TOOL"
+      }
+    }
+  },
+  "order": [
+    "7af45965-05ed-414f-aa3d-bbc27bae697b",
+    "main",
+    "163247330191cc65e8",
+    "1632473305029b8e81",
+    "3c57f5da-ef6f-4ec2-bcb3-8a1f6da0163f",
+    "5bf3181f-18c9-4c77-b4bd-7227a8358225"
+  ]
+}

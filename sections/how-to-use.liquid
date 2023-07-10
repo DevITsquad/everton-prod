@@ -1,0 +1,54 @@
+
+<style>
+  @media only screen and (min-width: 750px) {
+  .uses-app-main-section {
+    display: flex !important;
+    justify-content: space-evenly !important;
+}
+  .uses-app-main-section .left_content {
+    width: 55%;
+}
+  .uses-app-main-section .right_content {
+    width: 45%;
+}
+  }
+</style>
+
+<div class="uses_app">
+    <div class="uses-app-main-section">
+  <div class="left_content">
+  {{- section.settings.text -}}
+  </div>
+    <div class="right_content">
+{% assign app_blocks = section.blocks | where: 'type', '@app' %}
+{% for block in app_blocks %}
+ {%- render block -%}
+{% endfor %}
+    </div>
+</div>
+   </div>
+
+
+
+{% schema %}
+  {
+    "name": "How To Use",
+    "settings": [
+            {
+          "type": "liquid",
+          "id": "text",
+          "label": "Custom Liquid"         
+        }
+    ],
+    "blocks": [
+      {
+        "type": "@app"
+      }
+    ],
+    "presets": [
+      {
+        "name": "How To Use"
+      }
+    ]
+  }
+{% endschema %}

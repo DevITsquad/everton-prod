@@ -1,0 +1,86 @@
+
+ <style>
+
+.marquee_text {
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 7rem;
+
+/*     position: absolute; */
+/*     top: 50%;
+    transform: translateY(-50%); */
+}
+.marquee_text {
+    font-size: 6rem;
+    font-weight: bold !important;
+    overflow: hidden!important;
+    width: calc(100% - 20px)!important;
+    margin: 0 auto!important;
+    padding: 50px 0!important;
+    max-width: 460px;
+    line-height: 0!important;
+}
+
+
+@media(max-width:749px){
+  .marquee_text {
+    font-weight: bold;
+    overflow: hidden;
+    width: calc(100% - 20px) !important;
+    margin: 0 auto;
+    padding: 20px 0!important;
+}
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+
+<div class="marquee_text">
+  <div class="page-width">
+  {% for block in section.blocks %}{{ block.settings.icon }}    {%endfor%}
+ {% for block in section.blocks %}{{ block.settings.icon }}    {%endfor%}
+  </div>
+  </div>
+<script>
+  // Start marquee
+$('.marquee_text').marquee({
+    direction: 'left',
+    duration: 50000,
+    gap: 50,
+    delayBeforeStart: 0,
+    duplicated: true,
+    startVisible: true
+});
+
+</script>
+{% schema %}
+  {
+    "name": "Custom Logolicious",
+    "settings": [],
+"blocks":[
+		{
+		"type":"content",
+		"name":"Content",
+ 		"settings": [	
+           {
+			"type":"html",
+			"id":"icon",
+			"label":"icon"
+    		}			
+		]
+	  }
+	],
+    "presets": [
+      {
+        "name": "Home Logolicious",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

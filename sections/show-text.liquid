@@ -1,0 +1,29 @@
+<div class="custom-text-section">
+  <div class="txtbx" style="color: {{ section.settings.color_heading }};"> {{ section.settings.custom_text_title }} </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Box",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "type": "color",
+        "id": "color_heading",
+        "label": "Text color",
+        "default": "#3d4246"
+      }
+    ],
+    "presets": [
+      {
+        "name": "custom-text",
+        "category": "Text Box"
+      }
+    ]
+  }
+{% endschema %}

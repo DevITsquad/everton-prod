@@ -1,0 +1,17 @@
+<div class="pro-cus-text">
+  <div class="txtbx"> {{ section.settings.custom_text_title }} </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Box",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      }
+    ]
+  }
+{% endschema %}

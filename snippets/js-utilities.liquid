@@ -1,0 +1,276 @@
+{% comment %}
+  We need access to these methods immediately, so they can't be brought in async.
+  By using Liquid we don't have to request this file on page load.
+{% endcomment %}
+
+<script>
+  // Element extended methods
+  Element.prototype.trigger = window.trigger = function(event, data = false) {
+    const event_obj = data ? new CustomEvent(event, { detail: data }) : new Event(event);
+    this.dispatchEvent(event_obj);
+  };
+
+  Element.prototype.on = window.on = function(events, callback, options) {
+    // save the namespaces on the element itself
+    if (!this.namespaces) this.namespaces = {};
+
+    events.split(' ').forEach(event => {
+      this.namespaces[event] = callback;
+      this.addEventListener(event.split('.')[0], callback, options);
+    });
+    return this;
+  };
+
+  Element.prototype.off = window.off = function(events) {
+    if (!this.namespaces) return;
+
+    events.split(' ').forEach(event => {
+      this.removeEventListener(event.split('.')[0], this.namespaces[event]);
+      delete this.namespaces[event];
+    });
+    return this;
+  };
+
+  Element.prototype.index = function() {
+    return [...this.parentNode.children].indexOf(this);
+  };
+
+  Element.prototype.offset = function() {
+    const rect = this.getBoundingClientRect();
+
+    return {
+      top: rect.top + window.pageYOffset,
+      left: rect.left + window.pageXOffset
+    };
+  };
+
+  Element.prototype.setStyles = function(styles = {}) {
+    for (const property in styles) this.style[property] = styles[property];
+    return this;
+  }
+
+  Element.prototype.remove = function() {
+    return this.parentNode.removeChild(this);
+  };
+
+  // NodeList & Array extended methods
+  NodeList.prototype.on = Array.prototype.on = function(events, callback, options) {
+    this.forEach(element => {
+      // save the namespaces on the element itself
+      if (!element.namespaces) element.namespaces = {};
+
+      events.split(' ').forEach(event => {
+        element.namespaces[event] = callback;
+        element.addEventListener(event.split('.')[0], callback, options);
+      });
+    });
+  };
+
+  NodeList.prototype.off = Array.prototype.off = function(events) {
+    this.forEach(element => {
+      if (!element.namespaces) return;
+
+      events.split(' ').forEach(event => {
+        element.removeEventListener(event.split('.')[0], element.namespaces[event]);
+        delete element.namespaces[event];
+      });
+    });
+  };
+
+  NodeList.prototype.not = Array.prototype.not = function(arr_like_obj) {
+    // this always returns an Array
+    const new_array_of_elements = [];
+    if (arr_like_obj instanceof HTMLElement) arr_like_obj = [arr_like_obj];
+
+    this.forEach(element => {
+      if (![...arr_like_obj].includes(element)) new_array_of_elements.push(element);
+    });
+
+    return new_array_of_elements;
+  };
+
+  class Utilities {
+    constructor() {
+      this.isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+    }
+
+    debounce(delay, fn) {
+      let timeout;
+
+      return function(...args) {
+        const context = this;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn.apply(context, args), delay);
+      };
+    }
+
+    formatMoney(raw_amount) {
+      const num_decimals = theme.settings.money_format.includes('no_decimals') ? 0 : 2;
+      const locale = theme.settings.money_format.includes('comma') ? 'de-DE' : 'en-US';
+
+      const formatter = Intl.NumberFormat(locale, {
+        minimumFractionDigits: num_decimals,
+        maximumFractionDigits: num_decimals
+      });
+
+      const formatted_amount = formatter.format(raw_amount / 100);
+      {% comment %} // replace 'amount' in '${{ amount }}' {% endcomment %}
+      return theme.settings.money_format.replace(/\{\{\s*(\w+)\s*\}\}/, formatted_amount);
+    }
+
+    getDimensions(element, strip_components = []) {
+      const cloned_el = this.parseHtml(element.outerHTML, null, strip_components);
+      cloned_el.setStyles({
+        display: 'block',
+        position: 'absolute',
+        padding: element.style.padding,
+        visibility: 'hidden',
+      })
+
+      element.parentNode ? element.parentNode.appendChild(cloned_el) : document.body.appendChild(cloned_el);
+      const { offsetHeight: height, offsetWidth: width } = cloned_el;
+      cloned_el.remove();
+      return { height, width };
+    }
+
+    getAvailableQuantity(form) {
+      const { dataset: variant_data, value: variant_id } = form.querySelector('option[selected]');
+      const { inventoryManagement, inventoryPolicy, inventoryQuantity } = variant_data;
+
+      // if inventory isn't tracked we can add items indefinitely
+      if (inventoryManagement !== 'shopify' || inventoryPolicy === 'continue') return true;
+
+      // we use local storage because you can have multiple tabs open
+      const cart_items = JSON.parse(localStorage.getItem(theme.local_storage.cart_items));
+      let cart_quantity = 0;
+      if (cart_items[variant_id]) cart_quantity = cart_items[variant_id];
+
+      const form_id = form.getAttribute('id');
+      let quantity_remaining = parseInt(inventoryQuantity) - cart_quantity;
+
+      let requested_quantity = 1;
+      const quantity_input = document.querySelector(`.product-quantity--input[form='${form_id}']`);
+      if (quantity_input) requested_quantity = parseInt(quantity_input.value);
+
+      if (quantity_remaining <= 0) {
+        quantity_remaining = 0;
+        // if quantity block isn't added, quantity_input.value will be undefined
+        if (quantity_input) quantity_input.value = 1;
+      } else if (requested_quantity > quantity_remaining && quantity_input) {
+        quantity_input.value = quantity_remaining;
+      } else return true;
+
+      if (quantity_remaining === 0)
+        window.location.hash = '#feedback-bar--product--no-items';
+      else if (quantity_remaining === 1)
+        window.location.hash = '#feedback-bar--product--one-item';
+      else if (quantity_remaining > 1)
+        window.location.hash = `#feedback-bar--product--${quantity_remaining}-items`;
+
+      window.trigger('theme:feedbackBar:quantity', quantity_remaining);
+      return false;
+    }
+
+    imagesLoaded(containers, callback, force_load) { // containers can be an element or array of elements
+      if (containers instanceof HTMLElement) containers = [containers];
+
+      let images = [], loaded_images = [];
+      containers.forEach(container => {
+        images = [...images, ...container.querySelectorAll('img, .placeholder--root svg')]
+      });
+
+      if (!images.length) {
+        callback();
+        return;
+      }
+
+      const loadImage = image => {
+        loaded_images.push(image);
+        loaded_images.length === images.length && callback();
+      };
+
+      images.forEach(image =>
+        image.classList.contains('lazyloaded')
+          ? loadImage(image) : image.on('lazyloaded', () => loadImage(image))
+      );
+
+      if (force_load) {
+        const forceLoad = () => images.forEach(image => window.lazySizes.loader.unveil(image));
+        const lazysizes = document.head.querySelector('script[src*="/assets/lazysizes.min.js"]');
+        lazysizes.loaded
+          ? forceLoad() : window.on('theme:lazySizes:loaded', () => forceLoad());
+      }
+    }
+
+    libraryLoader(name, url, callback) {
+      if (theme.scripts[name] === undefined) {
+        theme.scripts[name] = 'requested';
+        const script = document.createElement('script');
+        script.src = url;
+        script.onload = () => {
+          theme.scripts[name] = 'loaded';
+          callback && callback();
+          window.trigger(`theme:${name}:loaded`);
+        };
+        document.body ? document.body.appendChild(script) : document.head.appendChild(script);
+      } else if (callback && theme.scripts[name] === 'requested') {
+        window.on(`theme:${name}:loaded`, callback);
+      } else if (callback && theme.scripts[name] === 'loaded') callback();
+    }
+
+    parseHtml(html_string, selector, strip_components = []) {
+      strip_components.forEach(component => { // remove web components so they don't init
+        const regex = new RegExp(component, 'g');
+        html_string = html_string.replace(regex, 'div')
+      });
+
+      const container = document.createElement('div');
+      container.innerHTML = html_string;
+      return selector ? container.querySelector(selector) : container.querySelector(':scope > *');
+    }
+
+    stylesheetLoader(name, url, callback) {
+      if (theme.styles[name] === undefined) {
+        theme.styles[name] = 'requested';
+        const stylesheet = document.createElement('link');
+        stylesheet.rel = 'stylesheet';
+        stylesheet.href = url;
+        stylesheet.onload = () => {
+          theme.styles[name] = 'loaded';
+          callback && callback();
+          window.trigger(`theme:${name}Styles:loaded`);
+        }
+        document.body ? document.body.appendChild(stylesheet) : document.head.appendChild(stylesheet);
+      } else if (callback && theme.styles[name] === 'requested') {
+        window.on(`theme:${name}Styles:loaded`, callback);
+      } else if (callback && theme.styles[name] === 'loaded') callback();
+    }
+
+    updateRecentProducts(handle) {
+      const current_product_arr = [handle];
+      const previous_product_str = localStorage.getItem(theme.local_storage.recent_products);
+      const max_num_recents_stored = 4;
+      let previous_product_arr, current_product_str, newly_visited_product = false;
+
+      // first check if we have existing data or not
+      if (previous_product_str) {
+        previous_product_arr = JSON.parse(previous_product_str);
+
+        if (previous_product_arr.indexOf(handle) === -1) newly_visited_product = true;
+      } else {
+        // localStorage accepts strings only, so we'll convert to string and set
+        current_product_str = JSON.stringify(current_product_arr);
+        localStorage.setItem(theme.local_storage.recent_products, current_product_str);
+      }
+      if (newly_visited_product) {
+        if (previous_product_arr.length === max_num_recents_stored)
+          previous_product_arr = previous_product_arr.slice(1);
+
+        current_product_str = JSON.stringify(previous_product_arr.concat(current_product_arr));
+        localStorage.setItem(theme.local_storage.recent_products, current_product_str);
+      }
+    }
+  }
+
+  theme.utils = new Utilities();
+</script>

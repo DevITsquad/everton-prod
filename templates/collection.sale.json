@@ -1,0 +1,510 @@
+{
+  "sections": {
+    "aedd58be-25ab-43be-8377-8ad65be5ca87": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "auto",
+        "background-color": "none",
+        "container-width": 6,
+        "spacing-above": false,
+        "spacing-below": false,
+        "image-height": 2,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "medium",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "image": "shopify:\/\/shop_images\/Sale_Banner_4_c73e370d-2905-4cc7-8882-04e6ca4d2e95.jpg",
+        "overline": "",
+        "title": "",
+        "description": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "collection-tab-links": {
+      "type": "collection-tab-links",
+      "disabled": true,
+      "blocks": {
+        "f64702a4-4f1e-4737-9ab0-836841120d58": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "BUNDLES",
+            "link": "#tab-1"
+          }
+        },
+        "ab2ca37a-f1da-443c-8fdf-8dd91230ae01": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "BODY CARE",
+            "link": "#tab-2"
+          }
+        },
+        "8f38aa77-d5e6-4d3e-bd6d-79aa7feeb6af": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "BEST SELLERS",
+            "link": "#tab-3"
+          }
+        },
+        "e400c9fb-d025-428a-9a2d-4a9093fc4bf7": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "ANTI-STRETCH MARK",
+            "link": "#tab-4"
+          }
+        },
+        "954416bd-c26f-4b61-9def-1f27136b75c1": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "ANTI-CELLULITE",
+            "link": "#tab-5"
+          }
+        }
+      },
+      "block_order": [
+        "f64702a4-4f1e-4737-9ab0-836841120d58",
+        "ab2ca37a-f1da-443c-8fdf-8dd91230ae01",
+        "8f38aa77-d5e6-4d3e-bd6d-79aa7feeb6af",
+        "e400c9fb-d025-428a-9a2d-4a9093fc4bf7",
+        "954416bd-c26f-4b61-9def-1f27136b75c1"
+      ],
+      "settings": {
+      }
+    },
+    "navigation": {
+      "type": "collection--navigation",
+      "disabled": true,
+      "settings": {
+        "show-browse-button": true,
+        "show-sort-button": true,
+        "show-refine-button": true,
+        "show-layout-buttons": true,
+        "show-collections-list": true,
+        "custom-list-collections": "collection-navigation",
+        "show-sort-list": true,
+        "show-refine-list": true,
+        "swatches-enabled": false,
+        "show-search-link": true
+      }
+    },
+    "4d028e99-0751-439a-9ad3-e616734dadd1": {
+      "type": "text-columns-1",
+      "blocks": {
+        "163b32ca-af53-4055-b696-8fdaf3746b52": {
+          "type": "image",
+          "settings": {
+            "product": "bounce-back",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Bounce Back",
+            "description": "<p>Anti-Cellulite Bundle<\/p>",
+            "link-url": "shopify:\/\/products\/bounce-back",
+            "link-text": "View more"
+          }
+        },
+        "4fcde269-314f-4877-9957-65ca7a1ba2c1": {
+          "type": "image",
+          "settings": {
+            "product": "keepin-it-taut",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Final Stretch",
+            "description": "<p>Anti-Stretch Mark Bundle<\/p>",
+            "link-url": "shopify:\/\/products\/keepin-it-taut",
+            "link-text": "View more"
+          }
+        },
+        "71acb0ab-27a4-470c-9429-eb8b9a52345c": {
+          "type": "image",
+          "settings": {
+            "product": "dark-spot-treatment-duo-1-2-glow-bundle",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "1, 2 Glow Bundle",
+            "description": "<p>Dark Spot Treatment Duo<\/p>",
+            "link-url": "shopify:\/\/products\/dark-spot-treatment-duo-1-2-glow-bundle",
+            "link-text": "View more"
+          }
+        },
+        "e985a569-33b3-4492-bedc-a0e2bcebdd77": {
+          "type": "image",
+          "settings": {
+            "product": "complete-skin-recovery-bundle",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "complete Skin Recovery",
+            "description": "<p>Anti-Cellulite + Anti-Stretch Mark Bundle<\/p>",
+            "link-url": "shopify:\/\/products\/complete-skin-recovery-bundle",
+            "link-text": "View more"
+          }
+        },
+        "914ad498-4469-4c86-8f8f-35dbdbb2a321": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "body-smoother",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body Smoother",
+            "description": "<p>Anti-Stretch Mark Lotion<\/p>",
+            "link-url": "shopify:\/\/products\/body-smoother",
+            "link-text": "shop now"
+          }
+        },
+        "template--15942906675366__4d028e99-0751-439a-9ad3-e616734dadd1-16678500663d8b1f5e-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "body-detoxifier",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body detoxifier",
+            "description": "<p>Anti-Stretch Mark Masque<\/p>",
+            "link-url": "shopify:\/\/products\/body-detoxifier",
+            "link-text": "shop now"
+          }
+        },
+        "template--15942906675366__4d028e99-0751-439a-9ad3-e616734dadd1-16678500663d8b1f5e-3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "body-refresher",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body Refresher",
+            "description": "<p>Anti-Stretch Mark Body Cleanser<\/p>",
+            "link-url": "shopify:\/\/products\/body-refresher",
+            "link-text": "Shop Now"
+          }
+        },
+        "template--15942906675366__4d028e99-0751-439a-9ad3-e616734dadd1-16678500663d8b1f5e-2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "body-firmer",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "body firmer",
+            "description": "<p>Anti-Celulite Masque<\/p>",
+            "link-url": "shopify:\/\/products\/body-firmer",
+            "link-text": "shop now"
+          }
+        },
+        "template--15942906675366__4d028e99-0751-439a-9ad3-e616734dadd1-16678500663d8b1f5e-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "body-exfoliator",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body Exfoliator",
+            "description": "<p>Anti-Cellulite Scrub<\/p>",
+            "link-url": "shopify:\/\/products\/body-exfoliator",
+            "link-text": "shop now"
+          }
+        },
+        "9891388a-ca2c-480e-a1d6-7fa5b9083b99": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "body-shaper",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body Shaper",
+            "description": "<p>Anti-Cellulite Cream<\/p>",
+            "link-url": "shopify:\/\/products\/body-shaper",
+            "link-text": "shop now"
+          }
+        },
+        "88550af6-1c0d-491f-9592-e52e9fbd2e16": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "body-gua-sha-tool",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body Sculptor",
+            "description": "<p>Body Gua Sha Tool<\/p>",
+            "link-url": "shopify:\/\/products\/body-gua-sha-tool",
+            "link-text": "View more"
+          }
+        },
+        "d8bb2d57-c437-4916-8216-d12adcec82ac": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "luxe-velvet-cosmetic-bag",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Evertone Bag",
+            "description": "<p>Cosmetic Pouch<\/p>",
+            "link-url": "shopify:\/\/products\/luxe-velvet-cosmetic-bag",
+            "link-text": "View more"
+          }
+        },
+        "1b73ef24-b443-406d-a069-0a2e81178822": {
+          "type": "image",
+          "settings": {
+            "product": "evertone-microcurrent-facial-toning-device",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Evertone EverLift",
+            "description": "<p>Microcurrent Facial Toning Device<\/p>",
+            "link-url": "shopify:\/\/products\/evertone-microcurrent-facial-toning-device",
+            "link-text": "View more"
+          }
+        },
+        "36e54925-2e79-4e8b-9c6b-c468cb5022d3": {
+          "type": "image",
+          "settings": {
+            "product": "evertone-red-light-therapy-wand",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Evertone InfraWave",
+            "description": "<p>Red Light Therapy Wand<\/p>",
+            "link-url": "shopify:\/\/products\/evertone-red-light-therapy-wand",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "163b32ca-af53-4055-b696-8fdaf3746b52",
+        "4fcde269-314f-4877-9957-65ca7a1ba2c1",
+        "71acb0ab-27a4-470c-9429-eb8b9a52345c",
+        "e985a569-33b3-4492-bedc-a0e2bcebdd77",
+        "914ad498-4469-4c86-8f8f-35dbdbb2a321",
+        "template--15942906675366__4d028e99-0751-439a-9ad3-e616734dadd1-16678500663d8b1f5e-0",
+        "template--15942906675366__4d028e99-0751-439a-9ad3-e616734dadd1-16678500663d8b1f5e-3",
+        "template--15942906675366__4d028e99-0751-439a-9ad3-e616734dadd1-16678500663d8b1f5e-2",
+        "template--15942906675366__4d028e99-0751-439a-9ad3-e616734dadd1-16678500663d8b1f5e-1",
+        "9891388a-ca2c-480e-a1d6-7fa5b9083b99",
+        "88550af6-1c0d-491f-9592-e52e9fbd2e16",
+        "d8bb2d57-c437-4916-8216-d12adcec82ac",
+        "1b73ef24-b443-406d-a069-0a2e81178822",
+        "36e54925-2e79-4e8b-9c6b-c468cb5022d3"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 4,
+        "aspect-ratio": "natural",
+        "image-width": 0,
+        "mobile-width": "2",
+        "text-alignment": "center",
+        "heading": "",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "collection-header": {
+      "type": "collection--header",
+      "disabled": true,
+      "settings": {
+        "enable-header": true,
+        "show-title": false,
+        "title-alignment": "center",
+        "show-description": false,
+        "description-alignment": "with-title",
+        "show-image": true,
+        "use-image-fallback": true,
+        "image-height": "large",
+        "alt-color": true,
+        "apply-overlay": false,
+        "parallax-enabled": false
+      }
+    },
+    "d3398dbb-586b-4708-bbab-6cf14996bd16": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": false,
+        "overline": "",
+        "heading": "Best Value Bundles",
+        "text": ""
+      }
+    },
+    "68905f64-cef8-4fc5-bdbc-2ad2c97770ee": {
+      "type": "text-columns-1",
+      "blocks": {
+        "template--16038324600998__68905f64-cef8-4fc5-bdbc-2ad2c97770ee-1677184696cc12906b-0": {
+          "type": "image",
+          "settings": {
+            "product": "body-exfoliator",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY EXFOLIATOR",
+            "description": "<p>Anti-cellulite Scrub<\/p>",
+            "link-url": "shopify:\/\/products\/body-exfoliator",
+            "link-text": "View more"
+          }
+        },
+        "template--16038324600998__68905f64-cef8-4fc5-bdbc-2ad2c97770ee-1677184696cc12906b-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY SHAPER",
+            "description": "<p>Anti-Cellulite Cream<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        },
+        "template--16038324600998__68905f64-cef8-4fc5-bdbc-2ad2c97770ee-1677184696cc12906b-2": {
+          "type": "image",
+          "settings": {
+            "product": "body-refresher",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY REFRESHER",
+            "description": "<p>Anti-Stretch Mark Body Cleanser<\/p>",
+            "link-url": "shopify:\/\/products\/body-refresher",
+            "link-text": "View more"
+          }
+        },
+        "template--16038324600998__68905f64-cef8-4fc5-bdbc-2ad2c97770ee-1677184696cc12906b-3": {
+          "type": "image",
+          "settings": {
+            "product": "body-detoxifier",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY DETOXIFIER",
+            "description": "<p>Anti-Stretch Mark Masque<\/p>",
+            "link-url": "shopify:\/\/products\/body-detoxifier",
+            "link-text": "View more"
+          }
+        },
+        "9c49a9d9-5203-4d3a-832b-47e41dee5652": {
+          "type": "image",
+          "settings": {
+            "product": "body-smoother",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY SMOOTHER",
+            "description": "<p>Anti-Stretch Mark Lotion<\/p>",
+            "link-url": "shopify:\/\/products\/body-smoother",
+            "link-text": "View more"
+          }
+        },
+        "e8330dac-6978-43b7-9e15-2e8db161a1c6": {
+          "type": "image",
+          "settings": {
+            "product": "body-firmer",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY FIRMER",
+            "description": "<p>Anti-Cellulite Masque<\/p>",
+            "link-url": "shopify:\/\/products\/body-firmer",
+            "link-text": "View more"
+          }
+        },
+        "cc34c9e1-a067-401c-b16d-0fc453664e83": {
+          "type": "image",
+          "settings": {
+            "product": "body-gua-sha-tool",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY SCULPTOR",
+            "description": "<p>Body Gua Sha Tool<\/p>",
+            "link-url": "shopify:\/\/products\/body-gua-sha-tool",
+            "link-text": "View more"
+          }
+        },
+        "d681cad0-eee2-491e-94fd-20440cfc6cd9": {
+          "type": "image",
+          "settings": {
+            "product": "luxe-velvet-cosmetic-bag",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Evertone Bag",
+            "description": "<p>Cosmetic Pouch<\/p>",
+            "link-url": "shopify:\/\/products\/luxe-velvet-cosmetic-bag",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--16038324600998__68905f64-cef8-4fc5-bdbc-2ad2c97770ee-1677184696cc12906b-0",
+        "template--16038324600998__68905f64-cef8-4fc5-bdbc-2ad2c97770ee-1677184696cc12906b-1",
+        "template--16038324600998__68905f64-cef8-4fc5-bdbc-2ad2c97770ee-1677184696cc12906b-2",
+        "template--16038324600998__68905f64-cef8-4fc5-bdbc-2ad2c97770ee-1677184696cc12906b-3",
+        "9c49a9d9-5203-4d3a-832b-47e41dee5652",
+        "e8330dac-6978-43b7-9e15-2e8db161a1c6",
+        "cc34c9e1-a067-401c-b16d-0fc453664e83",
+        "d681cad0-eee2-491e-94fd-20440cfc6cd9"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 4,
+        "aspect-ratio": "natural",
+        "image-width": 0,
+        "mobile-width": "2",
+        "text-alignment": "center",
+        "heading": "SHOP MORE",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "main": {
+      "type": "collection--body",
+      "disabled": true,
+      "blocks": {
+        "01876aa0-d8e6-483b-81bb-9ff7efa0a398": {
+          "type": "promotion",
+          "settings": {
+            "row-number": 2,
+            "column-number": 1,
+            "promo-width": 1,
+            "background-color": "light",
+            "text-color": "light",
+            "darken-image": true,
+            "image": "shopify:\/\/shop_images\/DSC08371.jpg",
+            "image-size": "fit-to-container",
+            "overline": "GET IT WHILE IT LASTS",
+            "title": "20% off best value bundles",
+            "description": "",
+            "link-url": "",
+            "link-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "01876aa0-d8e6-483b-81bb-9ff7efa0a398"
+      ],
+      "settings": {
+        "products-per-row--desktop": 3,
+        "products-per-row--mobile": "2",
+        "number-of-rows": 2
+      }
+    }
+  },
+  "order": [
+    "aedd58be-25ab-43be-8377-8ad65be5ca87",
+    "collection-tab-links",
+    "navigation",
+    "4d028e99-0751-439a-9ad3-e616734dadd1",
+    "collection-header",
+    "d3398dbb-586b-4708-bbab-6cf14996bd16",
+    "68905f64-cef8-4fc5-bdbc-2ad2c97770ee",
+    "main"
+  ]
+}

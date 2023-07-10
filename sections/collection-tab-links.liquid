@@ -1,0 +1,123 @@
+<!-- collection-tab-links -->
+
+<div class="collection-tab-links">
+<div class="page-width">
+
+  <div class="collection-tabs-list links">
+  {% for block in section.blocks %}
+
+  <a href="#tab-{{ forloop.index }}" class="tab-links {% if forloop.index ==1 %}active{% endif %}">{{ block.settings.collection_tab }}</a>
+
+    {% endfor %}
+  </div>
+  
+</div>
+</div>
+
+<script>  
+$( '.links a' ).on( 'click', function(e){  
+  var href = $(this).attr( 'href' );   
+  $( 'html, body' ).animate({
+		scrollTop: $( href ).offset().top
+  }, '500' );
+  e.preventDefault();
+  $('.collection-tabs-list').addClass('scroller')
+});
+</script>
+
+
+  <script>
+    $('.links a').removeClass('scoller-active');
+    $(window).scroll(function() {
+		var windscroll = $(window).scrollTop();
+		if (windscroll >= 100) {
+			$('.collection-list').each(function(i) {
+        // The number at the end of the next line is how pany pixels you from the top you want it to activate.
+				if ($(this).position().top <= windscroll - 0) {
+					$('.links a').removeClass('scoller-active');
+					$('.links a').eq(i).addClass('scoller-active');
+				}
+			});
+
+		}
+
+		}).scroll();
+  </script>
+
+<script>
+$(document).ready(function(){
+  $('.tab-links').click(function(){
+    $('.tab-links').removeClass("active");
+    $(this).addClass("active");
+});
+});
+</script>
+<script>   
+        $(window).scroll(function(){    
+         var bottom = $('.featured-grid--root').offset().top;
+       
+          if ($(this).scrollTop() > bottom){ 
+            $('.collection-tab-links').addClass('sticky_tabs'); 
+            
+          }
+          else{
+            $('.collection-tab-links').removeClass('sticky_tabs');        
+          }
+        }); 
+</script>
+<script>
+
+var one = $("#tab-1").offset();
+var two = $("#tab-2").offset();
+
+$(document).ready(function() {
+    $(window).scroll(function(){
+       
+        
+        var screenPosition = $(document).scrollTop();
+        if (screenPosition < two.top) {
+            $( ".one" ).addClass( "newactive" );
+            //be sure you are removing the active class from the other ones.
+            $(".two").removeClass("newactive");
+        }
+        if (screenPosition >= two.top) {
+            $( ".two" ).addClass( "newactive" );
+            $(".one").removeClass("newactive");
+        }
+    });
+    //call the scroll() event so that the proper one is highlighted at the start
+    $(window).scroll();
+    $(".one, .two").click(function() {$(window).scroll();});
+}); 
+
+</script>
+{% schema %}
+  {
+    "name": "Collection Tab Link",
+    "settings": [],
+    "blocks":[
+      {
+        "type":"links",
+        "name":"Links",
+         "settings": [
+           {
+             "type":"text",
+             "id":"collection_tab",
+             "label":"Text"
+           },
+            {
+             "type":"url",
+             "id":"link",
+             "label":"Text Link"
+           }
+         ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,29 @@
+{% if section.settings.custom_text != blank %}
+<div class="announce-bar"style="background-color: {{ section.settings.color_back }};">
+<marquee style="color: {{ section.settings.color_heading }};" direction = "left">{{ section.settings.custom_text }}</marquee>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Scroll announcement",
+    "settings": [
+      {
+        "id": "custom_text",
+        "type": "text",
+        "label": "Add Text"
+      },
+      {
+        "type": "color",
+        "id": "color_heading",
+        "label": "Text color",
+        "default": "#3d4246"
+      },
+      {
+        "type": "color",
+        "id": "color_back",
+        "label": "Text color",
+        "default": "#BEACEA"
+      }
+    ]
+  }
+{% endschema %}

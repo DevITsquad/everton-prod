@@ -1,0 +1,537 @@
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "9a98c6f7-a709-47bc-af9d-983d337bb48a": {
+          "type": "overline",
+          "disabled": true,
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+          }
+        },
+        "e29f83c9-653c-406f-8b94-46211d3a40d9": {
+          "type": "textbox",
+          "settings": {
+            "custom_text_title": "Endless Summer Sale! 30% Off",
+            "color_heading": "#444444"
+          }
+        },
+        "8c84b736-51f8-41e6-ae87-1cce2a4e1803": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "custom-liquid": "<h5 style=\"text-align: center;\">Extra Get 25% OFF Auto Applied at Checkout!<\/h5>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "thumbnails": {
+          "type": "thumbnails",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "upsell_heading": "",
+            "chart_heading": ""
+          }
+        },
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "options": {
+          "type": "options",
+          "disabled": true,
+          "settings": {
+            "variant-style": "buttons",
+            "swatches-enabled": true,
+            "size-chart-enabled": true,
+            "size-chart-option": "size",
+            "size-chart-content": ""
+          }
+        },
+        "buy-buttons": {
+          "type": "buy-buttons",
+          "settings": {
+            "smart-payment-enabled": true
+          }
+        },
+        "566fea39-9487-4052-9274-42473ca2be9d": {
+          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/stories-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": true,
+          "settings": {
+            "publishId": "gsw6402ro1fne"
+          }
+        },
+        "7a8704f3-445e-4f9b-9daf-951da864da6c": {
+          "type": "afterpay",
+          "settings": {
+          }
+        },
+        "c0e0dfc9-7bad-4bb1-88a9-660fefe270a3": {
+          "type": "producticon",
+          "settings": {
+          }
+        },
+        "488a8233-94ae-4794-a1dc-bfc5b5edf8ad": {
+          "type": "liquid",
+          "settings": {
+            "custom-liquid": "<h5>Key Ingredients<\/h5>"
+          }
+        },
+        "3646dcf1-6957-4947-8192-df09264bb9b8": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Coffee Arabica",
+            "description": "<p>The caffeine dilates the blood vessels and tightens the skin<\/p>",
+            "page-content": ""
+          }
+        },
+        "a47a167a-b824-4120-bf13-a8fdd18b277c": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Squalane",
+            "description": "<p>Seals in moisture to give you firmer, healthier-looking skin <\/p>",
+            "page-content": ""
+          }
+        },
+        "3af31267-b981-40ac-ae7b-68cfa51dbca7": {
+          "type": "collapsible-tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Ginko Biloba",
+            "description": "<p>Increase blood flow in your stomach, legs and butt reducing the appearance of cellulite <\/p>",
+            "page-content": ""
+          }
+        },
+        "eb374486-0dc5-4c07-9a16-98b3444ebc18": {
+          "type": "collapsible-tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Gotu Kola",
+            "description": "<p>Improves elasticity and thickens the skin<\/p>",
+            "page-content": ""
+          }
+        },
+        "a62d7b49-cc23-4e25-b3f5-7418dba43987": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Hydrolyzed Collagen",
+            "description": "<p>A form of collagen more easily absorbed into the epidermis, plumping the skin<\/p>",
+            "page-content": ""
+          }
+        },
+        "772b4a3b-99bc-4e47-baa7-b836aa1666d9": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Vitamin C",
+            "description": "<p>Boosts collagen levels in the skin leading to better elasticity and  tautness<\/p>",
+            "page-content": ""
+          }
+        },
+        "9949ef2f-d28a-47ad-bd9e-eb99bf166eec": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Full Ingredients",
+            "description": "<p><strong>BODY SHAPER Anti-Cellulite Cream<\/strong><\/p><p>Ingredients<br\/>Aqua, Caprylic\/Capric Triglyceride, Glycerin, Methyl Gluceth-20, Caffeine, Cyclopentasiloxane, Dimethicone, PEG-100 Stearate, Glyceryl Stearate, Stearic Acid, **Squalane, Cetyl Alcohol, *CO Glycerin, Panthenol, Sea Salt (Dead Sea Salt), *CO Humulus Lupulus (Hops) Extract, *COLavandula Angustifolia (Lavender) Flower\/Leaf\/Stem Extract, *CO Calendula Officinalis FlowerExtract, *CO Chamomilla Recutita (Matricaria) Flower Extract, *CO Citrus Limon (Lemon) PeelExtract, *CO Cucumis Sativus (Cucumber) Seed Extract, *CO Camellia Sinensis Leaf Extract,*CO Pyrus Malus (Apple) Fruit Extract, *CO Spirulina Platensis Extract, Coffea Arabica (Coffee)Seed Extract, Ascorbic Acid (Vitamin C), Tocopheryl Acetate (Vitamin E), Retinyl Palmitate(Vitamin A), Carbomer, Phenoxyethanol, Ethylhexylglycerin, Sodium Hydroxide, Disodium EDTA,Fragrance*CO Certified Organic** From sugarcane<br\/><\/p><p><br\/><strong>BODY FIRMER Anti-Cellulite Masque <\/strong><\/p><p>Ingredients<strong><br\/><\/strong>Aqua, Caprylic\/Capric Triglyceride, Glycerin, Cetyl Alcohol, Glyceryl Stearate SE, Sorbitol, Stearic Acid, Bentonite, Helianthus Annuus (Sunflower) Seed Oil, Polysorbate 20, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Hydrolyzed Collagen, Carbomer, *CO Glycerin, Panthenol, Sodium Hydroxide, Lavandula Angustifolia (Lavender) Oil, **Squalane, *CO Avena Sativa (Oat) Kernel Extract, *CO Hamamelis Virginiana (Witch Hazel) Extract, *CO Pogostemon Cablin Leaf Extract, Ginkgo Biloba Leaf Extract, Malus Domestica Fruit Cell Culture Extract, Sodium Hyaluronate (Hyaluronic Acid), Citric Acid, Ascorbic Acid (Vitamin C), Xanthan Gum, Lactic Acid, *CO Melaleuca Alternifolia (Tea Tree) Leaf Oil, Malic Acid, Gluconic Acid, Glycolic Acid, Retinyl Palmitate (Vitamin A), Tocopheryl Acetate (Vitamin E), Lecithin, Tartaric Acid, Phenoxyethanol, Ethylhexylglycerin, Fragrance*CO Certified Organic**From sugarcane<\/p>",
+            "page-content": ""
+          }
+        },
+        "9c679054-438b-451b-9eb7-30c295cdc6f2": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "custom-liquid": "<h5>HOW TO USE<\/h5>\n<br><p>Just <b>2 STEPS<\/b> a day helps keep the bumps away! \n<br>\n<br><b>Step 1:<\/b> Alternate uses between the Body Firmer masque and Body Exfoliator scrub each day<br>\n<br><b>Step 2:<\/b> Finish every day with the silky Body Shaper cream, and that’s IT! You’re ready to give your body the boost it needs to firm up and smooth out that stubborn cellulite, at last.<\/p>\n<br>\n<b>Pro Tip:<\/b> Remember to apply all products in circular motion to maximize your results.\n<br>\n<br><p><b>90%<\/b> of women say that their cellulite is way less visible after just 4 weeks!<\/p>\n<br>\n<b>95%<\/b> of women say that their skin feels firmer after just 4 weeks!\n<\/h5>"
+          }
+        },
+        "ad9d47a6-6fa2-4aad-9fb0-53f2d5de4600": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "custom-liquid": "<h6 class=\"p1\"><b><meta charset=\"utf-8\">&nbsp;<span style=\"color: #ffb6a1;\" data-mce-fragment=\"1\" data-mce-style=\"color: #ffb6a1;\">•&nbsp;<\/span>Vegan&nbsp;Free&nbsp;<span style=\"color: #ffb6a1;\">•<\/span> <meta charset=\"utf-8\">Cruelty-Free&nbsp;<meta charset=\"utf-8\"><span style=\"color: #ffb6a1;\" data-mce-fragment=\"1\" data-mce-style=\"color: #ffb6a1;\">•<\/span> Breastfeeding Safe&nbsp;<\/b><\/h6>"
+          }
+        },
+        "divider": {
+          "type": "divider",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "pickup": {
+          "type": "pickup",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "66ac37c8-a3b7-4cda-892a-7c357debdcad": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "custom-liquid": "See what"
+          }
+        },
+        "f10c3a3e-2451-4df1-bec6-96d1712b87ee": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "ceee7b9d-e856-409a-b361-8f087238a0e3": {
+          "type": "whatsin",
+          "disabled": true,
+          "settings": {
+            "Heading": "",
+            "title": "BODY SHAPER",
+            "title2": "(4Fl Oz. \/ 118 mL.)",
+            "price": "59.99",
+            "price2": "43.32",
+            "descs": "A daily skin-firming, cellulite-reducing cream for anywhere on your body. The Body Shaper increases blood circulation, reduces water retention, and spreads fat tissues to significantly reduce the appearance of  cellulite."
+          }
+        },
+        "4b1ab7dc-c1fe-4f14-8c5e-31116c43c8d5": {
+          "type": "whatsin",
+          "disabled": true,
+          "settings": {
+            "Heading": "",
+            "title": "BODY EXFOLIATOR",
+            "title2": "(4.9 Fl Oz. \/ 144 mL.)",
+            "price": "59.99",
+            "price2": "43.32",
+            "descs": "A double-shot espresso to wake your body up. A body scrub that diminishes the appearance of cellulite, improves blood circulation underneath the surface of the skin and reveals a new healthy layer of skin. The caffeine constricts the blood vessels to reduce the appearance of dimples and the antioxidants fight off free radicals. The fatty acids give a glossy appearance to the skin."
+          }
+        },
+        "73005589-bafd-4f4d-8c6e-259fcff2ceb7": {
+          "type": "whatsin",
+          "disabled": true,
+          "settings": {
+            "Heading": "",
+            "title": "BODY GUA SHA TOOL",
+            "title2": "($45 VALUE)",
+            "price": "45",
+            "price2": "0",
+            "descs": "Good for Lymphatic drainage, contours and sculpts body, reduces the appearance of cellulite, promotes collagen production, diminishes the appearance of stretch marks and scars, and reduces inflammation."
+          }
+        },
+        "45d98e93-5b9f-4e66-9e7a-8327f43f79a7": {
+          "type": "whatsin",
+          "disabled": true,
+          "settings": {
+            "Heading": "",
+            "title": "LUXE VELVET COSMETIC BAG",
+            "title2": "($40 VALUE)",
+            "price": "40",
+            "price2": "0",
+            "descs": "Super adorable velvet bag with zipper closure, perfect to store your things."
+          }
+        },
+        "f74b247a-6696-4f58-b759-61e6d9f84ab5": {
+          "type": "whatsin",
+          "settings": {
+            "Heading": "",
+            "title": " BODY SHAPER ",
+            "title2": "(4Fl Oz. \/ 118 mL.)",
+            "price": "69.99",
+            "price2": "49.50",
+            "descs": "A daily skin-firming, cellulite-reducing cream for anywhere on your body. The Body Shaper increases blood circulation, reduces water retention, and spreads fat tissues to significantly reduce the appearance of cellulite."
+          }
+        },
+        "29224566-fd1a-4a5d-851b-ea91baca387c": {
+          "type": "whatsin",
+          "settings": {
+            "Heading": "",
+            "title": " BODY FIRMER  ",
+            "title2": "(4 Fl Oz. \/ 118 mL.)",
+            "price": "69.99",
+            "price2": "49.50",
+            "descs": "A treatment masque to take cellulite reduction to the next level. With an action packed combo of Vitamin A, C, & D, this masque promotes cell-turnover, giving your skin elasticity and firmness, while hydrating the skin. You’ll wash off the mask to supple and bouncy skin!"
+          }
+        }
+      },
+      "block_order": [
+        "9a98c6f7-a709-47bc-af9d-983d337bb48a",
+        "heading",
+        "e29f83c9-653c-406f-8b94-46211d3a40d9",
+        "8c84b736-51f8-41e6-ae87-1cce2a4e1803",
+        "price",
+        "thumbnails",
+        "description",
+        "vendor",
+        "options",
+        "buy-buttons",
+        "566fea39-9487-4052-9274-42473ca2be9d",
+        "7a8704f3-445e-4f9b-9daf-951da864da6c",
+        "c0e0dfc9-7bad-4bb1-88a9-660fefe270a3",
+        "488a8233-94ae-4794-a1dc-bfc5b5edf8ad",
+        "3646dcf1-6957-4947-8192-df09264bb9b8",
+        "a47a167a-b824-4120-bf13-a8fdd18b277c",
+        "3af31267-b981-40ac-ae7b-68cfa51dbca7",
+        "eb374486-0dc5-4c07-9a16-98b3444ebc18",
+        "a62d7b49-cc23-4e25-b3f5-7418dba43987",
+        "772b4a3b-99bc-4e47-baa7-b836aa1666d9",
+        "9949ef2f-d28a-47ad-bd9e-eb99bf166eec",
+        "9c679054-438b-451b-9eb7-30c295cdc6f2",
+        "ad9d47a6-6fa2-4aad-9fb0-53f2d5de4600",
+        "divider",
+        "pickup",
+        "66ac37c8-a3b7-4cda-892a-7c357debdcad",
+        "f10c3a3e-2451-4df1-bec6-96d1712b87ee",
+        "ceee7b9d-e856-409a-b361-8f087238a0e3",
+        "4b1ab7dc-c1fe-4f14-8c5e-31116c43c8d5",
+        "73005589-bafd-4f4d-8c6e-259fcff2ceb7",
+        "45d98e93-5b9f-4e66-9e7a-8327f43f79a7",
+        "f74b247a-6696-4f58-b759-61e6d9f84ab5",
+        "29224566-fd1a-4a5d-851b-ea91baca387c"
+      ],
+      "settings": {
+        "show-breadcrumbs": true,
+        "modal-enabled": true,
+        "image-zoom-enabled": true,
+        "loop-enabled": false,
+        "mobile-media-style": "slideshow",
+        "text_1": "",
+        "text_2": "",
+        "text_3": "",
+        "text_4": ""
+      }
+    },
+    "8ad714e6-ced1-4f6e-9c6c-c6afd5ec8f60": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom-liquid": "<h5>HOW TO USE<\/h5>\n<br><p>Just <b>2 STEPS<\/b> a day helps keep the bumps away! \n<br>\n<br><b>Step 1:<\/b> Alternate uses between the Body Firmer masque and Body Exfoliator scrub each day<br>\n<br><b>Step 2:<\/b> Finish every day with the silky Body Shaper cream, and that’s IT! You’re ready to give your body the boost it needs to firm up and smooth out that stubborn cellulite, at last.<\/p>",
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "0b9182ce-8907-4938-bedb-40e82f3aa588": {
+      "type": "how-to-use",
+      "blocks": {
+        "afcd8c8f-17fa-42ea-b83f-9899118ea9f1": {
+          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": true,
+          "settings": {
+            "publishId": "rzwfugre25xa0"
+          }
+        }
+      },
+      "block_order": [
+        "afcd8c8f-17fa-42ea-b83f-9899118ea9f1"
+      ],
+      "settings": {
+        "text": "<h5>HOW TO USE<\/h5>\n<ul class=\"text-align-new\">\n<li>\n<b>Step 1:<\/b> Apply a thick layer of BODY FIRMER Collagen Mask over clean skin focusing on areas with cellulite. Remove with soft wet cloth or sponge. Massage remaining masque into skin. <br>\n<li><b>Step 2:<\/b> Apply a generous layer of BODY SHAPER Booty Firming Cream focusing on areas with cellulite once daily at nighttime. Massage into skin using a circular motion until absorbed into skin.<\/p>\n<br>\n<b>PRO TIP:<\/b> Add a body massage into your routine on these areas at least once a week.  Hold the Gua Sha tool at a flat angle and use pressure on the skin as you apply long, lifted strokes upward and outward to activate lymphatic drainage. Continue these motions for 3-4 minutes."
+      }
+    },
+    "05439a5f-b652-4835-b41a-fdef29f1a410": {
+      "type": "text-columns-product-page",
+      "blocks": {
+        "template--15991045390502__05439a5f-b652-4835-b41a-fdef29f1a410-1672240719b1cf58db-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "image": "shopify:\/\/shop_images\/BounceBack_467353ac-5690-45a8-a91f-c3bd0f694ec1.gif",
+            "title": "",
+            "description": "",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        },
+        "template--15991045390502__05439a5f-b652-4835-b41a-fdef29f1a410-1672240719b1cf58db-1": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "image": "shopify:\/\/shop_images\/100-Days2_2da059bf-4d9f-4d43-8c96-e124b306eaf8.jpg",
+            "title": "",
+            "description": "",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--15991045390502__05439a5f-b652-4835-b41a-fdef29f1a410-1672240719b1cf58db-0",
+        "template--15991045390502__05439a5f-b652-4835-b41a-fdef29f1a410-1672240719b1cf58db-1"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 2,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 2,
+        "aspect-ratio": "natural",
+        "image-width": 0,
+        "mobile-width": "1",
+        "text-alignment": "center",
+        "heading": "",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "a49f85ca-d4ac-4ec3-adc8-0d467ae512ef": {
+      "type": "text-columns",
+      "disabled": true,
+      "blocks": {
+        "template--15934453874854__a49f85ca-d4ac-4ec3-adc8-0d467ae512ef-1666803018e7f79f5e-0": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "",
+            "description": "",
+            "link-url": "",
+            "link-text": ""
+          }
+        },
+        "template--15934453874854__a49f85ca-d4ac-4ec3-adc8-0d467ae512ef-1666803018e7f79f5e-1": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "",
+            "description": "",
+            "link-url": "",
+            "link-text": ""
+          }
+        },
+        "template--15934453874854__a49f85ca-d4ac-4ec3-adc8-0d467ae512ef-1666803018e7f79f5e-2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "<p>Explain a set of product features, add illustrations, infographics, logo lists, or link to pages.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        },
+        "template--15934453874854__a49f85ca-d4ac-4ec3-adc8-0d467ae512ef-1666803018e7f79f5e-3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "<p>Explain a set of product features, add illustrations, infographics, logo lists, or link to pages.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--15934453874854__a49f85ca-d4ac-4ec3-adc8-0d467ae512ef-1666803018e7f79f5e-0",
+        "template--15934453874854__a49f85ca-d4ac-4ec3-adc8-0d467ae512ef-1666803018e7f79f5e-1",
+        "template--15934453874854__a49f85ca-d4ac-4ec3-adc8-0d467ae512ef-1666803018e7f79f5e-2",
+        "template--15934453874854__a49f85ca-d4ac-4ec3-adc8-0d467ae512ef-1666803018e7f79f5e-3"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 2,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 2,
+        "aspect-ratio": "natural",
+        "image-width": 0,
+        "mobile-width": "1",
+        "text-alignment": "center",
+        "heading": "",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_related_products": true,
+        "related_title": "You may also like",
+        "related_grid_num": "4",
+        "related_grid_row": "1"
+      }
+    },
+    "1667919439e8a0056f": {
+      "type": "apps",
+      "disabled": true,
+      "blocks": {
+        "5ecdb9d9-b756-4c19-8dc7-e7fec9524353": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "5ecdb9d9-b756-4c19-8dc7-e7fec9524353"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "56f88c73-3f3c-4b5d-a6fe-e1cd6be2599b": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom-liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"236257\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-name=\"{{ product.title | escape }}\" data-yotpo-url=\"{{ shop.url }}{{ product.url }}\" data-yotpo-image-url=\"{{ product.featured_image | product_img_url: \"large\" |replace: '?', '%3F' | replace: '&','%26'}}\" data-yotpo-description=\"{{ product.description | escape }}\"><\/div>\n\n<Style>\n.yotpo-horizontal-pagination .yotpo-reviews-pagination-item {\n    cursor: pointer;\n    padding: 5px 9px;\n    min-width: 20px;\n    margin-left: 5px;\n    margin-right: 5px;\n    color: var(--text-color);\n    height: 22px;\n    font-style: normal;\n    font-weight: 400;\n    font-size: 16px;\n    line-height: 22px;\n    color: #CA507F;\n}\n.yotpo-reviewer-verified-buyer-text[data-v-0673f83a] {\n    font-size: smaller;\n    color: var(--primary-color);\n    font-family: var(--secondary-font-family);\n    font-weight: var(--secondary-font-weight);\n    font-style: var(--secondary-font-style);\n    white-space: nowrap;\n    color: #CA507F;\n}\n.yotpo-horizontal-pagination .selected, .yotpo-horizontal-pagination .yotpo-pagination-number:hover {\n    color: #CA507F;\n    background-color: var(--primary-color);\n    border-radius: 5px;\n}\n<\/style>",
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "product-share": {
+      "type": "product-share",
+      "settings": {
+        "enabled": true,
+        "background-color": "none",
+        "light-text": false,
+        "twitter-enabled": true,
+        "facebook-enabled": true,
+        "pinterest-enabled": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8ad714e6-ced1-4f6e-9c6c-c6afd5ec8f60",
+    "0b9182ce-8907-4938-bedb-40e82f3aa588",
+    "05439a5f-b652-4835-b41a-fdef29f1a410",
+    "a49f85ca-d4ac-4ec3-adc8-0d467ae512ef",
+    "recommendations",
+    "1667919439e8a0056f",
+    "56f88c73-3f3c-4b5d-a6fe-e1cd6be2599b",
+    "product-share"
+  ]
+}

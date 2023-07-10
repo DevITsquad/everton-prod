@@ -1,0 +1,151 @@
+{
+  "sections": {
+    "8a81b7ad-53ae-4ced-879f-c0ce47e5ceb0": {
+      "type": "image-with-text",
+      "settings": {
+        "text-color": "light",
+        "background-color": "none",
+        "container-width": 6,
+        "spacing-above": false,
+        "spacing-below": true,
+        "image-height": 4,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "medium",
+        "overlap": true,
+        "box-around-text": false,
+        "mobile-overlay": true,
+        "image": "shopify:\/\/shop_images\/AdobeStock_536781649.jpg",
+        "overline": "its clear",
+        "title": "OUR CUSTOMERS LOVE US!",
+        "description": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "show-title": true,
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "c1197b86-5b39-4f3f-a899-20ec13bdaca7": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<center>\n<div><p>See Reviews For<\/p><\/div>\n\n<button><a href=\"#sectionA\">Bundles<\/a>\n<\/button>\n\n<button><a href=\"#sectionA\">Bundles<\/a>\n<\/button>\n\n<button><a href=\"#sectionA\">Bundles<\/a>\n<\/button>\n\n<\/center>"
+      }
+    },
+    "97a5d0a2-f09c-4aa9-b783-3df268a68310": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<center>\n<h1 style=\"font-size:60px;\">OUR CUSTOMERS LOVE US<\/h1>\n<\/center>"
+      }
+    },
+    "09d0691c-c341-48fe-927e-3655925595dd": {
+      "type": "text-columns",
+      "blocks": {
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-0": {
+          "type": "image",
+          "settings": {
+            "show-image": true,
+            "title": "BODY SMOOTHER",
+            "description": "<p>\"I LOVE this product. I noticed the difference in 2 weeks!\"<br\/>— Tritia J.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        },
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-2": {
+          "type": "image",
+          "settings": {
+            "show-image": true,
+            "title": "KEEPIN' IT TAUT",
+            "description": "<p>\"Amazing results!\"<br\/>— Jennifer S.<\/p>",
+            "link-url": "shopify:\/\/products\/keepin-it-taut",
+            "link-text": "SHOP NOW"
+          }
+        },
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-3": {
+          "type": "image",
+          "settings": {
+            "show-image": true,
+            "title": "Body exfoliator",
+            "description": "<p>\"Incredible product. I bought one for my mother and sister!\"<br\/>— Ruby J.<\/p>",
+            "link-url": "shopify:\/\/products\/body-exfoliator",
+            "link-text": "SHOP NOW"
+          }
+        },
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-1": {
+          "type": "image",
+          "settings": {
+            "show-image": true,
+            "title": "BODY FIRMER",
+            "description": "<p>\"Have never felt so comfortable in my skin, highly recommend.\"<br\/>— Stacy L.<\/p>",
+            "link-url": "shopify:\/\/products\/body-firmer",
+            "link-text": "SHOP NOW"
+          }
+        },
+        "a9319336-fd57-4733-a3e0-650c0af155f7": {
+          "type": "image",
+          "settings": {
+            "show-image": true,
+            "title": "body refresher",
+            "description": "<p>\"Wow this actually works!\"<br\/>— Lucy L.<\/p>",
+            "link-url": "shopify:\/\/products\/body-refresher",
+            "link-text": "Shop now"
+          }
+        },
+        "fbe1f4c4-50d7-4c6a-961d-3c0aacf50d6c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "<p>Explain a set of product features, add illustrations, infographics, logo lists, or link to pages.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-0",
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-2",
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-3",
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-1",
+        "a9319336-fd57-4733-a3e0-650c0af155f7",
+        "fbe1f4c4-50d7-4c6a-961d-3c0aacf50d6c"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 2,
+        "spacing-above": false,
+        "spacing-below": true,
+        "width": 2,
+        "image-width": 0,
+        "mobile-width": "2",
+        "text-alignment": "center",
+        "heading": "",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    }
+  },
+  "order": [
+    "8a81b7ad-53ae-4ced-879f-c0ce47e5ceb0",
+    "main",
+    "c1197b86-5b39-4f3f-a899-20ec13bdaca7",
+    "97a5d0a2-f09c-4aa9-b783-3df268a68310",
+    "09d0691c-c341-48fe-927e-3655925595dd"
+  ]
+}

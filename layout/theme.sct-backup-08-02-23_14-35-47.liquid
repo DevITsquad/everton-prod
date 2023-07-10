@@ -1,0 +1,391 @@
+<!doctype html>
+<html class="no-js flexbox-gap" lang="{{ request.locale.iso_code }}" dir="ltr">
+<head>
+ <script>
+var head = document.head;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "https://184779.t.hyros.com/v1/lst/universal-script?ph=e604ca2ecca862cc93c174fbe2ecfdb139a1619df93fde3a31499275d31f613a&tag=!clicked&origin=SHOPIFY&ref_url=" + document.URL ;
+head.appendChild(script);
+</script>
+{% include 'visually_io_sdk' %}
+<!-- hnk portfolio proof -->
+  <meta name="google-site-verification" content="Q6z1pa3612qJbqRjEiTMdBtinkqYhxA5O77GtX8_IQg" />
+
+
+  {% render 'pagefly-head' %}
+    <!-- Blockshop Theme - Version 8.6.0 by Troop Themes - https://troopthemes.com/ -->
+
+
+
+    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/oSnL5hcZwtOriiZw01pE07FYObM5Fak5U173puEM" async></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    <link rel="preconnect" href="https://cdn.shopify.com">
+    <link rel="preconnect" href="https://fonts.shopifycdn.com">
+    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com"> 
+
+    <link rel="preload" href="{{ "theme--critical.css" | asset_url }}" as="style">
+    <link rel="preload" href="{{ "theme--async.css" | asset_url }}" as="style">
+    <link rel="preload" href="{{ 'lazysizes.min.js' | asset_url }}" as="script">
+
+    {%- if canonical_url != blank -%}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {%- endif -%}
+
+    {%- if settings.favicon != blank -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32 }}" type="image/png">
+      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180 }}">
+    {%- endif -%}
+
+    <title>
+      {%- liquid
+        if request.page_type == 'index'
+          echo page_title
+        else
+          echo page_title | append: ' | ' | append: shop.name
+        endif
+      -%}
+    </title>
+
+    {%- liquid
+      render 'meta-tags'
+      render 'css-typography'
+      render 'css-colors'
+      render 'js-variables'
+      render 'js-utilities'
+      render 'swatch-colors'
+      render 'js-modules'
+    -%}
+
+    <script
+      src="{{ 'lazysizes.min.js' | asset_url }}"
+      async="async"
+      onload="this.loaded=true;window.trigger('theme:lazySizes:loaded');"
+    ></script>
+
+    {%- if request.page_type contains 'customers' -%}
+      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+      <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    <link href="{{ "theme--critical.css" | asset_url }}" rel="stylesheet" media="all">
+    <link
+      href="{{ "theme--async.css" | asset_url }}"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    >
+
+    <style>
+      {%- render 'custom-styles' -%}
+    </style>
+
+    <noscript>
+      <style>
+        .layout--main-content > *,
+        .footer--root,
+        .popup-modal-close,
+        .modal--root,
+        .modal--window {
+          opacity: 1;
+        }
+      </style>
+      <link href="{{ "theme--async.css" | asset_url }}" rel="stylesheet">
+    
+     
+    </noscript>
+   {{ 'custom.css' | asset_url | stylesheet_tag }}
+  
+    {{ content_for_header }}
+    {% render 'rapid-search-settings' %}
+    <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/oSnL5hcZwtOriiZw01pE07FYObM5Fak5U173puEM/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})(); </script>
+
+        {% render 'digismoothie-candyrack' %}
+
+{% render 'prime-css' %}
+
+
+  <!-- Reddit Pixel -->
+<script>
+!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_shr8fdo7', {"optOut":false,"useDecimalCurrencyValues":true,"aaid":"<AAID-HERE>","email":"<EMAIL-HERE>","externalId":"<EXTERNAL-ID-HERE>","idfa":"<IDFA-HERE>"});rdt('track', 'PageVisit');
+</script>
+<!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
+<!-- End Reddit Pixel -->
+
+  
+
+  <!-- Snap Pixel Code -->
+<script type='text/javascript'>
+(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+{a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+r.src=n;var u=t.getElementsByTagName(s)[0];
+u.parentNode.insertBefore(r,u);})(window,document,
+'https://sc-static.net/scevent.min.js');
+
+snaptr('init', '9c291779-ac21-409d-9d1d-abe3a2cbf624', {
+'user_email': '__INSERT_USER_EMAIL__'
+});
+
+snaptr('track', 'PAGE_VIEW');
+
+</script>
+<!-- End Snap Pixel Code -->
+  
+
+        {%include 'snapTrack' %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11026455919"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'AW-11026455919', {'allow_enhanced_conversions': true});
+</script>
+
+				
+      
+<script>(() => {const installerKey = 'docapp-discount-auto-install'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(installerKey)) {window.sessionStorage.setItem(installerKey, JSON.stringify({integrationId: urlParams.get('docapp-integration-id'), divClass: urlParams.get('docapp-install-class'), check: urlParams.get('docapp-check')}));}})();</script>
+
+<script>(() => {const previewKey = 'docapp-discount-test'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(previewKey)) {window.sessionStorage.setItem(previewKey, JSON.stringify({active: true, integrationId: urlParams.get('docapp-discount-inst-test')}));}})();</script>
+</head>
+        
+
+  <body
+    class="page--{{ page_title | handle }} template--{{ template | split: '.' | first | remove: '/' | remove: '_' }}"
+    data-theme-id="606"
+    data-theme-name="Blockshop"
+    data-theme-version="8.6.0"
+  >
+    <!--[if IE]>
+      <div style="text-align:center;padding:72px 16px;">
+        {{ 'general.browser_unsupported' | t }}
+      </div>
+      <style>
+        .off-canvas--viewport { display: none; }
+      </style>
+    <![endif]-->
+
+    <a data-item="a11y-button" href='#main-content'>
+      {{- 'general.a11y.skip_main' | t -}}
+    </a>
+
+    <off-canvas-root class="off-canvas--viewport" data-off-canvas--state="closed">
+      <transition-root class="off-canvas--overlay"></transition-root>
+      <transition-root aria-label="{{ 'general.a11y.close' | t }}" data-off-canvas--close>
+        {%- render 'icons', icon: 'cross' -%}
+      </transition-root>
+
+      <div class="off-canvas--main-content">
+        {%- liquid
+          section 'announcement'
+          section 'header'
+
+          echo '<main class="layout--main-content" id="main-content">'
+            echo content_for_layout
+          echo '</main>'
+
+          section 'footer'
+        -%}
+      </div>
+
+      <transition-root class="off-canvas--right-sidebar" data-active="cart">
+        <div class="off-canvas--focus-trigger" tabindex="0"></div>
+
+        {%- liquid
+          if request.page_type == 'product'
+            echo '<div class="off-canvas--container" data-view="pickup"></div>'
+          endif
+
+          if request.page_type == 'collection' or request.page_type == 'search'
+            echo '<div class="off-canvas--container" data-view="filter"></div>'
+          endif
+
+          if settings.product--quick-add-enabled
+            echo '<div class="off-canvas--container" data-view="product-form"></div>'
+          endif
+
+          if settings.cart--type == 'drawer' or settings.product--quick-add-enabled
+            echo '<div class="off-canvas--container" data-view="cart">'
+              render 'cart', view: 'drawer'
+            echo '</div>'
+          endif
+        -%}
+
+        <div class="off-canvas--focus-trigger" tabindex="0"></div>
+      </transition-root>
+
+      <transition-root class="off-canvas--left-sidebar" data-active="menu">
+        <div class="off-canvas--focus-trigger" tabindex="0"></div>
+
+        <div class="off-canvas--container" data-view="menu">
+          {%- render 'mobile-nav' -%}
+        </div>
+
+        <div class="off-canvas--focus-trigger" tabindex="0"></div>
+      </transition-root>
+
+    </off-canvas-root>
+
+    {%- liquid
+      if settings.popup--enabled
+        render 'popup'
+      endif
+
+      render 'main-search'
+      render 'modal'
+      render 'feedback-bar'
+    -%}
+  
+  {% render 'rps-csb' %}
+
+<!-- **BEGIN** Hextom CTB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_ctb_main', product: product, customer: customer %}
+    <!-- **END** Hextom CTB Integration // Main Include - DO NOT MODIFY -->
+
+
+{% render 'primeb-js' %}
+
+<script>
+
+          window.addEventListener('theme:cart:updated', ({ detail: cart }) => {
+            console.log('update')
+  setTimeout(function(){
+    if($('.cart--item[data-upsell-id]').length){
+    $('.cart--item[data-upsell-id]').each(function(){
+      var upid=$(this).attr('data-upsell-id');
+      if($('.cart--item.notupsell[data-variant-id="'+upid+'"]').length){}else{
+        $(this).find('.cart--item--remove a')[0].click();
+        $(this).find('.cart--item--remove a').addClass('hit')
+      }
+      
+    })
+    }
+  },500)
+});
+  {% comment %}  Script {% endcomment %}
+    $(".featured-content--container").click(function () {
+        var link = $(this).attr("data-link");
+        console.log( link );
+        window.location.href = link;
+    });
+
+  $(".data_linkcolre").click(function( event ) {
+    event.preventDefault();
+        var link = $(this).attr("data-link");
+        console.log( link );
+        window.location.href = link;
+    });
+  
+    {% comment %}  Script end {% endcomment %}
+    
+  $('.template--collection .featured-product--wrapper .product-media--root .product-media--featured').click(function () {
+
+var gthtml=$(this).parent().parent().parent().find('h2.featured-product--heading a').attr('href');
+ window.location.href=gthtml
+    console.log(gthtml)
+
+  })
+</script>
+<!--Gorgias Chat Widget Start--><script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=26043"></script>
+<script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script><!--Gorgias Chat Widget End-->
+<!--script>
+  window.renderBadge = function() {
+    var ratingBadgeContainer = document.createElement("div");
+    document.body.appendChild(ratingBadgeContainer);
+    window.gapi.load('ratingbadge', function() {
+      window.gapi.ratingbadge.render(ratingBadgeContainer, {"merchant_id": 669385852});
+    });
+  }
+</script -->
+    {% comment %}
+    <!-- BEGIN GCR Badge Code -->
+    <script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
+    <script>
+    window.renderBadge = function() {
+        var ratingBadgeContainer = document.createElement("div");
+        document.body.appendChild(ratingBadgeContainer);
+        window.gapi.load('ratingbadge', function() {
+        window.gapi.ratingbadge.render(
+            ratingBadgeContainer, {
+            "merchant_id": 669385852,
+            "position": "BOTTOM_LEFT"
+            });           
+        });
+    }
+    // BEGIN GCR Language Code
+    window.___gcfg = {
+        lang: 'en_GB'
+    };
+    </script>
+<!-- END GCR Badge Code -->
+{% endcomment %}
+  {% render 'ms-voila-snip' %}
+
+         {% include 'smile-initializer' %}
+
+</body>
+
+
+</html>
+{% comment %}
+<!-- Begin Shopify-Afterpay JavaScript Snippet (v1.1.5) -->
+{% if cart.currency.iso_code == shop.currency %}
+<script type="text/javascript">
+// Overrides:
+// var afterpay_min = 1.00;       // As per your Afterpay contract.
+// var afterpay_max = 2000.00;    // As per your Afterpay contract.
+// var afterpay_msg_size = 'sm';  // Can be 'xs', 'sm', 'md' or 'lg'.
+// var afterpay_bold_amount = true;
+// var afterpay_logo_theme = 'colour';  // Can be 'colour', 'black' or 'white'.
+// var afterpay_modal_open_icon = true;
+// var afterpay_hide_upper_limit = false;
+// var afterpay_hide_lower_limit = true;
+// var afterpay_show_if_outside_limits = true;
+// var afterpay_cbt_enabled = false;
+// var afterpay_apr_loans_available = false;
+
+// var afterpay_product_integration_enabled = true;
+ var afterpay_product_selector = '.product-buy-buttons--root.desk';
+// var afterpay_variable_price_fallback = false;
+// var afterpay_variable_price_fallback_selector = '';
+// var afterpay_variable_price_fallback_method = 'mutation';  // Can be 'mutation' or 'interval'.
+
+// var afterpay_cart_integration_enabled = true;
+// var afterpay_cart_static_selector = '#cart-subtotal-selector';
+// var afterpay_variable_subtotal_fallback = false;
+// var afterpay_variable_subtotal_fallback_selector = '';
+// var afterpay_variable_subtotal_fallback_method = 'mutation'; // Can be 'mutation' or 'interval'.
+// var afterpay_cart_dynamic_integration_enabled = false;
+
+// var afterpay_footer_logo_enabled = true;
+// var afterpay_footer_logo_format = 'icon';  // Can be 'icon', 'stacked' or 'logo'.
+// var afterpay_footer_logo_theme = 'colour'; // Can be 'colour', 'black' or 'white'.
+// var afterpay_footer_logo_background = 'border';  // Can be 'border' or 'transparent'.
+// var afterpay_footer_logo_container = 'footer ul.payment-icons';
+// var afterpay_footer_logo_template = '<li class="payment-icon"><object data="{logo_path}" type="image/svg+xml"></object></li>';
+
+// Non-editable fields:
+var afterpay_js_language = {{ localization.language.iso_code | slice: 0, 2 | json }};
+var afterpay_js_country = {{ localization.country.iso_code | json }};
+var afterpay_shop_currency = {{ shop.currency | json }};
+var afterpay_cart_currency = {{ cart.currency.iso_code | json }};
+var afterpay_shop_money_format = {{ shop.money_format | json }};
+var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
+var afterpay_theme_name = {{ theme.name | json }};
+var afterpay_product = {{ product | json }};
+var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
+var afterpay_cart_total_price = {{ cart.total_price | json }};
+var afterpay_js_snippet_version = '1.1.5';
+</script>
+<script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+{% else %}
+<!-- Afterpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
+{% endif %}
+<!-- End Shopify-Afterpay JavaScript Snippet (v1.1.5) -->
+{% endcomment %}

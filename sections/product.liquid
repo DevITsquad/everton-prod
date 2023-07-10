@@ -1,0 +1,1203 @@
+{% if product.metafields.custom.upsell_product != blank %} 
+  {% assign upsellproduct=product.metafields.custom.upsell_product.value %}
+  
+
+  {% endif %}
+ 
+ {% assign productTags= product.tags | join: ', '  %}
+
+
+{% if productTags contains 'parentproduct'%}
+  
+  {% for tag in product.tags %}
+
+    {% if tag contains 'parentproduct' %}
+      {% assign  parentproductid=tag | split : '--' %}
+       {% assign  tagproduct=parentproductid[1] %}
+      {% endif %}
+    {% endfor %}
+  <style>
+    body{
+      opacity:1 !important;
+    }
+  </style>
+
+ {% assign product=all_products[tagproduct] %}
+ 
+  {% elsif productTags contains 'hidden'%}
+  <style>
+    body{
+      opacity:0 !important;
+    }
+  </style>
+  <script>
+    window.location.href='/'
+  </script>
+
+  {% endif %}{%- liquid
+  comment
+    Variables
+  endcomment
+
+  assign current_variant = product.selected_or_first_available_variant
+  assign move_to_next_column = false
+  assign image_zoom_enabled = section.settings.image-zoom-enabled
+  assign load_model = false
+  assign load_video = false
+  assign mobile_media_style = section.settings.mobile-media-style
+  assign modal_enabled = section.settings.modal-enabled
+  assign product_id = product.id | append: '-' | append: section.id
+  assign show_breadcrumbs = section.settings.show-breadcrumbs
+  assign video_looping_enabled = section.settings.loop-enabled
+
+  for media in product.media
+    if media.media_type == "model"
+      assign load_model = true
+    elsif media.media_type == "video" or media.media_type == "external_video"
+      assign load_video = true
+    endif
+
+    capture featured_media
+      echo featured_media
+
+      if modal_enabled and media.media_type == 'image'
+        echo '<div class="modal--link">'
+      endif
+
+      render "product--media", media_view: "featured", inside_carousel: false, image_zoom_enabled: image_zoom_enabled, product_media: media, video_looping_enabled: video_looping_enabled, max_height: 600
+
+      if modal_enabled and media.media_type == 'image'
+        echo '</div>'
+      endif
+    endcapture
+
+    if product.media.size > 1
+      capture thumb_html
+        echo thumb_html
+
+        render "product--media", media_view: "thumb", product_media: media, product: product
+      endcapture
+    endif
+
+    capture modal_media
+      echo modal_media
+
+      if media.media_type == 'image'
+        echo '<div class="modal--content">'
+          render "image", image: media.preview_image
+        echo '</div>'
+      endif
+    endcapture
+  endfor
+-%}
+
+  
+  
+ 
+{% for block in section.blocks %}
+  {%- liquid
+    if block.type == 'divider'
+      assign move_to_next_column = true
+      continue
+    endif
+  -%}
+
+  {%- capture block_html -%}
+    <div
+      class="product-page--block {% if block.type == 'afterpay' %}shopeeuh{% endif %} {% if block.type == 'new_icon' %}new_ic none_{% increment my_counter %}{% endif %}"
+      data-product-block
+      data-block-type="{{ block.type }}"
+      {{ block.shopify_attributes }}
+    >
+      {%- case block.type -%}
+          
+           
+         
+       
+        {%- when 'overline' -%}
+          <div class="product-page--overline" data-item="overline">
+            {{ block.settings.text }}
+          </div>
+
+        {%- when 'heading' -%}
+          {% assign titlet= product.title  | split : '/' %}
+        {% comment %}
+         {{ product.metafields.custom.product_title }}
+        {% endcomment %}
+        {% if titlet[1] == blank %}
+                    <h2 class="product-page--heading" data-item="section-heading">
+            {{ titlet[0] }}
+          </h2>
+          {% else %}
+        <h1>{{ titlet[0] }}</h1>
+          {% endif %}
+        {% if titlet[1] != blank %}
+          <h2 class="product-page--heading" data-item="section-heading">
+            {{ titlet[1] }}
+          </h2>
+          {% endif %}
+            <div class="yotpo bottomLine"
+            data-product-id="{{ product.id }}">
+            </div>
+
+        {%- when 'vendor' -%}
+          <div class="product-page--vendor" data-item="light-accent-text">
+            <a href="{{ product.vendor | url_for_vendor }}">
+              {{ product.vendor }}
+            </a>
+          </div>
+
+ {% comment %}{%- when 'price' -%}
+          {%- render 'product-price', product: product, id: product_id -%}{% endcomment %}
+
+        {%- when 'low-stock' -%}
+          {%-
+            render 'product-low-stock',
+            id: product_id,
+            current_variant: current_variant,
+            threshold: block.settings.threshold
+          -%}
+
+        {%- when 'options' -%}
+          {%-
+            render "product-options",
+            id: product_id,
+            product: product,
+            block_settings: block.settings
+          -%}
+        
+          {%- when 'afterpay' -%}
+        {% unless template == 'product.evertone-multi-hair-style' %}
+          {%- render 'afterpay' -%}
+          {% endunless %}
+        
+          {%- when '@app' -%}
+         {% render block %}
+        
+        {%- when 'quantity-input' -%}
+          {%- render 'product-quantity', id: product_id -%}
+
+        {%- when 'buy-buttons' -%}
+         
+           <div class="hide--desktop buy_buttons">
+
+        {% include 'duplicate-button' %}
+            {%- render 'buy-button-only',id: product_id,product: product,smart_payment_enabled: block.settings.smart-payment-enabled, btn-class: block.settings.btn_class  -%}
+        
+            </div>
+         
+        {%- when 'producticon' -%}
+{% include 'product-icon-list' %}
+        
+        {%- when 'unavailable-form' -%}
+          {%- render 'product-unavailable-form', product: product, id: product_id -%}
+
+        {%- when 'pickup' -%}
+          {%- render 'product-pickup', product: product, id: product_id -%}
+
+
+        {%- when 'new_icon' -%}
+        {% assign nmbr=1 %}
+{% for block in section.blocks %}
+         {% if nmbr == 1 %}
+        <div class="new_iconsec">
+{% for block in section.blocks %}  
+        {% if block.settings.texticon != blank %}
+        <div class="ic">
+        <span class="iconimg"><img src="{{ block.settings.imageicon | img_url : 'master' }}"></span>
+        <span class="icontxt">{{ block.settings.texticon }}</span>
+        </div>
+            {% endif %}
+  {% endfor %}
+        </div>
+              {% assign nmbr=nmbr | plus : 1 %}
+        {% endif %}
+   {% endfor %}
+        {%- when 'collapsible-tab' -%}
+          {%- render 'collapsible-tab', block: block -%}
+
+        {%- when 'description' -%}
+      
+          {% if product.handle == "evertone-microcurrent-facial-toning-device" %}
+        {% else %}
+        <div class="hide--desktop">
+
+        {% include 'duplicate-button' %}
+            {%- render 'buy-button-only',id: product_id,product: product,smart_payment_enabled: block.settings.smart-payment-enabled, btn-class: block.settings.btn_class  -%}
+        
+            </div>
+        
+        {% endif %}
+        {% if template == 'product.evertone-multi-hair-style' %}
+  {% render 'afterpay' %}
+        {% endif %}
+        {% if product.handle == "evertone-microcurrent-facial-toning-device" or product.id == 7750648987814 %}
+          {% else %}
+         {% if product.metafields.custom.upsell_product != blank %}
+        {% render 'upsell',product:product ,upsellproduct:upsellproduct, upsell_second_product:upsell_second_product, heading:block.settings.upsell_heading %}
+          {% endif %}
+          {% endif %}
+        <div class="hide--desktop">
+        {% if product.handle == "evertone-microcurrent-facial-toning-device" %}
+        {% include 'duplicate-button' %}
+            {%- render 'buy-button-only',id: product_id,product: product,smart_payment_enabled: block.settings.smart-payment-enabled, btn-class: block.settings.btn_class  -%}
+        {% endif %}
+            </div>
+          
+        {% if product.handle == "evertone-microcurrent-facial-toning-device" or product.id == 7750648987814 or product.id == 7746099380390 %}
+           {% render 'afterpay' %}
+          {% endif %}
+        
+          {%- unless product.description == blank -%}
+            <div class="product-page--description" data-item="rte-content">
+         
+            {% assign prodes= product.description  | split : '<!---->' %}
+              {{ prodes[0] }}
+{% assign nmbr=1 %}
+{% for block in section.blocks %}
+      {% if block.type == 'whatsin' %}
+        
+        {% if nmbr == 1 %}
+          <div class="main-description-border">
+        {% if block.settings.Heading != blank %}  
+          <h5>{{ block.settings.Heading | limit : 1 }}</h5>
+          {% endif %}
+          <ul class="new-listclass">
+{% for block in section.blocks %}
+      {% if block.type == 'whatsin' %}
+        {% if block.settings.title != blank %}
+          <li>
+          <strong>{{ block.settings.title }} </strong><br><span class="nw">{{ block.settings.title2 }} </span>
+          <span class="pricedes nw">
+          <div class="product-price--wrapper">
+           {% if block.settings.price != blank %}
+          <div class="product-price--compare" data-item="light-accent-text" style="display:inline-block;">
+          ${{ block.settings.price }}
+          </div>    
+          {% endif %}
+              {% if block.settings.price2 != blank %}
+          <div class="product-price--original" data-item="accent-text">
+          ${{ block.settings.price2 }}
+          </div>
+                {% endif %}
+          </div>
+          </span>
+          <p class="nw">{{ block.settings.descs }}</p>
+          </li>
+          {% endif %}
+        {% endif %}
+{% endfor %}
+          </ul>
+          </div>
+            {% endif %}
+        {% assign nmbr=nmbr | plus : 1 %}
+        {% endif %}
+   {% endfor %}
+
+            
+{% comment %}
+              {%- if product.metafields.custom.perfect_for != blank %}
+              <div class="Cellulite-Reducing-border">
+              <h5>Perfect For:</h5>
+              <p>{{ product.metafields.custom.perfect_for }}</p>
+            </div>
+                {%- endif -%}
+            <p>
+<span style="font-weight: 400;">
+<span>
+<strong>
+{%- if product.metafields.custom.tickone != blank %}
+✔️<span style="color: #ca507f;" data-mce-style="color: #ca507f;">{{ product.metafields.custom.tickone }}</span> 
+{%- endif -%}
+{%- if product.metafields.custom.ticktwo != blank %}
+✔️<span style="color: #ca507f;" data-mce-style="color: #ca507f;">{{ product.metafields.custom.ticktwo }}</span>
+{%- endif -%}
+{%- if product.metafields.custom.tickthree != blank %}
+✔️<span style="color: #ca507f;" data-mce-style="color: #ca507f;">{{ product.metafields.custom.tickthree }}</span>
+{%- endif -%}
+{%- if product.metafields.custom.tickfour != blank %}
+✔️<span style="color: #ca507f;" data-mce-style="color: #ca507f;">{{ product.metafields.custom.tickfour }}</span>
+{%- endif -%}
+{%- if product.metafields.custom.tickfive != blank %}
+✔️<span style="color: #ca507f;" data-mce-style="color: #ca507f;">{{ product.metafields.custom.tickfive }}</span>
+{%- endif -%}
+{%- if product.metafields.custom.ticksix != blank %}
+✔️<span style="color: #ca507f;" data-mce-style="color: #ca507f;">{{ product.metafields.custom.ticksix }}</span>
+{%- endif -%}
+</strong>
+</span>
+</span>
+</p>
+            {% endcomment %}
+{{ prodes[1] }}
+{% if block.settings.chart_size %}
+<div class="size-chart">
+  <h5>{{ block.settings.chart_heading }}</h5>
+  <img src="{{ block.settings.chart_size | img_url:'master' }}" class="cstm-img">
+</div>
+ {% endif %}
+            </div>
+           
+          {%- endunless -%}
+
+        {%- when 'rating' -%}
+          {%- render 'product-rating' -%}
+
+        {%- when 'liquid' -%}
+          {{- block.settings.custom-liquid -}}
+        
+{%- when 'image_picker' -%}
+        <img src="{{ block.settings.image | img_url : 'master' }}">
+        
+      {%- when 'textbox' -%}
+
+        <div class="custom-text-block">
+        <div class="txtbx" style="color: {{ block.settings.color_heading }};"> {{ block.settings.custom_text_title }} </div>
+        </div>
+
+
+      {%- endcase -%}
+    </div>
+  {%- endcapture -%}
+
+  {%- liquid
+    unless move_to_next_column
+      capture left_column_blocks
+        echo left_column_blocks
+        echo block_html
+      endcapture
+    else
+      capture right_column_blocks
+        echo right_column_blocks
+        echo block_html
+      endcapture
+    endunless
+  -%}
+{%- endfor -%}
+
+{% comment %} View {% endcomment %}
+<product-root
+  class="product-page--root"
+  data-section-id="{{ section.id }}"
+  data-section-type="product_page"
+  data-product-id="{{ product_id }}"
+  data-handle="{{ product.handle }}"
+  data-magnify="1.7"
+  data-mobile-media-style="{{ mobile_media_style }}"
+  data-zoom-enabled="{{ image_zoom_enabled }}"
+>
+  <div class="product-page--wrapper product_main_container">
+    <div class="img_section inside_cont">
+<div class="thumb_img_con slider-nav">
+{% for image in product.images %}
+  <div class="thumbin_img">
+  <img class="hidde" data-src="{{ image | img_url: 'master' }}" src="{{ image | img_url: 'master' }}" alt="{{ image.alt | escape }}" />
+  </div>
+{% endfor %}
+</div>
+    <div class="main_pro_img slider-for">
+      {% for image in product.images %}
+        <div class="mainin_img">
+  <img class="hidde" data-src="{{ image | img_url: 'master' }}" src="{{ image | img_url: 'master' }}" alt="{{ image.alt | escape }}" />
+        </div>
+    {% endfor %}
+    </div>
+                  {%- if mobile_media_style == 'slideshow' -%}
+<div class="thumb_img_con slider-nav slide_mob">
+{% for image in product.images %}
+  <div class="thumbin_img">
+  <img class="hidde" data-src="{{ image | img_url: 'master' }}" src="{{ image | img_url: 'master' }}" alt="{{ image.alt | escape }}" />
+  </div>
+{% endfor %}
+</div>
+            {%- endif -%}
+    </div>
+{% comment %}
+    <div class="product-page--center">
+
+            {%- if product.media.size > 1 -%}
+            <div class="product-page--thumbs">
+              {%
+                render "product--media",
+                media_view: "thumb-container",
+                thumb_html: thumb_html,
+                direction: "row",
+                product: product
+              %}
+            </div>
+          {%- endif -%}
+          
+      <div
+        class="product-media--wrapper"
+        data-media-type="{{ current_variant.featured_media.media_type }}"
+      >
+        {%- if product.media.size > 0 -%}
+          <modal-root
+            class="modal--root slider-for"
+            data-modal-view="product-media"
+            {%- if mobile_media_style == 'slideshow' -%}
+              data-mq="medium-large"
+            {%- endif -%}
+          >
+            {%- liquid
+              echo featured_media
+
+              if modal_enabled
+                echo '<div class="product-page--modal-media">'
+                  echo modal_media
+                echo '</div>'
+              endif
+            -%}
+          </modal-root>
+
+          {%- if mobile_media_style == 'slideshow' -%}
+            <div class="product-page--carousel" data-mq="small">
+              {% render
+                "carousel",
+                view: "product-page",
+                section_id: section.id,
+                product: product,
+                video_looping_enabled: video_looping_enabled,
+                blocks: product.media
+                dot_nav_enabled: true,
+                media_size: "mobile",
+                blocks_per_slide: 1,
+                blocks_per_slide_mobile: 1,
+                total_blocks: product.media.size,
+                total_slides: product.media.size,
+                spacing_around_blocks: true,
+                transition_type: "slide"
+              -%}
+            </div>
+          {%- endif -%}
+
+        {%- else -%}
+          {%- render 'placeholder', type: 'product', aspect_ratio: 1, placeholder_index: 1 -%}
+
+        {%- endif -%}
+      </div>
+ 
+
+      <div class="product-page--right-column" data-position="collapsed" data-mq="medium-large">
+        
+        {{- right_column_blocks -}}
+      </div>
+    </div>
+    {% endcomment %}
+  <div class="product-page--left-column inside_cont">
+      {{ left_column_blocks }}
+    </div>
+<!--     <div class="product-page--right-column" data-position="column">
+      {{- right_column_blocks -}}
+    </div> -->
+  </div>
+</product-root>
+
+{%-
+  render "product--scripts",
+  product: product,
+  id: product_id,
+  load_model: load_model,
+  load_video: load_video
+-%}
+
+
+  <script type="text/javascript">
+    $( document ).ready(function() {
+      setTimeout(function() { 
+currLoc = $(location).attr('href');
+    scrollsec = currLoc.split('#');
+    secid = '#'+scrollsec[1]
+        $('html, body').animate({
+        scrollTop: $(secid).offset().top
+    }, 2000);
+    console.log(secid);
+       }, 1000);
+    });
+  $(document).ready(function(){
+    $(document).on('click', '.product-page--wrapper .yotpo-display-wrapper', function () {
+  console.log('tt')
+
+      
+       $('html, body').animate({
+        scrollTop: $(".yotpo-widget-instance").offset().top
+    }, 250);
+    })
+  
+  })
+
+    
+	</script>
+{% comment %}
+    $( document ).ready(function() {
+
+var html = $(".hide--desktop .product-price--root").html();
+        $("span.pricedes").html(html);
+        console.log(html);
+
+    })
+
+    $( document ).ready(function() {
+    var span = $('.product-page--description span strong').html();
+    span = span.replace(/&nbsp;/g, '');
+    $('.product-page--description span strong').html(span);
+});
+{% endcomment %}
+ 
+ <style>
+
+   span.product-buy-buttons--cta-texts {
+    color: white;
+}
+.product-page--block.shopeeuh {
+    margin-top: 5px;
+}
+.afterpaysec afterpay-placement {
+    display: block !important;
+    text-align: center;
+}
+
+   
+   shopify-payment-terms {
+    font-size: 14px;
+    text-align: center;
+}
+
+   
+   .template--product .product_main_container {
+    display: inline-block !important;
+    width: 100%;
+}
+
+.template--product .product_main_container .inside_cont {
+    display: inline-block;
+    width: 49%;
+    float: left;
+    padding: 0 10px;
+}
+
+.template--product .product_main_container .img_section .thumb_img_con {
+    width: 15.6%;
+    display: inline-block;
+    height: auto;
+}
+
+.template--product .product_main_container .img_section .main_pro_img {
+    display: inline-block;
+    width: 79%;
+    padding-left: 5px;
+}
+.template--product .product_main_container .img_section .thumb_img_con.slide_mob {
+    display: none;
+}
+   .template--product .product_main_container .img_section .thumb_img_con .slick-arrow {
+    position: absolute;
+    border-radius: 0;
+    background-image: url({{'white-left-arrow.webp' | file_url }});
+}
+
+.slick-slider .slick-arrow {
+    border: none;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: #CA507F;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+    text-indent: 40px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 5px 0px rgb(0 0 0 / 8%);
+    box-shadow: 0 0 5px #00000014;
+}
+.yotpo .yotpo-icon-default-star:before, .yotpo .yotpo-icon-star:before, .yotpo .yotpo-icon-half-star:before, .yotpo .text-m, .yotpo .text-m:hover {
+    color:#000 !important;
+}  
+.template--product .product_main_container .img_section .thumb_img_con .slick-arrow.slick-prev {
+    top: -10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(90deg);
+    -ms-transform: translateX(-50%) rotate(90deg);
+    transform: translate(-50%) rotate(90deg);
+}
+
+.template--product .product_main_container .img_section .thumb_img_con .slick-arrow.slick-next {
+    bottom: -10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(90deg);
+    -ms-transform: translateX(-50%) rotate(90deg);
+    transform: translate(-50%) rotate(-90deg);
+    top: auto;
+}
+.template--product .product_main_container .img_section .thumb_img_con .thumbin_img {
+    padding: 2px;
+    transition: ease .3s;
+    border: transparent 3px solid;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+.template--product .product_main_container .img_section .thumb_img_con .thumbin_img.slick-current {
+    border-color: #dedede;
+   <-- box-shadow: #0003 3px 3px 3px; -->
+}
+.template--product .product_main_container .img_section .thumb_img_con .slick-arrow.slick-disabled {
+    opacity: .5;
+}
+
+      @media only screen and (max-width: 1024px) {
+   .hide--desktop {
+    margin-bottom: 25px;
+}
+      }
+   @media only screen and (min-width: 768px) {
+.template--product .product_main_container .inside_cont.img_section {
+    position: sticky;
+    top: 75px;
+}
+     .template--product .product_main_container .img_section .thumb_img_con {
+       top: -7px;   
+     }
+     
+   }
+   
+   @media only screen and (max-width: 767px) {
+.template--product .product_main_container .inside_cont {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+.template--product .product_main_container .img_section .thumb_img_con {
+    display: none;
+}
+.template--product .product_main_container .img_section .thumb_img_con.slide_mob {
+    //display: block;
+    width: 100%;
+    position: unset;
+}
+.template--product .product_main_container .img_section .main_pro_img {
+    width: 100%;
+    padding: 0;
+}
+.main_pro_img.slider-for.slick-initialized.slick-slider {}
+
+.template--product .product_main_container .img_section .thumb_img_con .slick-arrow.slick-prev {
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%) rotate(0);
+}
+
+.template--product .product_main_container .img_section .thumb_img_con .slick-arrow.slick-next {
+    right: -10px;
+    bottom: auto;
+    left: auto;
+    transform: translate(-50%) rotate(180deg);
+    top: 50%;
+}
+.template--product .product_main_container .inside_cont.product-page--left-column {
+    float: none;
+    margin-top: 10px;
+}   
+     span.pricedes {
+    position: absolute;
+}
+}
+      @media only screen and (max-width: 380px) {
+    
+     shopify-payment-terms{
+       font-size: 10px;
+    text-align: center;
+     }
+   }
+         @media only screen and (max-width: 360px) {
+span.pricedes {
+    position: unset;
+}
+      }
+ </style>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <script>
+   
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    infinite: false,    
+    asNavFor: '.slider-nav',
+    responsive: [{
+        breakpoint: 768, settings: { fade: false, slidesToShow: 1.2, dots: true,}
+    }]
+});
+$('.slider-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    vertical:true,
+    asNavFor: '.slider-for',
+    dots: false,
+    focusOnSelect: true,
+    verticalSwiping:true,
+    arrows: true,
+    infinite: false,
+    responsive: [
+        {breakpoint: 1251, settings: {slidesToShow: 4,}},  
+        {breakpoint: 1101, settings: { slidesToShow: 3, }},
+        {breakpoint: 990, settings: { slidesToShow: 6, }},
+        {breakpoint: 768, settings: "unslick"},
+       // {breakpoint: 500, settings: { vertical: false, slidesToShow: 4, slidesToScroll: 1, arrows: true, }}
+    ]
+});
+
+   
+   $( '.upsell-grid input' ).change(function() {
+if ($(this).is(':checked')) {
+var htmltxt = $('.duplicate--btn button .product-price--root').html();
+$('.newproicedup .product-price--root').html(htmltxt);
+}
+    });
+
+// var text = $('.pro-cus-text .txtbx').text();
+// console.log(text);
+// $('.custom-text-block .txtbx').text('');
+// $('.custom-text-block .txtbx').text(text);
+   
+   
+   
+ </script>
+{% schema %}
+{
+  "name": "Product pages",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show-breadcrumbs",
+      "label": "Show breadcrumbs",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "paragraph",
+      "content": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)."
+    },
+    {
+      "type": "checkbox",
+      "id": "modal-enabled",
+      "label": "Enable modal popup",
+      "default": true,
+      "info": "Triggers when you click the selected media"
+    },
+    {
+      "type": "checkbox",
+      "id": "image-zoom-enabled",
+      "label": "Enable image zoom",
+      "default": true,
+      "info": "Triggers when you roll your mouse over an image"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop-enabled",
+      "label": "Enable video looping",
+      "default": false
+    },
+    {
+      "type": "radio",
+      "id": "mobile-media-style",
+      "label": "Mobile media navigation",
+      "options": [
+        { "label": "Thumbnails", "value": "thumbnails" },
+        { "label": "Slideshow", "value": "slideshow" }
+      ],
+      "default": "slideshow"
+    },
+    {
+      "type": "header",
+      "content": "Positions"
+    },
+    {
+      "type": "paragraph",
+      "content": "Screens between 768-1280px will rearrange columns automatically to prevent content from getting squished."
+    },
+    {
+      "type":"image_picker",
+      "id":"image_1",
+      "label":"Image"
+    },
+    {
+      "type":"text",
+      "id":"text_1",
+      "label":"Text"
+    },
+    {
+      "type":"image_picker",
+      "id":"image_2",
+      "label":"Image"
+    },
+    {
+      "type":"text",
+      "id":"text_2",
+      "label":"Text"
+    },
+    {
+      "type":"image_picker",
+      "id":"image_3",
+      "label":"Image"
+    },
+    {
+      "type":"text",
+      "id":"text_3",
+      "label":"Text"
+    },
+    {
+      "type":"image_picker",
+      "id":"image_4",
+      "label":"Image"
+    },
+    {
+      "type":"text",
+      "id":"text_4",
+      "label":"Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "overline",
+      "name": "Overline text",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Overline text",
+          "id": "text",
+          "type": "text",
+          "default": "Overline text"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Title",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "vendor",
+      "name": "Vendor",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "quantity-input",
+      "name": "Quantity input",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "low-stock",
+      "name": "Low stock notice",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Show low in stock notice when quantity is",
+          "id": "threshold",
+          "type": "range",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "default": 5,
+          "info": "Set to 0 to disable this feature. Updated for each variant."
+        }
+      ]
+    },
+    {
+      "type": "options",
+      "name": "Variant picker",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "variant-style",
+          "label": "Product variant style",
+          "options": [
+            { "label": "Dropdowns", "value": "dropdowns" },
+            { "label": "Buttons", "value": "buttons" }
+          ],
+          "default": "buttons"
+        },
+        {
+          "type": "checkbox",
+          "id": "swatches-enabled",
+          "label": "Enable color swatches",
+          "default": true,
+          "info": "Automatically turn color options into swatches. [Learn more](https://support.troopthemes.com/guide/color-swatch-guide)"
+        },
+        {
+          "type": "header",
+          "content": "Size chart"
+        },
+        {
+          "type": "checkbox",
+          "id": "size-chart-enabled",
+          "label": "Enable",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "size-chart-option",
+          "label": "Link from option",
+          "default": "size"
+        },
+        {
+          "type": "page",
+          "id": "size-chart-content",
+          "label": "Page content"
+        }
+      ]
+    },
+    {
+      "type": "buy-buttons",
+      "name": "Buy buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "smart-payment-enabled",
+          "label": "Show dynamic checkout button",
+          "info": "Lets customers check out directly using a familiar payment method. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "unavailable-form",
+      "name": "Unavailable form",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "pickup",
+      "name": "Pickup availability",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "thumbnails",
+      "name": "Image thumbnails",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "divider",
+      "name": "Column divider",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1,
+      "settings": [
+        {
+          "id": "upsell_heading",
+          "label": "upsell Product Heading",
+          "type": "textarea"
+        },
+        {
+          "id": "chart_size",
+          "label": "choose Chart image",
+          "type": "image_picker"
+        },
+        {
+          "id": "chart_heading",
+          "label": "Chart Heading",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "collapsible-tab",
+      "name": "Collapsible tab",
+      "settings": [
+        {
+          "id": "heading",
+          "label": "Heading",
+          "type": "text",
+          "default": "Collapsible tab"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Text",
+          "default": "<p>Use tabs to highlight unique features, <br/>sizing information, <br/>or other sales information.</p>",
+          "info": "You can use product metafields to assign content to this tab that is unique to an individual product. Learn more about [metafields](https://help.shopify.com/en/manual/metafields/displaying-metafields-on-your-online-store)."
+        },
+        {
+          "type": "page",
+          "id": "page-content",
+          "label": "Tab content from page"
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "name": "Product rating",
+      "limit": 1
+    },
+    {
+      "type": "liquid",
+      "name": "Custom liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom-liquid",
+          "label": "Custom Liquid",
+          "info": "Add app snippets or other Liquid code to create advanced customizations."
+        }
+      ]
+    },
+    {
+      "type": "how-to-use",
+      "name": "How To Use",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "text",
+          "label": "Custom Liquid"         
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    },
+    {
+      "type": "afterpay",
+      "name": "Afterpay",
+      "limit": 1,
+      "settings": [
+
+      ]
+    },
+    {
+      "type": "producticon",
+      "name": "Product Icon List",
+      "limit": 1,
+      "settings": [
+
+      ]
+    },
+     {
+       "type": "whatsin",
+       "name": "WHAT’S IN THE BUNDLE?",
+       "settings": [
+                  {
+           "type": "text",
+           "id": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "title",
+           "label": "Title"
+         },
+        {
+           "type": "text",
+           "id": "title2",
+           "label": "Subtitle"
+         },
+        {
+           "type": "text",
+           "id": "price",
+           "label": "Add Actual Price"
+         },
+        {
+           "type": "text",
+           "id": "price2",
+           "label": "Add Discount price"
+         },
+        {
+           "type": "textarea",
+           "id": "descs",
+           "label": "Add Description"
+         }
+       ]
+     },
+     {
+       "type": "textbox",
+       "name": "Custom text box",
+       "settings": [
+         {
+           "type": "text",
+           "id": "custom_text_title",
+           "label": "Text box heading"
+         },
+        {
+          "type": "color",
+          "id": "color_heading",
+          "label": "Text color",
+          "default": "#444444"
+        }
+       ]
+     },
+
+
+    {
+       "type": "image_picker",
+       "name": "image timeline",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "image"
+         }
+       ]
+    },
+
+
+    {
+       "type": "new_icon",
+       "name": "icon text",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "imageicon",
+           "label": "Image"
+         },
+         {
+           "type": "text",
+           "id": "texticon",
+           "label": "Heading"
+         }
+       ]
+    }
+
+         
+  ]
+}
+{% endschema %}
+<script>
+   $(document).on("change", ".radios--main .radio_input_main input", function(){
+     var compare_price = $(this).parent('.radio_input_main').attr("data_price");
+     var main_price = $(this).parent('.radio_input_main').attr("data_main_price");
+     $('#Custom_Bundles').attr("value", compare_price);
+     
+   });
+ </script>

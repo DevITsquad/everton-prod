@@ -1,0 +1,268 @@
+{
+  "sections": {
+    "0d555e91-98b1-4f58-9bc2-8bda1ada1e80": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "text-color": "auto",
+        "background-color": "none",
+        "container-width": 6,
+        "spacing-above": false,
+        "spacing-below": false,
+        "image-height": 4,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "medium",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": true,
+        "overline": "",
+        "title": "Tighter body tactics",
+        "description": "<p><\/p>",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "989a9b7e-58a3-473e-9a24-686c7d0eeb5c": {
+      "type": "featured-products",
+      "disabled": true,
+      "settings": {
+        "product-list": [
+          "bounce-back",
+          "keepin-it-taut"
+        ],
+        "background-color": "none",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true,
+        "display-type": "grid",
+        "products-per-row--desktop": "3",
+        "products-per-row--mobile": "1",
+        "heading": "BEST VALUE BUNDLES",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "0c3f86a3-3962-45a7-b312-05f1930964e0": {
+      "type": "featured-products",
+      "disabled": true,
+      "settings": {
+        "product-list": [
+          "body-detoxifier",
+          "body-exfoliator",
+          "body-firmer",
+          "body-refresher",
+          "body-shaper",
+          "body-smoother",
+          "keepin-it-taut",
+          "bounce-back"
+        ],
+        "background-color": "none",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true,
+        "display-type": "grid",
+        "products-per-row--desktop": "4",
+        "products-per-row--mobile": "2",
+        "heading": "BODY CARE",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "collection-header": {
+      "type": "collection--header",
+      "disabled": true,
+      "settings": {
+        "enable-header": true,
+        "show-title": false,
+        "title-alignment": "center",
+        "show-description": false,
+        "description-alignment": "with-title",
+        "show-image": true,
+        "use-image-fallback": true,
+        "image-height": "large",
+        "alt-color": true,
+        "apply-overlay": false,
+        "parallax-enabled": false
+      }
+    },
+    "main": {
+      "type": "collection--body",
+      "disabled": true,
+      "blocks": {
+        "01876aa0-d8e6-483b-81bb-9ff7efa0a398": {
+          "type": "promotion",
+          "settings": {
+            "row-number": 2,
+            "column-number": 1,
+            "promo-width": 2,
+            "background-color": "light",
+            "text-color": "light",
+            "darken-image": false,
+            "image-size": "fit-to-container",
+            "overline": "GET IT WHILE IT LASTS",
+            "title": "20% off best value bundles",
+            "description": "<p><\/p>",
+            "link-url": "",
+            "link-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "01876aa0-d8e6-483b-81bb-9ff7efa0a398"
+      ],
+      "settings": {
+        "products-per-row--desktop": 3,
+        "products-per-row--mobile": "1",
+        "number-of-rows": 1
+      }
+    },
+    "navigation": {
+      "type": "collection--navigation",
+      "disabled": true,
+      "settings": {
+        "show-browse-button": false,
+        "show-sort-button": true,
+        "show-refine-button": true,
+        "show-layout-buttons": false,
+        "show-collections-list": true,
+        "custom-list-collections": "",
+        "show-sort-list": true,
+        "show-refine-list": true,
+        "swatches-enabled": false,
+        "show-search-link": true
+      }
+    },
+    "1665947072be780041": {
+      "type": "apps",
+      "disabled": true,
+      "blocks": {
+        "1f2d6927-69d0-404c-abcf-01d58c38e7a2": {
+          "type": "shopify:\/\/apps\/logolicious\/blocks\/app-block\/fa8a9c52-9a2b-4452-9900-ea0c41834d57",
+          "settings": {
+            "slot": "1",
+            "sliderHeading": "",
+            "sliderSubHeading": "",
+            "headingMarginBottom": 0,
+            "headingColorScheme": "default",
+            "headingColor": "#333333",
+            "sliderHeadingAlignment": "center",
+            "interval": 2500,
+            "speed": 200,
+            "moveType": "logo",
+            "showArrows": "false",
+            "arrowColor": "#121212",
+            "showDots": "false",
+            "pageDotsMarginTop": 24,
+            "dotColor": "#121212",
+            "logoColorScheme": "normal",
+            "customLogoColor": "#333333",
+            "maxLogoWidth": 500,
+            "maxLogoHeight": 87,
+            "gap": 1,
+            "blockBackground": "rgba(0,0,0,0)",
+            "blockPaddingTop": 0,
+            "blockPaddingBottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "1f2d6927-69d0-404c-abcf-01d58c38e7a2"
+      ],
+      "settings": {
+        "background-color": "accent",
+        "light-text": false,
+        "container-width": 1,
+        "spacing-above": false,
+        "spacing-below": false
+      }
+    },
+    "5048ac17-35ea-4fcb-bdb8-95a263190ae6": {
+      "type": "text-columns-1",
+      "blocks": {
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-0": {
+          "type": "image",
+          "settings": {
+            "product": "bounce-back",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Bounce Back",
+            "description": "<p>Anti-Cellulite Bundle<\/p>",
+            "link-url": "shopify:\/\/products\/bounce-back",
+            "link-text": "View more"
+          }
+        },
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-1": {
+          "type": "image",
+          "settings": {
+            "product": "keepin-it-taut",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Final Stretch",
+            "description": "<p>Anti-Stretch Mark Bundle<\/p>",
+            "link-url": "shopify:\/\/products\/keepin-it-taut",
+            "link-text": "View more"
+          }
+        },
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-2": {
+          "type": "image",
+          "settings": {
+            "product": "complete-skin-recovery-bundle",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Complete Skin Recovery",
+            "description": "<p>Anti-Cellulite + Anti-StretchMark Bundle <\/p>",
+            "link-url": "shopify:\/\/products\/complete-skin-recovery-bundle",
+            "link-text": "View more"
+          }
+        },
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-3": {
+          "type": "image",
+          "settings": {
+            "product": "dark-spot-treatment-duo-1-2-glow-bundle",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "1, 2 Glow",
+            "description": "<p>Dark Spot Treatment<\/p>",
+            "link-url": "shopify:\/\/products\/dark-spot-treatment-duo-1-2-glow-bundle",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-0",
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-1",
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-2",
+        "template--15969680621734__5048ac17-35ea-4fcb-bdb8-95a263190ae6-167005401588ff8daf-3"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 2,
+        "aspect-ratio": "natural",
+        "image-width": 0,
+        "mobile-width": "1",
+        "text-alignment": "center",
+        "heading": "Limited edition Bundles",
+        "subtitle": "Industry leading 100 days Free trial",
+        "link-url": "",
+        "link-text": ""
+      }
+    }
+  },
+  "order": [
+    "0d555e91-98b1-4f58-9bc2-8bda1ada1e80",
+    "989a9b7e-58a3-473e-9a24-686c7d0eeb5c",
+    "0c3f86a3-3962-45a7-b312-05f1930964e0",
+    "collection-header",
+    "main",
+    "navigation",
+    "1665947072be780041",
+    "5048ac17-35ea-4fcb-bdb8-95a263190ae6"
+  ]
+}

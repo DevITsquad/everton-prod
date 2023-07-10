@@ -1,0 +1,13 @@
+<div class="hf_products">
+  {% assign hf_one = all_products[settings.h_product_one] %}
+  <input class="hfp_one" fptitle="{{ hf_one.title }}" var_id="{{ hf_one.variants.first.id }}" fpcmp="{{ hf_one.compare_at_price | money }}" type="hidden" />
+  {% assign hf_two = all_products[settings.h_product_two] %}
+  <input class="hfp_two" fptitle="{{ hf_two.title }}" var_id="{{ hf_two.variants.first.id }}" fpcmp="{{ hf_two.compare_at_price | money }}" type="hidden" />
+</div>
+
+<div class="exc_products">
+  {% assign exc_one = all_products[settings.exc_product_one] %}
+  <input class="exc_one" exptitle="{{ exc_one.title }}" expvar_id="{{ exc_one.variants.first.id }}" expcmp="{{ exc_one.compare_at_price | money }}" type="hidden" />
+  {% assign exc_two = all_products[settings.exc_product_two] %}
+  <input class="exc_two" exptitle="{{ exc_two.title }}" expvar_id="{{ exc_two.variants.first.id }}" expcmp="{{ exc_two.compare_at_price | money }}" type="hidden" />
+</div>

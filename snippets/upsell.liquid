@@ -1,0 +1,122 @@
+<style>
+.upsell-grid input:checked+ label span.checbxupsell:before {
+    content: '';
+    left: -1px;
+    border: solid #e19aa6;
+    border-radius: 30px;
+    border-width: 16px 0px 0px 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /* top: 1px; */
+    /* right: 0; */
+    /* margin: auto; */
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    /* color: #CA507F; */
+    /* background: #CA507F; */
+}
+</style>
+
+<div class="upsell">
+ {% if heading != blank %}
+    <h4 class="heading-title">{{ heading }}</h4>
+ {% endif %}
+        {% assign productTags= upsellproduct.tags | join: ', '  %}
+       
+
+
+{% if productTags contains 'parentproduct'%}
+  
+  {% for tag in upsellproduct.tags %}
+
+    {% if tag contains 'parentproduct' %}
+     
+      {% assign  parentproductids=tag | split : '--' %}
+       {% assign  tagproducts=parentproductids[1] %}
+      
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+   <div class="parentproductupsell" proid="{{ all_products[tagproducts].first_available_variant.id }}" style="display:none;"></div>
+        {% comment %}<p>Increase cell turnover with Award winning</p>{% endcomment %}
+        
+        <div class="upsell-grid">
+        <input type="checkbox" variantID="{{ upsellproduct.first_available_variant.id }}" id="bundleuspell">
+        <label for="bundleuspell">
+        
+        <span class="checbxupsell"></span>
+        <div class="upslimg">{{ upsellproduct.featured_image | img_url : 'master' | img_tag }}</div>
+        <div class="upsellTitle">{% comment %}<span class=toptit>Increase cell turnover with Award winning</span>{% endcomment %}<a target="_blank" href="{{ upsellproduct.url }}">{% if product.metafields.custom.reviews != blank %}  {{ product.metafields.custom.reviews }} {% else %}{{upsellproduct.title}} {% endif %}</a></div>
+        <div class="upsel--price">
+         
+        
+         <span class="newprice-upsell">{{ upsellproduct.price | money }}</span>
+          {% if upsellproduct.compare_at_price > upsellproduct.price %}
+          <span class="compareprice-upsell">{{ upsellproduct.compare_at_price | money }}</span>
+          {% endif %}
+        </div>
+        
+        </label>
+       
+       
+        <script>
+         
+  $('.upsell-grid input').change(function(){
+    
+    setTimeout(function(){
+      
+    if($('.upsell-grid input').is(':checked')) {
+      console.log('chnage')
+      $('.product-buy-buttons--primary').hide();
+      $('.duplicate--btn').show();
+      
+  }else{
+      console.log('nochnage')
+      $('.product-buy-buttons--primary').show();
+      $('.duplicate--btn').hide(); 
+  }
+    
+    })
+  });
+            $(document).on('click', '.duplicate--btn', function() {
+              var getproid=$(this).attr('proid');
+              console.log(getproid)
+ $('.product-buy-buttons--primary').attr('data-loading','true');
+          console.log('click')
+       
+              if($('.cart--item[data-upsell-id="'+getproid+'"]').length){
+                var variantID=$('.parentproductupsell').attr('proid');
+                var data = {
+      "id":variantID,
+      "quantity": 1
+    }
+              }else{
+                
+                 var variantID= $('.upsell-grid input').attr('variantID');
+                var data = {
+      "id":variantID,
+      "quantity": 1,
+
+    }
+              }
+        jQuery.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: data,
+      dataType: 'json',
+      success: function() { 
+         $('.product-page--left-column.inside_cont .product-page--block[data-block-type="buy-buttons"] .original--btn button')[0].click();
+        
+        setTimeout(function(){
+          $('.product-buy-buttons--primary').attr('data-loading','false');
+       },2000)
+        }
+    });
+        })
+</script>
+        </div>
+        
+        
+        </div>

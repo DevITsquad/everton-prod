@@ -1,0 +1,120 @@
+{%- liquid
+  assign widths = '200,400,600,700,800,900,1000,1200,1500,1800,2000,2400' | split: ','
+
+  capture valid_widths
+    for width in widths
+      assign width_int = width | plus: 0
+      if image.width >= width_int
+        echo width_int | append: ','
+      else
+        break
+      endif
+    endfor
+
+    if image.width <= 2400
+      echo image.width | downcase
+    endif
+  endcapture
+  assign valid_widths = valid_widths | split: ',' | uniq
+
+  for width in valid_widths
+    assign width_int = width | plus: 0
+    capture srcset
+      echo srcset
+      echo image | image_url: width: width_int | append: ' ' | append: width | append: 'w'
+      unless forloop.last
+        echo ', '
+      endunless
+    endcapture
+
+    if mobile_image
+      capture mobile_srcset
+        echo mobile_srcset
+        echo mobile_image | image_url: width: width_int | append: ' ' | append: width | append: 'w'
+        unless forloop.last
+          echo ', '
+        endunless
+      endcapture
+    endif
+  endfor
+
+  unless preload
+    assign preload = false
+  endunless
+
+  assign lazy_classes = 'lazyload'
+  if preload
+    assign lazy_classes = lazy_classes | append: ' lazypreload'
+  endif
+
+  unless max_height
+    assign max_height = 0
+  endunless
+
+  assign width = image.width | append: "px"
+  if max_height > 0
+    assign width = max_height | times: image.aspect_ratio | round: 2 | append: 'px'
+  elsif full_width
+    assign width = "100%"
+  endif
+-%}
+
+<div
+  class="image--root"
+  data-parallax="{{ parallax }}"
+  data-cover="{{ cover }}"
+  data-cover-mobile="{{ cover_mobile }}"
+  data-darken="{{ darken }}"
+  data-darken-mobile="{{ darken_mobile }}"
+  data-full-width="{{ full_width }}"
+  style="width:{{ width }};--aspect-ratio:{{ image.aspect_ratio | round: 2 }};"
+  {{ custom_attributes }}
+>
+
+  <picture class="image--container">
+
+    {%- if mobile_image -%}
+      <source
+        media="(max-width: 767px)"
+        data-srcset="{{ mobile_srcset }}"
+        height="{{ mobile_image.height }}"
+        width="{{ mobile_image.width }}"
+      >
+
+
+
+    {%- endif -%}
+
+    <img
+      class="{{ lazy_classes }}"
+      data-src="{{ product.image | image_url }}"
+      data-srcset="{{ srcset }}"
+      data-sizes="auto"
+      alt="{{ image.alt | escape }}"
+      {% comment %} height="{{ image.height }}"
+      width="{{ image.width }}" {% endcomment %}
+    />
+  </picture>
+
+  <noscript>
+    <picture class="image--container">
+
+      {%- if mobile_image -%}
+        <source
+          media="(max-width: 767px)"
+          srcset="{{ mobile_srcset }}"
+          height="{{ mobile_image.height }}"
+          width="{{ mobile_image.width }}"
+        >
+        {%- endif -%}
+
+      <img
+        src=""
+        srcset="{{ srcset }}"
+        alt="{{ image.alt | escape }}"
+        height="{{ image.height }}"
+        width="{{ image.width }}"
+      >
+    </picture>
+  </noscript>
+</div>

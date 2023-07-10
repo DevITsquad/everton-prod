@@ -1,0 +1,81 @@
+{%- liquid
+  assign add_to_cart_t = 'TRY RISK FREE'
+  assign out_of_stock_t = 'products.out_of_stock' | t
+
+  assign current_variant = product.selected_or_first_available_variant
+
+  render 'section-assets', name: 'product-buy-buttons', type: 'script'
+%}
+
+<product-buy-buttons-root
+  class="product-buy-buttons--root {{ mobid }}"
+  data-id="{{ id }}"
+  style="display:block;"
+>
+  {%- form 'product', product, class: 'product-buy-buttons--form', id: id -%}
+    {% if  current_variant.compare_at_price > 0  %}
+    <input type="hidden" id="Custom_Bundles" name="properties[Compare_Price]" value="{{- current_variant.compare_at_price | money -}}" /> 
+      {% endif %}
+    {%- if request.page_type != "password" -%}
+     <div class='newproice orgnbtn'>  {%- render 'product-price', product: product, id: product_id -%}</div>
+      <div class="product-buy-buttons--primary original--btn"
+        data-enabled="true"
+        {% if smart_payment_enabled and product.selling_plan_groups == empty %}
+          data-item='secondary-button'
+        {% else %}
+          data-item='button'
+        {% endif %}
+      >
+        <button
+          class="product-buy-buttons--cta"
+          {%- unless current_variant.available -%}
+            disabled
+          {%- endunless -%}
+        >
+          <span class="{% if template contains 'product' %}product-buy-buttons--cta-texts {% else %}product-buy-buttons--cta-text{% endif %}">
+TRY RISK FREE
+          </span>
+          {% comment %}
+          <span class="product-buy-buttons--spinner">
+            {%- render 'loading-spinner', size: '41px' -%}
+          </span>
+     {% endcomment %}
+         
+ 
+        </button>
+      </div>
+        <div class="freetrial" style="display: none;">100 Days Free Trial</div>
+
+    {% comment %}  {%- if smart_payment_enabled and product.available and product.selling_plan_groups == empty -%}
+        <div
+          class="product-buy-buttons--smart"
+          {%- unless current_variant.available -%}
+            style="display:none;"
+          {%- endunless -%}
+        >
+          {{- form | payment_button -}}
+        </div>
+      {%- endif -%} {% endcomment %}
+    {%- endif -%}
+
+    <select class="product-buy-buttons--select" name="id" data-mq="none">
+      {%- for variant in product.variants -%}
+        <option
+          value="{{ variant.id }}"
+          data-sku="{{ variant.sku }}"
+          data-inventory-management="{{ variant.inventory_management }}"
+          data-inventory-policy="{{ variant.inventory_policy }}"
+          data-available="{{ variant.available }}"
+          data-inventory-quantity="{{ variant.inventory_quantity | default: 0 }}"
+          {% if variant == current_variant %}
+            selected
+          {% endif %}
+        >
+          {{- variant.title -}}
+        </option>
+      {%- endfor -%}
+    </select>
+  
+  {%- endform -%}
+</product-buy-buttons-root>
+{% assign mobid='' %}

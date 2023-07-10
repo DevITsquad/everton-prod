@@ -1,0 +1,236 @@
+{
+  "sections": {
+    "0d555e91-98b1-4f58-9bc2-8bda1ada1e80": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "text-color": "light",
+        "background-color": "none",
+        "container-width": 6,
+        "spacing-above": false,
+        "spacing-below": false,
+        "image-height": 4,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "large",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": true,
+        "image": "shopify:\/\/shop_images\/Shop-All-banner.jpg",
+        "overline": "",
+        "title": "approved by your body",
+        "description": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "collection-tab-links": {
+      "type": "collection-tab-links",
+      "disabled": true,
+      "blocks": {
+        "f64702a4-4f1e-4737-9ab0-836841120d58": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "BUNDLES",
+            "link": "#tab-1"
+          }
+        },
+        "ab2ca37a-f1da-443c-8fdf-8dd91230ae01": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "BODY CARE",
+            "link": "#tab-2"
+          }
+        },
+        "8f38aa77-d5e6-4d3e-bd6d-79aa7feeb6af": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "BEST SELLERS",
+            "link": "#tab-3"
+          }
+        },
+        "e400c9fb-d025-428a-9a2d-4a9093fc4bf7": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "ANTI-STRETCH MARK",
+            "link": "#tab-4"
+          }
+        },
+        "954416bd-c26f-4b61-9def-1f27136b75c1": {
+          "type": "links",
+          "settings": {
+            "collection_tab": "ANTI-CELLULITE",
+            "link": "#tab-5"
+          }
+        }
+      },
+      "block_order": [
+        "f64702a4-4f1e-4737-9ab0-836841120d58",
+        "ab2ca37a-f1da-443c-8fdf-8dd91230ae01",
+        "8f38aa77-d5e6-4d3e-bd6d-79aa7feeb6af",
+        "e400c9fb-d025-428a-9a2d-4a9093fc4bf7",
+        "954416bd-c26f-4b61-9def-1f27136b75c1"
+      ],
+      "settings": {
+      }
+    },
+    "navigation": {
+      "type": "collection--navigation",
+      "disabled": true,
+      "settings": {
+        "show-browse-button": true,
+        "show-sort-button": true,
+        "show-refine-button": true,
+        "show-layout-buttons": true,
+        "show-collections-list": true,
+        "custom-list-collections": "collection-navigation",
+        "show-sort-list": true,
+        "show-refine-list": true,
+        "swatches-enabled": false,
+        "show-search-link": true
+      }
+    },
+    "collection-header": {
+      "type": "collection--header",
+      "disabled": true,
+      "settings": {
+        "enable-header": true,
+        "show-title": false,
+        "title-alignment": "center",
+        "show-description": false,
+        "description-alignment": "with-title",
+        "show-image": true,
+        "use-image-fallback": true,
+        "image-height": "large",
+        "alt-color": true,
+        "apply-overlay": false,
+        "parallax-enabled": false
+      }
+    },
+    "main": {
+      "type": "collection--body",
+      "disabled": true,
+      "blocks": {
+        "01876aa0-d8e6-483b-81bb-9ff7efa0a398": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "row-number": 2,
+            "column-number": 1,
+            "promo-width": 2,
+            "background-color": "light",
+            "text-color": "light",
+            "darken-image": false,
+            "image-size": "fit-to-container",
+            "overline": "GET IT WHILE IT LASTS",
+            "title": "20% off best value bundles",
+            "description": "",
+            "link-url": "",
+            "link-text": ""
+          }
+        },
+        "8cd63d56-20ea-4df0-9569-b1eea68ab491": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "row-number": 2,
+            "column-number": 1,
+            "promo-width": 2,
+            "background-color": "light",
+            "text-color": "dark",
+            "darken-image": true,
+            "image-size": "fit-to-container",
+            "overline": "Overline text",
+            "title": "Grid promotion",
+            "description": "<p>Create eye-catching promos within collection grids to increase discoverability and accelerate conversions.<\/p>",
+            "link-url": "",
+            "link-text": "Optional link"
+          }
+        }
+      },
+      "block_order": [
+        "01876aa0-d8e6-483b-81bb-9ff7efa0a398",
+        "8cd63d56-20ea-4df0-9569-b1eea68ab491"
+      ],
+      "settings": {
+        "products-per-row--desktop": 4,
+        "products-per-row--mobile": "1",
+        "number-of-rows": 1
+      }
+    },
+    "d3398dbb-586b-4708-bbab-6cf14996bd16": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": false,
+        "overline": "",
+        "heading": "Best Value Bundles",
+        "text": ""
+      }
+    },
+    "088b0456-3af8-48b4-bf87-14102420f352": {
+      "type": "text-columns-1",
+      "blocks": {
+        "template--16065892155558__088b0456-3af8-48b4-bf87-14102420f352-16802181167fd0855c-0": {
+          "type": "image",
+          "settings": {
+            "product": "evertone-microcurrent-facial-toning-device",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Evertone EverLift",
+            "description": "<p>Microcurrent Facial Toning Device<\/p>",
+            "link-url": "shopify:\/\/products\/evertone-microcurrent-facial-toning-device",
+            "link-text": "View more"
+          }
+        },
+        "template--16065892155558__088b0456-3af8-48b4-bf87-14102420f352-16802181167fd0855c-1": {
+          "type": "image",
+          "settings": {
+            "product": "evertone-red-light-therapy-wand",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Evertone InfraWave",
+            "description": "<p>Red Light Therapy Wand<\/p>",
+            "link-url": "shopify:\/\/products\/evertone-red-light-therapy-wand",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--16065892155558__088b0456-3af8-48b4-bf87-14102420f352-16802181167fd0855c-0",
+        "template--16065892155558__088b0456-3af8-48b4-bf87-14102420f352-16802181167fd0855c-1"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 4,
+        "aspect-ratio": "square",
+        "image-width": 0,
+        "mobile-width": "2",
+        "text-alignment": "center",
+        "heading": "",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    }
+  },
+  "order": [
+    "0d555e91-98b1-4f58-9bc2-8bda1ada1e80",
+    "collection-tab-links",
+    "navigation",
+    "collection-header",
+    "main",
+    "d3398dbb-586b-4708-bbab-6cf14996bd16",
+    "088b0456-3af8-48b4-bf87-14102420f352"
+  ]
+}

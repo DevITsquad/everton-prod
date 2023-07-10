@@ -1,0 +1,166 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+<style>  
+  .slider_announce {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+}
+  .anc_bar_main {
+    max-width: 100% !important;
+    margin: unset !important;
+    padding: unset !important;
+}
+  .hell .slick-arrow.slick-prev {
+  left: 0px;
+  background: url("https://cdn.shopify.com/s/files/1/0621/2272/1446/files/icons8-chevron-left-24.png?v=1679644708") 0
+    0 / 38% no-repeat;
+}
+  .hell .slick-arrow {
+font-size: 0;
+
+  }
+.hell .slick-arrow.slick-next {
+  right: -15px;
+  background: url("https://cdn.shopify.com/s/files/1/0621/2272/1446/files/icons8-chevron-left-24_1.png?v=1679644868") 0 0 / 38% no-repeat;
+}
+.hell.wrapper {
+    margin: auto;
+    max-width: 746px;
+    color: white;
+    text-align: center;
+}
+.hell button.slick-arrow {
+    position: absolute !important;
+    margin: -17px 0px 0px 0px;
+    z-index: 10 !important;
+    width: 45px !important;
+    top: 20px !important;
+    transform: none !important;
+}
+</style>
+
+  {% if section.settings.enabled %}
+  <div class="slider_announce hhh" style="background-color: {{ section.settings.color_back }};">
+    <div class="hell wrapper">
+      {% for block in section.blocks %}
+    <div class="container-anc" style="color: {{ section.settings.color_text }}">{{ block.settings.anc_text }} </div>
+        {% endfor %}
+
+    </div>
+  </div>
+  {% else %}
+  <style>
+    .anc_bar_main{
+      display:none;
+    }
+  </style>
+{% endif %}
+
+<script>
+$('.hell').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  arrows: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  // speed: 1000,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        // speed: 1000,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        autoplay: true,
+        // speed: 1000,
+        autoplaySpeed: 3000,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+         autoplay: true,
+        // speed: 1000,
+        autoplaySpeed: 3000,
+        arrows: false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+</script> 
+
+
+{% schema %}
+  {
+    "name": "Announcement",
+    "class": "anc_bar_main",
+    "settings": [
+      {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Show announcement"
+    },
+    {
+        "type": "color",
+        "id": "color_back",
+        "label": "Background color",
+        "default": "#BEACEA"
+      },
+              {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text color",
+        "default": "#BEACEA"
+      }
+    ],
+        "blocks": [
+      {
+        "type": "announcement",
+        "name": "announcement",
+        "settings": [
+          {
+            "type": "text",
+            "id": "anc_text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Announcement",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

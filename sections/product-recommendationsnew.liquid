@@ -1,0 +1,273 @@
+{%- liquid
+  assign container_width = section.settings.container-width
+  assign max_products = 4
+  assign title = section.settings.title
+  assign show_section = section.settings.show
+  assign spacing_above = section.settings.spacing-above
+  assign spacing_below = section.settings.spacing-below
+-%}
+
+{%- if show_section -%}
+  {%- render 'section-assets', name: 'product-recommendations' -%}
+
+  <product-recommendations-root
+    class="product-recommendations--root"
+    data-section-id="{{ section.id }}"
+    data-container-width="{{ container_width }}"
+    data-product-id="{{ product.id }}"
+    data-max-products="{{ max_products }}"
+    data-spacing-above="{{ spacing_above }}"
+    data-spacing-below="{{ spacing_below }}"
+    style="display:none;"
+  >
+    <div
+      class="product-recommendations--wrapper"
+      data-container="section"
+    >
+      {%- if title != blank -%}
+        <div class="product-recommendations--header" data-container="block">
+          <h2 class="product-recommendations--title" data-item="section-heading">
+            {{- title -}}
+          </h2>
+        </div>
+      {%- endif -%}
+
+      <product-grid-root
+        class="product-recommendations--grid"
+        data-container="panel"
+        data-columns="4"
+        data-image-size="{{ settings.product--image-size }}"
+        data-mobile-columns="2"
+      >
+        {%- for product in recommendations.products limit: max_products -%}
+          <div class="main-body-related">
+            <div class="itemproduct">
+          {%-
+            render 'product--item',
+            product: product,
+            unique_handle: 'recommendation',
+            section_id: section.id
+
+          -%}</div>
+            <div class="buybtn">
+                  {%-
+            render 'product-buy-buttons',
+            id: product_id,
+            product: product,
+            smart_payment_enabled: block.settings.smart-payment-enabled
+          -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </product-grid-root>
+
+    </div>
+  </product-recommendations-root>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Product recommendations",
+  "class": "section--product-recommendations",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show",
+      "label": "Show",
+      "default": true,
+      "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "You may also like"
+    },
+    {
+      "id": "container-width",
+      "label": "Maximum width of container",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "id": "spacing-above",
+      "label": "Spacing above",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "id": "spacing-below",
+      "label": "Spacing below",
+      "type": "checkbox",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
+
+{% comment %}
+
+
+<!-- Solution brought to you by Caroline Schnapp -->
+<!-- See this: https://docs.shopify.com/support/your-store/products/can-i-recommend-related-products#finding-a-relevant-collecitons -->
+
+{% comment %}
+  Number of related items per row,
+  and number of rows.
+{% endcomment %}
+
+{% assign number_of_related_products_per_row = 4 %}
+{% assign number_of_rows = 1 %}
+
+{% comment %}
+  Heading.
+  Leave blank if you don't need one.
+{% endcomment %}
+
+{% assign heading = 'Other fine products' %}
+
+{% comment %}
+  Set either or both to true, if you want
+  to limit yourself to items with same vendor, and/or type.
+{% endcomment %}
+
+{% assign same_vendor = false %}
+{% assign same_type = false %}
+
+{% comment %}
+  Collections to ignore.
+  Never pick related items from those.
+{% endcomment %}
+
+{% assign exclusions = 'frontpage,all' | split: ',' %}
+
+{% comment %}
+  Looking for a relevant collection.
+{% endcomment %}
+
+{% if product.metafields.c_f['Related Products'] %}
+  {% assign collection = collections[product.metafields.c_f['Related Products']] %}
+{% endif %}
+
+{% assign found_a_collection = false %}
+{% if collection and collection.all_products_count > 1 %}
+  {% unless exclusions contains collection.handle %}
+    {% assign found_a_collection = true %}
+  {% endunless %}
+{% endif %}
+{% unless found_a_collection %}
+  {% for c in product.collections %}
+    {% unless exclusions contains c.handle or c.all_products_count < 2 %}
+      {% assign found_a_collection = true %}
+      {% assign collection = c %}
+      {% break %}
+    {% endunless %}
+  {% endfor %}
+{% endunless %}
+
+{% comment %}
+  If we have a relevant collection.
+{% endcomment %}
+
+{% if found_a_collection %}
+
+  {% assign counter = 0 %}
+  {% assign break_at = number_of_rows | times: number_of_related_products_per_row %}
+  {% assign current_product = product %}
+
+  {% case number_of_related_products_per_row %}
+    {% when 1 %}
+      {% assign grid_item_width = '' %}
+    {% when 2 %}
+      {% assign grid_item_width = 'large--one-half medium--one-half' %}
+    {% when 3 %}
+      {% assign grid_item_width = 'large--one-third medium--one-half' %}
+    {% when 4 %}
+      {% assign grid_item_width = 'large--one-quarter medium--one-third small--one-half' %}
+    {% when 5 %}
+      {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
+    {% when 6 %}
+      {% assign grid_item_width = 'large--one-sixth medium--one-third small--one-half' %}
+    {% else %}
+      {% assign grid_item_width = 'large--one-quarter medium--one-third small--one-half' %}
+  {% endcase %}
+
+  {% capture related_items %}
+    {% for product in collection.products %}
+
+      {% unless product.handle == current_product.handle %}
+         {% unless same_vendor and current_product.vendor != product.vendor %}
+           {% unless same_type and current_product.type != product.type %}
+                   <div class="main-body-related">
+                         <div class="itemproduct">
+          {%-
+            render 'product--item',
+            product: product,
+            unique_handle: 'recommendation',
+            section_id: section.id
+
+          -%}</div>
+            <div class="buybtn">
+                  {%-
+            render 'product-buy-buttons',
+            id: product_id,
+            product: product,
+            smart_payment_enabled: block.settings.smart-payment-enabled
+          -%}
+            </div>
+             {% assign counter = counter | plus: 1 %}
+             {% if counter == break_at %}
+               {% break %}
+             {% endif %}
+           </div>
+           {% endunless %}
+        {% endunless %}
+      {% endunless %}
+
+    {% endfor %}
+  {% endcapture %}
+
+  {% assign related_items = related_items | trim %}
+
+  {% unless related_items == blank %}
+
+
+<product-recommendations-root
+    class="product-recommendations--root"
+    data-section-id="{{ section.id }}"
+    data-container-width="{{ container_width }}"
+    data-product-id="{{ product.id }}"
+    data-max-products="{{ max_products }}"
+    data-spacing-above="{{ spacing_above }}"
+    data-spacing-below="{{ spacing_below }}"
+  >
+    <div class="product-recommendations--wrapper" data-container="section">
+      {% unless heading == blank %}
+        <div class="product-recommendations--header" data-container="block">
+          <h2 class="product-recommendations--title" data-item="section-heading">
+            {{ heading }}
+          </h2>
+        </div>
+      {% endunless %}
+      <product-grid-root
+        class="product-recommendations--grid"
+        data-container="panel"
+        data-columns="4"
+        data-mobile-columns="2"
+      >
+            {{ related_items }}
+          </product-grid-root>   
+    </div>
+  </product-recommendations-root>
+
+  {% endunless %}
+     
+{% endif %}
+{% endcomment %}
+
+
+
+
+

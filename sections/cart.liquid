@@ -1,0 +1,14 @@
+{%- liquid
+  render 'cart', view: 'desktop'
+  render 'cart', view: 'mobile'
+-%}
+
+{% schema %}
+{
+  "name": "Cart",
+  "settings": []
+}
+{% endschema %}
+<script id="docapp-discount-speedup">
+(() => { if (!document.documentElement.innerHTML.includes('\\/shop' + '\\/js' + '\\/discount-on-cart-pro.min.js') || window.discountOnCartProAppLoaded) return; let script = document.createElement('script'); script.src = "https://d9fvwtvqz2fm1.cloudfront.net/shop/js/discount-on-cart-pro.min.js?shop=evertone-2.myshopify.com"; document.getElementById('docapp-discount-speedup').after(script); })();
+</script>

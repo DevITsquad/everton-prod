@@ -1,0 +1,46 @@
+{%- liquid
+  assign cart_t = 'layout.header.cart' | t
+
+  capture cart_icon
+    if cart_icon == 'text'
+      echo cart_t
+    elsif cart_icon == 'bag'
+      render 'icons', icon: 'bag'
+    else
+      render 'icons', icon: 'cart'
+    endif
+  endcapture
+-%}
+
+<a
+  class="header--cart-link"
+  data-item="accent-text"
+  aria-label="{{ cart_t }}"
+  {% if settings.cart--type == 'drawer' %}
+    data-off-canvas--open="right-sidebar"
+    data-off-canvas--view="cart"
+    aria-haspopup="menu"
+    href="#"
+  {% else %}
+    href="{{ routes.cart_url }}"
+  {% endif %}
+>
+  {{ cart_icon }}
+  <span class="cart--external--icon" data-item-count="{{ cart.item_count }}">
+  (<span class="cart--external--total-items">{{ cart.item_count }}</span>)
+  </span>
+</a>
+
+<noscript>
+  <a
+    class="header--cart-link"
+    data-item="accent-text"
+    aria-label="{{ cart_t }}"
+    href="{{ routes.cart_url }}"
+  >
+    {{ cart_icon }}
+    <span class="cart--external--icon" data-item-count="{{ cart.item_count }}">
+    (<span class="cart--external--total-items">{{ cart.item_count }}</span>)
+    </span>
+  </a>
+</noscript>

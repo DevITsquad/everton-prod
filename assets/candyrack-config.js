@@ -1,0 +1,2 @@
+CANDYRACK_DOCUMENT_LISTENER = true;
+CANDYRACK_CUSTOM_BUTTON_SELECTORS = [".product-buy-buttons--cta"];

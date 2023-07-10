@@ -1,0 +1,336 @@
+{
+  "sections": {
+    "0d555e91-98b1-4f58-9bc2-8bda1ada1e80": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "text-color": "auto",
+        "background-color": "none",
+        "container-width": 6,
+        "spacing-above": false,
+        "spacing-below": false,
+        "image-height": 4,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "medium",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": true,
+        "image": "shopify:\/\/shop_images\/igor-starkov-Hea3QOjilSs-unsplash-2.jpg",
+        "overline": "",
+        "title": "Tighter body tactics",
+        "description": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "1665947072be780041": {
+      "type": "apps",
+      "disabled": true,
+      "blocks": {
+        "1f2d6927-69d0-404c-abcf-01d58c38e7a2": {
+          "type": "shopify:\/\/apps\/logolicious\/blocks\/app-block\/fa8a9c52-9a2b-4452-9900-ea0c41834d57",
+          "settings": {
+            "slot": "1",
+            "sliderHeading": "",
+            "sliderSubHeading": "",
+            "headingMarginBottom": 0,
+            "headingColorScheme": "default",
+            "headingColor": "#333333",
+            "sliderHeadingAlignment": "center",
+            "interval": 2500,
+            "speed": 200,
+            "moveType": "logo",
+            "showArrows": "false",
+            "arrowColor": "#121212",
+            "showDots": "false",
+            "pageDotsMarginTop": 24,
+            "dotColor": "#121212",
+            "logoColorScheme": "normal",
+            "customLogoColor": "#333333",
+            "maxLogoWidth": 500,
+            "maxLogoHeight": 87,
+            "gap": 1,
+            "blockBackground": "rgba(0,0,0,0)",
+            "blockPaddingTop": 0,
+            "blockPaddingBottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "1f2d6927-69d0-404c-abcf-01d58c38e7a2"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 1,
+        "spacing-above": false,
+        "spacing-below": false
+      }
+    },
+    "3f431e03-9c78-4879-b62d-0e04ae7ffcdc": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<section id=\"sectionA\">\n  <\/section><p><\/p>\n\n\n​​​​​​​<a name=\"ConcernA\"><\/a><p><\/p>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "collection-header": {
+      "type": "collection--header",
+      "settings": {
+        "enable-header": true,
+        "show-title": true,
+        "title-alignment": "center",
+        "show-description": false,
+        "description-alignment": "with-title",
+        "show-image": true,
+        "use-image-fallback": true,
+        "image-height": "large",
+        "alt-color": true,
+        "apply-overlay": false,
+        "parallax-enabled": false
+      }
+    },
+    "bc8e1712-12bf-4904-9cc5-b8d981ed59ef": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<center>\n<button><a href=\"#sectionA\"><b>Stretch Marks<\/b><\/a>\n<\/button>\n\n<button><a href=\"#sectionB\"><b>Cellulite<\/b><\/a>\n<\/button>\n\n<button><a href=\"#sectionC\"><b>Body Acne<\/b><\/a>\n<\/button>\n\n<button><a href=\"#sectionD\"><b>Bundles<\/b><\/a>\n<\/button>\n\n<\/center>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "3633a35b-40e8-4887-9809-18f6daca0cdd": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<a name=\"ConcernA\"><\/a>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "12668be4-0720-4729-ae40-b0267f13d9b1": {
+      "type": "featured-products",
+      "disabled": true,
+      "settings": {
+        "product-list": [
+          "body-smoother",
+          "body-detoxifier",
+          "body-refresher",
+          "bundle-1"
+        ],
+        "background-color": "none",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true,
+        "display-type": "grid",
+        "products-per-row--desktop": "4",
+        "products-per-row--mobile": "1",
+        "heading": "GOODBYE STRETCH MARKS",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "8741c43a-de57-4bc3-8f4d-ebe4279d1cea": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<div>\n<p><\/p>\n<section id=\"sectionB\">\n  <\/section><p><\/p>\n<\/div>\n\n​​​​​​​<a name=\"ConcernB\"><\/a>\n\n\n<center>\n<h1 style=\"font-size:50px;\">GOODBYE CELLULITE\n<\/h1>\n<\/center>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "a5f3f427-ea9f-4ecb-a046-03874710f48b": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<a name=\"ConcernB\"><\/a>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "f4b217b4-bfcd-4c11-98bb-6b51a6e4e647": {
+      "type": "featured-products",
+      "disabled": true,
+      "settings": {
+        "product-list": [
+          "body-shaper",
+          "body-firmer",
+          "body-exfoliator",
+          "arabica-coffee-scrub-body-exfoliator"
+        ],
+        "background-color": "none",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true,
+        "display-type": "slider",
+        "products-per-row--desktop": "3",
+        "products-per-row--mobile": "2",
+        "heading": "GOODBYE CELLULITE",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "e0c04ffb-9681-4eeb-93b4-9dc10f99c7eb": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<div>\n<p><\/p>\n<div>\n<p><\/p>\n<section id=\"sectionC\">\n  <\/section><p><\/p>\n<\/div>\n<p><\/p>\n<\/div>\n\n​​​​​​​<a name=\"ConcernC\"><\/a>\n\n<center>\n<h1 style=\"font-size:50px;\">GOOD-BYE BODY ACNE\n<\/h1>\n<\/center>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "ee7a9f8d-19d8-448f-8566-bbfc89abfa58": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<div>\n<p><\/p>\n<div>\n<p><\/p>\n<div>\n<p><\/p>\n<section id=\"sectionC\">\n  <\/section><p><\/p>\n<\/div>\n<p><\/p>\n<\/div>\n<p><\/p>\n<\/div>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "826d6feb-8ede-4bf5-95c0-c66e19abb59f": {
+      "type": "featured-products",
+      "settings": {
+        "product-list": [
+          "body-refresher",
+          "body-smoother",
+          "bundle-1",
+          "body-detoxifier"
+        ],
+        "background-color": "none",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": false,
+        "display-type": "grid",
+        "products-per-row--desktop": "3",
+        "products-per-row--mobile": "2",
+        "heading": "GOODBYE BODY ACNE",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "665aae2a-2e13-482b-bb62-1af1e1ec3c1a": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<div>\n<p><\/p>\n<div>\n<p><\/p>\n<section id=\"sectionD\">\n  <\/section><p><\/p>\n<\/div>\n<p><\/p>\n<\/div>\n\n​​​​​​​<a name=\"ConcernA\"><\/a>\n\n<center>\n<h1 style=\"font-size:50px;\">BEST VALUE BUNDLES\n<\/h1>\n<\/center>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "853b1b27-6d9a-4770-b154-4b039c5e664c": {
+      "type": "featured-products",
+      "settings": {
+        "product-list": [
+          "keepin-it-taut",
+          "bundle-1",
+          "bounce-back"
+        ],
+        "background-color": "none",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true,
+        "display-type": "slider",
+        "products-per-row--desktop": "3",
+        "products-per-row--mobile": "2",
+        "heading": "BEST VALUE BUNDLES",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "navigation": {
+      "type": "collection--navigation",
+      "disabled": true,
+      "settings": {
+        "show-browse-button": false,
+        "show-sort-button": true,
+        "show-refine-button": true,
+        "show-layout-buttons": false,
+        "show-collections-list": true,
+        "custom-list-collections": "",
+        "show-sort-list": true,
+        "show-refine-list": true,
+        "swatches-enabled": false,
+        "show-search-link": true
+      }
+    },
+    "main": {
+      "type": "collection--body",
+      "disabled": true,
+      "blocks": {
+        "grid-promo-1": {
+          "type": "promotion",
+          "settings": {
+            "row-number": 2,
+            "column-number": 2,
+            "promo-width": 2,
+            "background-color": "light",
+            "text-color": "dark",
+            "darken-image": true,
+            "image-size": "fit-to-container",
+            "overline": "Overline text",
+            "title": "Grid promotion",
+            "description": "<p>Create eye-catching promos within collection grids to increase discoverability and accelerate conversions.<\/p>",
+            "link-url": "",
+            "link-text": "Optional link"
+          }
+        }
+      },
+      "block_order": [
+        "grid-promo-1"
+      ],
+      "settings": {
+        "products-per-row--desktop": 3,
+        "products-per-row--mobile": "2",
+        "number-of-rows": 3
+      }
+    }
+  },
+  "order": [
+    "0d555e91-98b1-4f58-9bc2-8bda1ada1e80",
+    "1665947072be780041",
+    "3f431e03-9c78-4879-b62d-0e04ae7ffcdc",
+    "collection-header",
+    "bc8e1712-12bf-4904-9cc5-b8d981ed59ef",
+    "3633a35b-40e8-4887-9809-18f6daca0cdd",
+    "12668be4-0720-4729-ae40-b0267f13d9b1",
+    "8741c43a-de57-4bc3-8f4d-ebe4279d1cea",
+    "a5f3f427-ea9f-4ecb-a046-03874710f48b",
+    "f4b217b4-bfcd-4c11-98bb-6b51a6e4e647",
+    "e0c04ffb-9681-4eeb-93b4-9dc10f99c7eb",
+    "ee7a9f8d-19d8-448f-8566-bbfc89abfa58",
+    "826d6feb-8ede-4bf5-95c0-c66e19abb59f",
+    "665aae2a-2e13-482b-bb62-1af1e1ec3c1a",
+    "853b1b27-6d9a-4770-b154-4b039c5e664c",
+    "navigation",
+    "main"
+  ]
+}

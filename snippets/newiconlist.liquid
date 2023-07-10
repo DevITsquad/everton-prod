@@ -1,0 +1,27 @@
+<!-- product-icon-list -->
+<div class="product_icon-list">
+  {% if product.metafields.custom.icon_1 != blank %}
+  <div class="ingredient_icon">
+    <span class="icon"><img src="{{ product.metafields.custom.icon_1 | img_url:''}}"></span>
+    <span class="">{{ product.metafields.custom.text_1 }}</span>
+  </div>
+ {% endif %}
+  {% if product.metafields.custom.icon_2 != blank %}
+   <div class="ingredient_icon">
+    <span class="icon"><img src="{{ product.metafields.custom.icon_2 | img_url:''}}"></span>
+    <span class="">{{ product.metafields.custom.text_2 }}</span>
+  </div>
+  {% endif %}
+  {% if product.metafields.custom.icon_3 != blank %}
+   <div class="ingredient_icon">
+    <span class="icon"><img src="{{ product.metafields.custom.icon_3 | img_url:''}}"></span>
+    <span class="">{{ product.metafields.custom.text_3 }}</span>
+  </div>
+  {% endif %}
+   {% if product.metafields.custom.icon_4 != blank %}
+   <div class="ingredient_icon">
+    <span class="icon"><img src="{{ product.metafields.custom.icon_4 | img_url:''}}"></span>
+    <span class="">{{ product.metafields.custom.text_4 }}</span>
+  </div>
+  {% endif %}
+</div>

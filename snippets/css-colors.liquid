@@ -1,0 +1,31 @@
+<style>
+  :root {
+    --image--popup: url('{{ settings.popup--image | image_url: width: 1200 }}');
+
+    --color--accent-1: {{ settings.color--accent-1 }};
+    --color--accent-2: {{ settings.color--accent-2 }};
+    --bg-color--light: {{ settings.bg-color--light }};
+    --bg-color--dark: {{ settings.bg-color--dark }};
+    --bg-color--button: {{ settings.bg-color--button }};
+    --bg-color--body: {{ settings.bg-color--body }};
+    --bdr-color--badge: {{ settings.color-text | color_modify: 'alpha', 0.05 }};
+    --bdr-color--general: {{ settings.color--border }};
+    --color--body: {{ settings.color--body }};
+    --color--button: {{ settings.color--button }};
+    --color--body--light: {{ settings.color-text | color_lighten: 19 }};
+    --color--alternative: {{ settings.color--alternative }};
+
+    /* shop pay */
+    --payment-terms-background-color: {{ settings.bg-color--body }};
+
+    --color--links--hover: var(--color--body--light);
+    --color--border-disabled: #d2d2d2;
+    --color--button-disabled: #b9b9b9;
+    --color--fail: #d32f2f;
+    --color--success: #4caf50;
+    --color--stars: black;
+    --bdr-color--badge: rgba(0, 0, 0, 0.05);
+    --bg-color--panel: #f7f7f7;
+    --bg-color--textbox: #fff;
+  }
+</style>

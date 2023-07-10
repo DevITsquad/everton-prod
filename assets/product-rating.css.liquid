@@ -1,0 +1,6 @@
+.product-rating--root{display:flex;align-items:center}.flexbox-gap .product-rating--root{gap:calc(var(--spacing--1)/ 2)}.no-flexbox-gap .product-rating--root>*{margin:calc(calc(var(--spacing--1)/ 2)/ 2)}@media only screen and (max-width:767px){.product-rating--root{justify-content:center}}.product-rating--root .product-rating--count{max-width:-webkit-fit-content;max-width:-moz-fit-content;max-width:fit-content}.product-rating--root .product-rating--count::before{content:"("}.product-rating--root .product-rating--count::after{content:")"}.product-rating--stars{letter-spacing:4px;--rating-percent:calc(
+    (
+        var(--rating) / var(--rating-max) + var(--rating-decimal) * 16 /
+          (var(--rating-max) * (16 + 4))
+      ) * 100%
+  )}.product-rating--stars::before{content:"★★★★★";background:linear-gradient(90deg,var(--color--stars) var(--rating-percent),rgba(0,0,0,.15) var(--rating-percent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}[data-light-text=true] .product-rating--stars::before{background:linear-gradient(90deg,var(--color--alternative) var(--rating-percent),rgba(255,255,255,.3) var(--rating-percent));-webkit-background-clip:text}@media only screen and (max-width:767px){.product-rating--stars{font-size:12px}}@media only screen and (max-width:767px){.product-rating--count{font-size:12px}}

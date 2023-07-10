@@ -1,0 +1,383 @@
+{
+  "sections": {
+    "16324399488a55ecb4": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 1,
+        "spacing-above": true,
+        "spacing-below": true,
+        "overline": "",
+        "heading": "FAQs",
+        "addcusclass": "faq_head",
+        "text": "<p>Find answers to our most frequently asked questions below. If you can't find what you're looking for please contact us and we'll get in touch with 24 hours.<\/p>"
+      }
+    },
+    "main": {
+      "type": "page",
+      "settings": {
+        "show-title": false,
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 2,
+        "spacing-above": false,
+        "spacing-below": true
+      }
+    },
+    "16324397781a8be68b": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "52f9ac18-7e2e-4c46-9c5c-fd69e4607b9a": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What is the 100-Day Free Trial Period?",
+            "description": "<p>The <strong>100-Day Free Trial Period<\/strong> is a limited promotion that offers you 100 days to try our products, and in case you are not satisfied, you may return them for <strong>FREE!<\/strong><\/p>",
+            "page-content": ""
+          }
+        },
+        "16324397781a8be68b-0": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What is the shipping cost?",
+            "description": "<p>Shipping is FREE on all orders<\/p>",
+            "page-content": ""
+          }
+        },
+        "16324397781a8be68b-1": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "How long will it take to receive my order?",
+            "description": "<p>All orders will be processed the same day the order is placed if your order is received by 2:00 pm EST. Orders received after 2:00 pm EST will be processed on the next business day. Orders received after 2:00 pm EST on Friday will be processed on the following Monday.<br\/><br\/>Local orders are usually delivered within 2-3 business days from shipment but due to high demand, we have extended our shipping estimate to 7 days.<br\/><\/p>",
+            "page-content": ""
+          }
+        },
+        "16324397781a8be68b-2": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Do you offer discounts?",
+            "description": "<p>Yes! Please leave us your email and you will receive a code for 10% off your order<\/p>",
+            "page-content": ""
+          }
+        },
+        "5212a784-4faa-4ff4-b627-6ca5174a15f9": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Can I cancel my order?",
+            "description": "<p>Yes, one of our specialists will be able to help you with your order. <\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "f5e9fc03-730e-40f9-a27f-6e958673be7d": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Can I change my order?",
+            "description": "<p>Yes, one of our specialists will be able to help you with your order. <\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "867e5285-ce29-43d7-ab7d-b71e9b6cd946": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "How to return a product?",
+            "description": "<p>Simply contact our team via email, chat or phone!<\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "55c9e99a-263a-4aab-8d0f-6daed941461c": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "How to exchange a product?",
+            "description": "<p>We do not allow exchanges.<\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a> <\/p>",
+            "page-content": ""
+          }
+        },
+        "a1431ac6-d961-4819-9765-1422a27368a4": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What is your return policy?",
+            "description": "<p>We offer a 100 day free trial period. <\/p><p>For more details please refer to our return policy or click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a> for immediate assistance<\/p>",
+            "page-content": ""
+          }
+        },
+        "5e9dca59-dfa9-4d67-b955-6f003b3cbafd": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "The 100 days start from purchase\/receipt of order?",
+            "description": "<p>The 100 days starts from receipt of the order.<\/p><p>If you need immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "fb9a1885-9ac2-4580-81b1-b0eec5fdd4a2": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "My order arrived damaged",
+            "description": "<p>Sorry for the inconvenience! Please allow our team to quickly rectify this issue for you. <\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "bebfb622-3e95-4040-ab7d-2dba22bf8bbe": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What is your email address?",
+            "description": "<p>Our email address is evertoneinfo@thesocialbeauty.com.<\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "fea40c16-c382-4e83-b167-0acc86b02883": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What are the available payment methods?",
+            "description": "<p>We accept Visa, Amex, Mastercard, Discover, Apple Pay, Google Pay, Meta Pay, Shop Pay, Venmo, PayPal<\/p>",
+            "page-content": ""
+          }
+        },
+        "1465efc2-be29-485f-a950-192679e9e6b1": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What is your phone number?",
+            "description": "<p>We're available at <a href=\"tel:888-505-5909\" title=\"tel:888-505-5909\">888-505-5909<\/a>. <\/p><p>If you have any questions - just give us a call.<\/p>",
+            "page-content": ""
+          }
+        },
+        "0cf9ecd8-effb-4cff-8342-829478b3fd43": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Where are you located\/do you have a brick&mortar store?",
+            "description": "<p>Our HQ is in Los Angeles, California. We do not have a brick and mortar store<\/p>",
+            "page-content": ""
+          }
+        },
+        "ec1b16ef-356b-4410-9692-5f26df238239": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Where are your products made?",
+            "description": "<p>Our products are made in the USA, with globally sourced components. <\/p>",
+            "page-content": ""
+          }
+        },
+        "61901f60-1de2-45be-82e3-e100b19ae6b2": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Do you have reviews?",
+            "description": "<p>Yes, please take a look at our reviews page with honest reviews from real customers.<\/p>",
+            "page-content": ""
+          }
+        },
+        "aa9caa12-8ec5-4e8f-a346-ac7aebde8533": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Can I use more than one coupon code?",
+            "description": "<p>You can only use one coupon code per order. <\/p>",
+            "page-content": ""
+          }
+        },
+        "1f39dc20-30c2-4cff-8c19-d8857f029acb": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "How long does it take for the refund to arrive?",
+            "description": "<p>Based on your individual bank or method of payment, refunds will arrive within 10-15 days.<\/p>",
+            "page-content": ""
+          }
+        },
+        "40ae533f-32e8-4005-b565-f8496c76661d": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "My order status is delivered, but it wasn't delivered",
+            "description": "<p>Sorry for the inconvenience! Please allow our team to quickly rectify this issue for you. <\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "0ace2044-5e93-41aa-b0b7-35be82e755f8": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "How to change my shipping address?",
+            "description": "<p>Please kindly provide your order number or the current address.<\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "579341d0-1564-4da3-94a4-88157483e067": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What is your shipping region?",
+            "description": "<p>We ship everywhere within the continental United States<\/p>",
+            "page-content": ""
+          }
+        },
+        "2286cd3d-feb6-4ce9-bc4c-b1721c509a2c": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "How to change my delivery date?",
+            "description": "<p>We do not directly control the date of delivery, this will depend on the courier. <\/p><p>For more information, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "24865020-ca72-4861-80d4-d96d0eb38a8a": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What are the shipping times?",
+            "description": "<p>Shipping will take place within 2-4 from the order date.<\/p><p>For more details, please refer to our Shipping policy here<\/p>",
+            "page-content": ""
+          }
+        },
+        "b4be86cf-1a79-4d73-b3dc-793df45450e0": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "I never received the order confirmation",
+            "description": "<p>Sorry for the inconvenience! Please allow our team to quickly rectify this issue for you. <\/p><p>For immediate assistance, please click <a href=\"mailto:evertoneinfo@thesocialbeauty.com\" title=\"mailto:evertoneinfo@thesocialbeauty.com\">here<\/a><\/p>",
+            "page-content": ""
+          }
+        },
+        "7afcfe0f-f061-4f7c-8667-8de7b2146de8": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "What is your shipping policy?",
+            "description": "<p>Shipping is FREE on all orders!<\/p><p>For more details, please check our Shipping policy here<\/p>",
+            "page-content": ""
+          }
+        },
+        "8a9672ff-66ba-4941-b238-732bf3cb9305": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Where do you ship from?",
+            "description": "<p>Our products are all made and shipped from Los Angeles, CA<\/p>",
+            "page-content": ""
+          }
+        },
+        "16465e16-55e8-4e1b-abab-9a5f22692fff": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Do you offer expedited shipping?",
+            "description": "<p>We are not able to provide expedited shipping.<br\/>Rest assured, we will process and ship your orders as soon as possible.<\/p>",
+            "page-content": ""
+          }
+        },
+        "5ceb3109-0101-4c7c-b7b5-46a9ca24d303": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Are your products organic?",
+            "description": "<p>Our products are formulated with clean ingredients free from Phthalates, Sulfates and Parabens. Where permitted, we use organic ingredients.<\/p>",
+            "page-content": ""
+          }
+        },
+        "6d227e89-abe3-4428-9efa-40e1927db4f6": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Are your products Vegan? ",
+            "description": "<p>Most of our products are currently formulated with vegan ingredients. We love our fury friends and are working towards making all of our existing and new products vegan and cruelty free!<\/p>",
+            "page-content": ""
+          }
+        },
+        "0e42edd8-a387-430f-a94f-b2caee672812": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "I am pregnant, is it safe for me to use Evertone products?",
+            "description": "<p>Most of our products are currently pregnancy safe. It is important to us to be a mom-friendly brand and are working towards making all of our existing and new products pregnancy safe!<\/p>",
+            "page-content": ""
+          }
+        },
+        "53489443-0d4b-4e20-b5cb-d09e2fc0c966": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Safe for breastfeeding? ",
+            "description": "<p>Most of our products are currently breastfeeding safe. It is important to us to be a mom-friendly brand and are working towards making all of our existing and new products breastfeeding safe!<\/p>",
+            "page-content": ""
+          }
+        },
+        "c8adebe8-e6f9-46e0-9425-aa46790d6bd8": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "NON GMO?",
+            "description": "<p>Our products are non GMO.<\/p>",
+            "page-content": ""
+          }
+        },
+        "7ce862e6-ac19-4e88-a70c-a8bd63ede87a": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Are your products safe for acne-prone skin?",
+            "description": "<p>Yes! Our products are all formulated with sensitive skin in mind. Our Keepin’ It Taut Bundle also helps reduce breakouts and diminish the appearance of acne and acne scars.<\/p>",
+            "page-content": ""
+          }
+        },
+        "1cc5642a-19d9-4ac9-88a4-34896eb7a788": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Any allergies that can be triggered?",
+            "description": "<p>Please perform a patch test before use. If irritation or redness occurs, consult a physician. If you have existing skin conditions, consult a physician before use.<\/p>",
+            "page-content": ""
+          }
+        },
+        "9367136c-e94b-4ff1-a94e-118092460736": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "It is safe to use if you have a BBL or any surgeries?",
+            "description": "<p>Please consult a physician before use after surgeries. <\/p>",
+            "page-content": ""
+          }
+        },
+        "9cbeb38d-7ce9-4243-9a7c-571af28280ac": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Is your packaging recyclable? ",
+            "description": "<p>Yes! Make sure to wash out your jars and bottles before disposing in the recycle bin. All paper boxes are also recyclable.<\/p>",
+            "page-content": ""
+          }
+        }
+      },
+      "block_order": [
+        "52f9ac18-7e2e-4c46-9c5c-fd69e4607b9a",
+        "16324397781a8be68b-0",
+        "16324397781a8be68b-1",
+        "16324397781a8be68b-2",
+        "5212a784-4faa-4ff4-b627-6ca5174a15f9",
+        "f5e9fc03-730e-40f9-a27f-6e958673be7d",
+        "867e5285-ce29-43d7-ab7d-b71e9b6cd946",
+        "55c9e99a-263a-4aab-8d0f-6daed941461c",
+        "a1431ac6-d961-4819-9765-1422a27368a4",
+        "5e9dca59-dfa9-4d67-b955-6f003b3cbafd",
+        "fb9a1885-9ac2-4580-81b1-b0eec5fdd4a2",
+        "bebfb622-3e95-4040-ab7d-2dba22bf8bbe",
+        "fea40c16-c382-4e83-b167-0acc86b02883",
+        "1465efc2-be29-485f-a950-192679e9e6b1",
+        "0cf9ecd8-effb-4cff-8342-829478b3fd43",
+        "ec1b16ef-356b-4410-9692-5f26df238239",
+        "61901f60-1de2-45be-82e3-e100b19ae6b2",
+        "aa9caa12-8ec5-4e8f-a346-ac7aebde8533",
+        "1f39dc20-30c2-4cff-8c19-d8857f029acb",
+        "40ae533f-32e8-4005-b565-f8496c76661d",
+        "0ace2044-5e93-41aa-b0b7-35be82e755f8",
+        "579341d0-1564-4da3-94a4-88157483e067",
+        "2286cd3d-feb6-4ce9-bc4c-b1721c509a2c",
+        "24865020-ca72-4861-80d4-d96d0eb38a8a",
+        "b4be86cf-1a79-4d73-b3dc-793df45450e0",
+        "7afcfe0f-f061-4f7c-8667-8de7b2146de8",
+        "8a9672ff-66ba-4941-b238-732bf3cb9305",
+        "16465e16-55e8-4e1b-abab-9a5f22692fff",
+        "5ceb3109-0101-4c7c-b7b5-46a9ca24d303",
+        "6d227e89-abe3-4428-9efa-40e1927db4f6",
+        "0e42edd8-a387-430f-a94f-b2caee672812",
+        "53489443-0d4b-4e20-b5cb-d09e2fc0c966",
+        "c8adebe8-e6f9-46e0-9425-aa46790d6bd8",
+        "7ce862e6-ac19-4e88-a70c-a8bd63ede87a",
+        "1cc5642a-19d9-4ac9-88a4-34896eb7a788",
+        "9367136c-e94b-4ff1-a94e-118092460736",
+        "9cbeb38d-7ce9-4243-9a7c-571af28280ac"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "heading": "",
+        "title-alignment": "center",
+        "container-width": 2,
+        "spacing-above": false,
+        "spacing-below": true
+      }
+    }
+  },
+  "order": [
+    "16324399488a55ecb4",
+    "main",
+    "16324397781a8be68b"
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "sections": {
+    "8a81b7ad-53ae-4ced-879f-c0ce47e5ceb0": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "text-color": "light",
+        "background-color": "none",
+        "container-width": 6,
+        "spacing-above": false,
+        "spacing-below": true,
+        "image-height": 4,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "medium",
+        "overlap": true,
+        "box-around-text": false,
+        "mobile-overlay": true,
+        "image": "shopify:\/\/shop_images\/Reviews-banner.jpg",
+        "overline": "",
+        "title": "BEFORE & AFTER",
+        "description": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "77da4bcd-0020-4994-a42a-03443d278b0b": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": false,
+        "spacing-below": false,
+        "overline": "",
+        "heading": "STRETCH MARKS",
+        "addcusclass": "",
+        "text": "<p>We love to see it! Real women with real results.<\/p>"
+      }
+    },
+    "fde1daa6-d82c-451e-b835-e636cb56f085": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": false,
+        "spacing-below": true,
+        "overline": "",
+        "heading": "",
+        "addcusclass": "",
+        "text": "<p>We love to see it! Real women with real results.x<\/p>"
+      }
+    },
+    "2ef4ed26-6660-45ee-b487-326a6d8e1dd0": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-4957ba51"
+      }
+    },
+    "88795d27-d3a9-4317-bba6-d8f413734fb4": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": false,
+        "overline": "",
+        "heading": "CELLULITE",
+        "addcusclass": "",
+        "text": ""
+      }
+    },
+    "af1a6e0e-a9b4-4e29-8eda-6bc2c0e1ba5d": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-4cc0d9f3"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "show-title": true,
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "09d0691c-c341-48fe-927e-3655925595dd": {
+      "type": "text-columns",
+      "disabled": true,
+      "blocks": {
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-0": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY SMOOTHER",
+            "description": "<p>\"I LOVE this product. I noticed the difference in 2 weeks!\"<br\/>— Tritia J.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        },
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-2": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Final Stretch",
+            "description": "<p>\"Amazing results!\"<br\/>— Jennifer S.<\/p>",
+            "link-url": "shopify:\/\/products\/keepin-it-taut",
+            "link-text": "SHOP NOW"
+          }
+        },
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-3": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Body exfoliator",
+            "description": "<p>\"Incredible product. I bought one for my mother and sister!\"<br\/>— Ruby J.<\/p>",
+            "link-url": "shopify:\/\/products\/body-exfoliator",
+            "link-text": "SHOP NOW"
+          }
+        },
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-1": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "BODY FIRMER",
+            "description": "<p>\"Have never felt so comfortable in my skin, highly recommend.\"<br\/>— Stacy L.<\/p>",
+            "link-url": "shopify:\/\/products\/body-firmer",
+            "link-text": "SHOP NOW"
+          }
+        },
+        "a9319336-fd57-4733-a3e0-650c0af155f7": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "body refresher",
+            "description": "<p>\"Wow this actually works!\"<br\/>— Lucy L.<\/p>",
+            "link-url": "shopify:\/\/products\/body-refresher",
+            "link-text": "Shop now"
+          }
+        },
+        "fbe1f4c4-50d7-4c6a-961d-3c0aacf50d6c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "<p>Explain a set of product features, add illustrations, infographics, logo lists, or link to pages.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-0",
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-2",
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-3",
+        "template--15878704824486__09d0691c-c341-48fe-927e-3655925595dd-1665974387ea6a548f-1",
+        "a9319336-fd57-4733-a3e0-650c0af155f7",
+        "fbe1f4c4-50d7-4c6a-961d-3c0aacf50d6c"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 1,
+        "spacing-above": false,
+        "spacing-below": true,
+        "width": 2,
+        "aspect-ratio": "square",
+        "image-width": 0,
+        "mobile-width": "2",
+        "text-alignment": "center",
+        "heading": "",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "862a2b0b-c1de-4b97-9201-4240bed9f817": {
+      "type": "slideshow",
+      "disabled": true,
+      "blocks": {
+        "template--15942906871974__862a2b0b-c1de-4b97-9201-4240bed9f817-166801777280577c50-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/KEEP_IT_TAUT.jpg",
+            "text-position": "bottom-left",
+            "text-width": "medium",
+            "overline": "Overline text",
+            "title": "Slide heading",
+            "description": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
+            "link-url": "\/",
+            "link-text": "View more"
+          }
+        },
+        "template--15942906871974__862a2b0b-c1de-4b97-9201-4240bed9f817-166801777280577c50-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/KEEP_IT_TAUT_af60962d-a969-401b-ba1b-ae1d5a65455a.png",
+            "mobile-image": "shopify:\/\/shop_images\/KEEP_IT_TAUT.png",
+            "text-position": "bottom-left",
+            "text-width": "medium",
+            "overline": "Overline text",
+            "title": "Slide heading",
+            "description": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
+            "link-url": "\/",
+            "link-text": "View more"
+          }
+        },
+        "template--15942906871974__862a2b0b-c1de-4b97-9201-4240bed9f817-166801777280577c50-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/KEEP_IT_TAUT_af60962d-a969-401b-ba1b-ae1d5a65455a.png",
+            "text-position": "bottom-left",
+            "text-width": "medium",
+            "overline": "Overline text",
+            "title": "Slide heading",
+            "description": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
+            "link-url": "\/",
+            "link-text": "View more"
+          }
+        },
+        "template--15942906871974__862a2b0b-c1de-4b97-9201-4240bed9f817-166801777280577c50-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/KEEP_IT_TAUT.jpg",
+            "text-position": "bottom-left",
+            "text-width": "medium",
+            "overline": "Overline text",
+            "title": "Slide heading",
+            "description": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
+            "link-url": "\/",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--15942906871974__862a2b0b-c1de-4b97-9201-4240bed9f817-166801777280577c50-0",
+        "template--15942906871974__862a2b0b-c1de-4b97-9201-4240bed9f817-166801777280577c50-1",
+        "template--15942906871974__862a2b0b-c1de-4b97-9201-4240bed9f817-166801777280577c50-2",
+        "template--15942906871974__862a2b0b-c1de-4b97-9201-4240bed9f817-166801777280577c50-3"
+      ],
+      "settings": {
+        "text-color": "auto",
+        "background-color": "none",
+        "spacing-above": false,
+        "spacing-below": false,
+        "spacing-around-blocks": true,
+        "image-height": 0,
+        "darken-image": false,
+        "blocks_per_slide": 4,
+        "blocks_per_slide_mobile": "1",
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "auto-rotate": false,
+        "rotate-frequency": 7,
+        "transition_type": "slide"
+      }
+    },
+    "8389a194-9bc1-410d-8dea-2c42649a0f4e": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": false,
+        "spacing-below": false,
+        "overline": "",
+        "heading": "Evertone Love",
+        "addcusclass": "",
+        "text": "<p>Listen to real reviews by real women.<\/p>"
+      }
+    },
+    "1671040791f0980216": {
+      "type": "apps",
+      "blocks": {
+        "6d446892-5aa4-4471-91b3-0c3d0d4fdd39": {
+          "type": "shopify:\/\/apps\/tolstoy-shoppable-video-quiz\/blocks\/carousel-block\/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "1iyplvw9vm92z"
+          }
+        }
+      },
+      "block_order": [
+        "6d446892-5aa4-4471-91b3-0c3d0d4fdd39"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": false,
+        "spacing-below": true
+      }
+    },
+    "710e5e9d-4ef7-4512-8cb5-56c6b4315fd3": {
+      "type": "yotpo-reviews",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "8a81b7ad-53ae-4ced-879f-c0ce47e5ceb0",
+    "77da4bcd-0020-4994-a42a-03443d278b0b",
+    "fde1daa6-d82c-451e-b835-e636cb56f085",
+    "2ef4ed26-6660-45ee-b487-326a6d8e1dd0",
+    "88795d27-d3a9-4317-bba6-d8f413734fb4",
+    "af1a6e0e-a9b4-4e29-8eda-6bc2c0e1ba5d",
+    "main",
+    "09d0691c-c341-48fe-927e-3655925595dd",
+    "862a2b0b-c1de-4b97-9201-4240bed9f817",
+    "8389a194-9bc1-410d-8dea-2c42649a0f4e",
+    "1671040791f0980216",
+    "710e5e9d-4ef7-4512-8cb5-56c6b4315fd3"
+  ]
+}

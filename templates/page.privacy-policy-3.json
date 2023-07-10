@@ -1,0 +1,104 @@
+{
+  "sections": {
+    "16324732604d3e7054": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "text-color": "auto",
+        "background-color": "none",
+        "container-width": 6,
+        "spacing-above": false,
+        "spacing-below": true,
+        "image-height": 4,
+        "darken-image": false,
+        "parallax-enabled": false,
+        "text-position": "center",
+        "text-width": "large",
+        "overlap": false,
+        "box-around-text": false,
+        "mobile-overlay": true,
+        "image": "shopify:\/\/shop_images\/marvin-meyer-hwkTELbKW2s-unsplash.jpg",
+        "overline": "",
+        "title": "Ingredients that actually work.",
+        "description": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "main": {
+      "type": "page",
+      "settings": {
+        "show-title": false,
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 2,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "16324732989269ca2c": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "overline": "",
+        "heading": "Core Values",
+        "text": ""
+      }
+    },
+    "af35b38d-b4c9-4530-99f1-8348e6c26770": {
+      "type": "custom-content",
+      "disabled": true,
+      "settings": {
+        "custom_html": "<center>\n<h1 style=\"font-size:50px;\">Core Values<\/h1>\n<\/center>",
+        "background-color": "none",
+        "container-width": 4,
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true
+      }
+    },
+    "1632473398c42b6136": {
+      "type": "featured-video",
+      "disabled": true,
+      "settings": {
+        "video-url": "",
+        "full-width": false,
+        "background-color": "none",
+        "section-height": "regular",
+        "light-text": true,
+        "darken-video": true,
+        "heading": "Video",
+        "sub-heading": "Add a subheading here",
+        "button-text": "button",
+        "button-url": ""
+      }
+    },
+    "8050fd99-4592-4d27-a69f-8f5363b592d9": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "overline": "Overline text",
+        "heading": "Introduce your brand",
+        "text": "<p>Introduce your brand, products and vision statement and welcome customers to your store.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "16324732604d3e7054",
+    "main",
+    "16324732989269ca2c",
+    "af35b38d-b4c9-4530-99f1-8348e6c26770",
+    "1632473398c42b6136",
+    "8050fd99-4592-4d27-a69f-8f5363b592d9"
+  ]
+}

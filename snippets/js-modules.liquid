@@ -1,0 +1,159 @@
+<script type="module">
+  import "{{ 'a11y.js' | asset_url }}";
+  import "{{ 'media-queries.js' | asset_url }}";
+  import "{{ 'radios.js' | asset_url }}";
+  import "{{ 'transition.js' | asset_url }}";
+  import "{{ 'general.js' | asset_url }}";
+  import "{{ 'product-grid.js' | asset_url }}";
+
+  {%- unless request.page_type == 'password' -%}
+    import "{{ 'off-canvas.js' | asset_url }}";
+    import "{{ 'cart.js' | asset_url }}";
+
+    {%- if settings.product--quick-add-enabled -%}
+      import "{{ 'quick-add.js' | asset_url }}";
+    {%- endif -%}
+
+    import XMenu from "{{ 'x-menu.js' | asset_url }}";
+    customElements.define(
+      'x-menu-root',
+      class XMenuBlockshop extends XMenu {
+        connectedCallback() {
+          super.connectedCallback();
+
+          this.header_timer = null;
+          this.transparent_header =
+            this.header_root.getAttribute('data-header-menu-transparent') === 'true';
+
+          this.headerListeners();
+        }
+
+        headerListeners() {
+          this.parents_with_sub_menu.on('mouseenter', () => clearTimeout(this.header_timer));
+
+          this.header_root.on('mouseenter touchstart', () => {
+            clearTimeout(this.header_timer);
+            this.showHeader();
+          });
+
+          this.header_root.on('mouseleave', () => {
+            this.header_timer = setTimeout(() => this.hideHeader(), 500);
+          });
+        }
+
+        showHeader() {
+          this.header_root.setAttribute('data-transition', 'forwards');
+        }
+
+        hideHeader() {
+          const open_parents = [];
+          this.parents_with_sub_menu.forEach(parent_with_sub_menu => {
+            const open_parent = parent_with_sub_menu.parentNode.querySelector(
+              '[data-main-menu--open="true"]'
+            );
+            if (open_parent) open_parents.push(open_parent);
+          });
+
+          if (open_parents.length) return false;
+
+          this.header_root.setAttribute('data-transition', 'backwards');
+
+          // found cases of the menu staying open when header has faded out
+          this.slideUp();
+        }
+      }
+    );
+  {%- endunless -%}
+
+  {%- if request.design_mode -%}
+    import "{{ 'editor-events.js' | asset_url }}";
+  {%- endif -%}
+
+  {%- if settings.product--quick-add-enabled or request.page_type == 'product' -%}
+    import FeaturedProduct from "{{ 'featured-product.js' | asset_url }}";
+  {%- endif -%}
+
+  {%- if request.page_type == 'product' -%}
+    import TabOrder from "{{ 'tab-order.js' | asset_url }}";
+
+    customElements.define(
+      'product-root',
+      class Product extends FeaturedProduct {
+        constructor() {
+          super();
+        }
+
+        connectedCallback() {
+          this.first_media = this.querySelector('.product-media--featured[data-active="true"]');
+          this.mobile_media_style = this.getAttribute('data-mobile-media-style');
+
+          if (this.mobile_media_style === 'slideshow') {
+            this.carousel = this.querySelector('.carousel--root');
+            this.carousel.on('loaded', () => this.goToSlide(this.first_media.dataset.id || 0));
+          }
+
+          this.mobileModalHandler();
+          this.initTabOrder();
+          super.connectedCallback();
+
+          this.zoom_enabled && this.zoom_images.length && this.waitForHoverImage();
+          theme.utils.updateRecentProducts(this.dataset.handle);
+        }
+
+        waitForHoverImage() {
+          const active_media_container = this.first_media.parentNode;
+          theme.utils.imagesLoaded(active_media_container, () => this.imageZoom(), true);
+        }
+
+        mobileModalHandler() {
+          if (this.media_container) {
+            const modal_links = this.media_container.querySelectorAll('.modal--link');
+            modal_links.length &&
+              modal_links.on('click', event =>
+                theme.mqs.current_window === 'small' && event.stopImmediatePropagation()
+              );
+          }
+        }
+
+        updateVariantMedia(variant_media_id) {
+          this.mobile_media_style === 'slideshow' && this.goToSlide(variant_media_id);
+          super.updateVariantMedia(variant_media_id);
+
+          const variant_image = [...this.main_media].find(media => {
+            const id = media.getAttribute('data-id');
+            return id === variant_media_id;
+          });
+
+          if (variant_image) {
+            const variant_media_type = variant_image.getAttribute('data-media-type');
+            this.media_container.setAttribute('data-media-type', variant_media_type);
+          }
+        }
+
+        initTabOrder() {
+          new TabOrder([
+            '.header--root',
+            '.product-page--center',
+            '.product-page--left-column',
+            '.product-page--right-column',
+            '.layout--main-content > *:not(:first-child)',
+            '.footer--root'
+          ], null);
+        }
+
+        goToSlide(variant_media_id) {
+          if (variant_media_id === 0) return;
+
+          const new_media = this.carousel.querySelector(
+            `.product-media--featured[data-id='${variant_media_id}']`
+          );
+
+          if (!new_media) return;
+
+          const new_slide = new_media.closest('.carousel--block').index() + 1;
+          this.carousel.updateThenGoToActiveSlide(new_slide);
+        }
+      }
+    );
+  {%- endif -%}
+</script>

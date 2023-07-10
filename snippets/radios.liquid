@@ -1,0 +1,429 @@
+{% comment %} Usage:
+- Place inside loop of 'option' objects
+- If more than one product is included on one page, include a unique 'id'
+- If swatches are desired, set 'is_swatches' to true
+- display_swatches_only is used when no functionality is desired
+{% endcomment %}
+<style>
+  .anti-cellulite-cream-body-shaper-bogo span.total_price_var,
+  .anti-cellulite-cream-body-shaper-bogo .radio_input_main{
+    display: none !Important;
+}
+    .custom_icon .content_box {
+    display: flex;
+    text-transform: uppercase;
+}
+  .custom_icon .content_box img {
+    width: 32px;
+    height:auto;
+    background: #f1b725;
+}
+.custom_icon .content_box span {
+    padding: 0  10px;
+    background-color: #e8e8e8;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .radios--main {
+    position: relative;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+.custom_icon {
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+  .variant_img img {
+    width: 60px;
+}
+  .radios--main {
+    justify-content: space-evenly;
+}
+  .product_price.mobile_price_var {
+    display: none;
+}
+  label.radios--value-button {
+    display: flex;
+}
+  .variant_img img {
+    height: auto;
+    max-height: 100px;
+}
+  .radios--value-button>* {
+    border: unset !important;
+}
+  .radios--container {
+    display: unset !important;
+}
+  .radios--input[data-item=radio], [data-is-swatches=true] .filter--input {
+    opacity: 1 !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0;
+}
+  input[type="radio"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  /* background-color only for content */
+  border: 2px solid #bbbbbb;
+  background-color: #e7e6e7;
+  border-radius: 50%;
+}
+  input[type="radio"]:checked {
+  background-color: #b74c6e;
+}
+  .radios_heading {
+    padding: 15px 0px 10px;
+}
+.value_title {
+    display: grid;
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+}
+  span.sub_title_p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 16px !important;
+}
+  .radio_input_main {
+    padding: 10px 10px;
+}
+.product_price {
+    text-align: left;
+    padding: unset !important;
+    width: 60%;
+}
+span.compare_price_var {
+    color: #CA507F !important;
+    text-decoration: line-through;
+    text-decoration-color: #CA507F !important;
+    font-size: 17px;
+}
+  span.total_price_var {
+    color: gray;
+}
+  .total_price {
+/*     display: flex; */
+    justify-content: space-between;
+    text-align:right;
+}
+
+     hr { 
+       border-top: 1px solid gainsboro;
+        }
+  .radios--main .total_price span {
+    display: inline-block;
+    width: 100%;
+}
+  .radio_input_main input {
+    position: relative;
+    z-index: 1;
+    overflow: inherit;
+    border: none;
+    background: transparent;
+}
+.radio_input_main input::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -3px;
+    left: -3px;
+    padding: 10px;
+    border: 1px solid #000;
+    z-index: 999;
+    border-radius: 50%;
+}
+  @media only screen and (max-width: 920px) and (min-width: 768px)  {
+    .custom_icon .content_box span {
+    font-size: 10px;
+    }
+  }
+  @media only screen and (max-width: 448px) {
+  .product_price {
+    text-align: center;
+    padding: unset !important;
+    width: unset !important;
+}
+    .value_title {
+    display: grid;
+    width: 100%;
+    padding: unset !important;
+    font-size: 18px;
+}
+    .evertone-microcurrent-facial-toning-device .radios--main {
+    padding-top: 30px;
+}
+   .evertone-microcurrent-facial-toning-device .radios--main:first-child{
+    padding-top: 0px;
+}
+    span.sub_title_p {
+    font-size: 12px;
+}
+    .total_price {
+    /*display: flex;*/
+    /* justify-content: space-between; */
+    flex-direction: column !important;
+}
+    .radio_input_main {
+    padding: unset !important;
+}
+    .product_price.mobile_price_var {
+    display: block;
+}
+    .product_price {
+    display: none;
+}
+.total_price {
+    font-size: 15px;
+}
+    span.compare_price_var {
+    color: #CA507F !important;
+    text-decoration: line-through;
+    text-decoration-color: #CA507F !important;
+    font-size: 18px;
+}
+    .variant_img {
+    padding: 5px 5px;
+}
+   .custom_icon .content_box span {
+    font-size: 13px;
+    } 
+  }
+  @media only screen and (max-width: 400px) {
+     .custom_icon .content_box span {
+    font-size: 11px;
+    }
+   }
+   @media only screen and (max-width: 360px) {
+     .custom_icon .content_box span {
+    font-size: 10px;
+    }
+   }
+</style>
+{%- liquid
+  unless is_swatches
+    assign is_swatches = false
+  endunless
+
+  capture radios_name
+    assign option_name = option.name | downcase | remove: ' '
+    echo id | append: '-' | append: option_name
+  endcapture
+
+  unless display_swatches_only
+    assign display_swatches_only = false
+  else
+    assign radios_name = radios_name | prepend: 'display-'
+    assign is_swatches = true
+  endunless
+-%}
+
+<radios-root
+  class="radios--root"
+  data-is-swatches="{{ is_swatches }}"
+  data-display-only="{{ display_swatches_only }}"
+>
+
+  <div class="radios--header">
+    <label
+      class="radios--option-label"
+      id="{{ radios_name }}"
+      {% if display_swatches_only %}
+        data-item="hidden-text"
+      {% else %}
+        data-item="accent-text"
+      {% endif %}
+    >
+      {% comment %}
+      {{ option.name | escape }}
+      {% endcomment %}
+    </label>
+
+    {%- liquid
+      if display_swatches_only == false and is_swatches
+        echo '<span class="radios--option-current" data-item="light-accent-text">'
+        for value in option.values
+          if value == option.selected_value
+            echo value | escape
+          endif
+        endfor
+        echo '</span>'
+      endif
+    -%}
+  </div> 
+
+  <div
+    class="radios--container"
+    role="radiogroup"
+    aria-labelledby="{{ radios_name }}"
+  >
+
+    {%- for value in option.values -%}
+      <div class="radios--main">
+      <div class="custom_icon">
+        {% for variant in product.variants %}
+          {% if variant.title == value %}
+          {%- if variant.metafields.custom.icon_image != blank -%}
+        <div class="content_box {{ forloop.index }}">
+        <img src="{{ variant.metafields.custom.icon_image | img_url:'master' }}" height="" width=""/>
+        <span>{{ variant.metafields.custom.icon_text }}</span>
+        </div>
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+        </div>
+        {% for variant in product.variants %}
+          {% if variant.title == value %}
+          {% assign Variant_price = variant.compare_at_price | money_without_trailing_zeros %}
+            {% assign variant_main_price = variant.price | money_without_trailing_zeros %}
+            {% endif %}
+          {% endfor %}
+      <div class="radio_input_main" data_price="{{ Variant_price }}" data_main_price="{{ variant_main_price }}">
+        <input
+          class="radios--input"
+          type="radio"
+          id="{{ radios_name }}-{{ value | downcase | remove: ' ' }}"
+          name="{{ radios_name }}"
+          value="{{ value | escape }}"
+          data-item="radio"
+          {% if display_swatches_only %}
+            disabled
+          {% elsif value == option.selected_value %}
+            checked
+          {% endif %}
+        />
+        {%- if is_swatches -%}
+          <label class="radios--swatch-button" data-item="swatch" for="{{ radios_name }}-{{ value | downcase | remove: ' ' }}" aria-label="{{ value | escape }}"></label>
+        {%- else -%}
+          <label class="radios--value-button"  data-item="button" for="{{ radios_name }}-{{ value | downcase | remove: ' ' }}" ></label>
+        {% endif %}
+      </div>
+           <div class="variant_img">
+                     {% for variant in product.variants %}
+                    {% assign variant_values = variant.options %} 
+                      {% if variant_values contains value %}
+                       {% if variant.metafields.custom.variant_image != blank %}
+                         <img src= "{{ variant.metafields.custom.variant_image | img_url: "master" }}" height="" width="">
+                         <span><img src= "{{ variant.metafields.custom.variant_image | img_url: "450x450" }}" height="" width=""></span> 
+                         {% else %}
+                   <img src= "{{ variant.image.src | product_img_url: medium | limit: 1 }}" height="" width="">
+                 <span><img src= "{{ variant.featured_image | img_url: '450x450' }}" height="" width=""></span> 
+                  {% endif %}
+                         {% endif %}
+                {% endfor %}
+            </div> 
+            <div class="value_title">
+          {{ value | escape }}
+      {% for variant in product.variants %}
+          {% if variant.title == value %}
+          <span class="sub_title_p">
+        
+          {{ variant.metafields.custom.icon_sub_heading }}
+            
+            </span>
+            {% endif %}
+        {% endfor %}
+            </div>
+            
+              {% assign current = product.selected_or_first_available_variant %}
+            <div class="product_price"> 
+              {% if product.handle == "evertone-microcurrent-facial-toning-device" or product.id == 7750648987814 or product.id == 7746099380390 %}
+                {% for variant in product.variants %}
+                      {% assign variant_values = variant.options %}
+                    {% if variant_values contains value %}
+                    <div class="total_price">
+                      <div class="each_total_price">
+                      <span class="each_price">
+                               {{ variant.price | money_without_trailing_zeros }} 
+                      </span>  
+                      <span class="compare_price_var">{{ variant.compare_at_price | money_without_trailing_zeros }}</span>
+                      </div>
+                    </div>
+                    {% endif %}
+              {% endfor %}
+          {% else %}
+     {% for variant in product.variants %}
+    {% assign variant_values = variant.options %}
+  {% if variant_values contains value %}
+  <div class="total_price">
+    <div class="each_total_price">
+    <span class="each_price">
+                {% if forloop.index == 1 %}
+             {{ variant.price | money_without_trailing_zeros }} {% if product.handle == "anti-cellulite-cream-body-shaper-bogo" %} {% else %}Each {% endif %}
+           {% elsif forloop.index == 2 %}
+             {% assign product_p = variant.price | divided_by: 2 %}
+           {{ product_p | money_without_trailing_zeros }} {% if product.handle == "anti-cellulite-cream-body-shaper-bogo" %} {% else %}Each {% endif %}
+           {% elsif forloop.index == 3 %}
+             {% assign product_p = variant.price | divided_by: 3 %}
+           {{ product_p | money_without_trailing_zeros }} {% if product.handle == "anti-cellulite-cream-body-shaper-bogo" %} {% else %}Each {% endif %}
+           {% endif %}
+    </span>  
+    <span class="compare_price_var">{{ variant.compare_at_price | money_without_trailing_zeros }}</span>
+    </div>
+    <span class="total_price_var">({{ variant.price | money_without_trailing_zeros }} Total)</span>
+    
+  </div>
+  {% endif %}
+{% endfor %}
+          {% endif %}
+            </div>
+      <div class="product_price mobile_price_var">
+      {% if product.handle == "evertone-microcurrent-facial-toning-device" or product.id == 7750648987814 or product.id == 7746099380390 %}
+                {% for variant in product.variants %}
+                      {% assign variant_values = variant.options %}
+                    {% if variant_values contains value %}
+                    <div class="total_price">
+                      <div class="each_total_price">
+                      <span class="each_price">
+                               {{ variant.price | money_without_trailing_zeros }} 
+                      </span>  
+                      <span class="compare_price_var">{{ variant.compare_at_price | money_without_trailing_zeros }}</span>
+                      </div>
+                    </div>
+                    {% endif %}
+              {% endfor %}
+          {% else %}
+     {% for variant in product.variants %}
+    {% assign variant_values = variant.options %}
+  {% if variant_values contains value %}
+  <div class="total_price">
+    <div class="each_total_price">
+    <span class="each_price">
+                {% if forloop.index == 1 %}
+             {{ variant.price | money_without_trailing_zeros }} {% if product.handle == "anti-cellulite-cream-body-shaper-bogo" %} {% else %}Each {% endif %}
+           {% elsif forloop.index == 2 %}
+             {% assign product_p = variant.price | divided_by: 2 %}
+           {{ product_p | money_without_trailing_zeros }} {% if product.handle == "anti-cellulite-cream-body-shaper-bogo" %} {% else %}Each {% endif %}
+           {% elsif forloop.index == 3 %}
+             {% assign product_p = variant.price | divided_by: 3 %}
+           {{ product_p | money_without_trailing_zeros }} {% if product.handle == "anti-cellulite-cream-body-shaper-bogo" %} {% else %}Each {% endif %}Each
+           {% endif %}
+    </span>  
+    <span class="compare_price_var">{{ variant.compare_at_price | money_without_trailing_zeros }}</span>
+    </div>
+    <span class="total_price_var">({{ variant.price | money_without_trailing_zeros }} Total)</span>
+    
+  </div>
+  {% endif %}
+{% endfor %}
+     {% endif %}     
+            </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</radios-root>
