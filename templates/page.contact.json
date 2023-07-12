@@ -45,6 +45,7 @@
         "spacing-below": true,
         "overline": "",
         "heading": "LETS TALK.",
+        "addcusclass": "",
         "text": "<p>For all customer service & general inquiries please contact us below. One of our staff members will be in contact you within 24 hours.<\/p>"
       }
     },
@@ -72,7 +73,8 @@
         "spacing-below": true,
         "overline": "",
         "heading": "",
-        "text": "<p>1209 S Orange St.<br\/>Wilmington DE, 19801<br\/><a href=\"tel:+18333172823\" target=\"_blank\">+1 833-317-2823<\/a><\/p>"
+        "addcusclass": "",
+        "text": "<p>1209 S Orange St.<br\/>Wilmington DE, 19801<br\/><\/p>"
       }
     }
   },

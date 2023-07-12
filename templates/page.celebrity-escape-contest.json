@@ -1,0 +1,364 @@
+{
+  "sections": {
+    "f2c721c9-7ff5-4efd-bb5a-c28fbd119b32": {
+      "type": "hero-section",
+      "settings": {
+        "desktop_img": "shopify:\/\/shop_images\/Celebrity_Escape_malibu_7da78bad-796a-4259-aae6-2851a28f81bb.png",
+        "heading": "",
+        "headingmiddle": "",
+        "headingmiddletwo": "",
+        "colortext": "",
+        "buttonlabel": "",
+        "buttonlink": "",
+        "alignment": "0 auto 0 0",
+        "verticalalignment": "flex-start"
+      }
+    },
+    "16324378141979f11c": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 1,
+        "spacing-above": true,
+        "spacing-below": true,
+        "overline": "VIP Prize Giveaway",
+        "heading": "Enter to Win the Ultimate Giveaway!",
+        "addcusclass": "",
+        "text": "<p>🏆 100 Grand Prize Winners 🏆<\/p><p>Get ready for a chance to win big with the most incredible prize package ever! We're thrilled to announce the Evertone Escape to Malibu: VIP Prize Giveaway. You have the opportunity to be one of the <strong>100 lucky winners<\/strong> who will receive a complete Evertone product collection <strong>valued at an amazing ($2300!)<\/strong><\/p><p>But that's not all! One grand prize winner will embark on the experience of a lifetime. <strong>You and a friend could win: total value of up to $20k!<\/strong><\/p>"
+      }
+    },
+    "9c5a13e5-2152-4137-bce9-edf6835a0db3": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 1,
+        "spacing-above": false,
+        "spacing-below": true,
+        "overline": "",
+        "heading": "Prizes",
+        "addcusclass": "",
+        "text": "<p><\/p><p>✈️ Two Round Trip Flights ✈️<br\/>Pack your bags because you'll be jetting off to the breathtaking paradise of Malibu. Say goodbye to ordinary and hello to extraordinary!<\/p><p>🌴 Weekend Stay at the Luxurious Nobu Hotel 🌴<br\/>Indulge in the epitome of luxury with a weekend escape at the iconic Nobu Hotel. Immerse yourself in the beauty and elegance of Malibu.<\/p><p>🍽️ Dinner at Nobu Restaurant Malibu 🍽️<br\/>Savor an exquisite dining experience at the world-renowned Nobu Restaurant Malibu. Delight your taste buds with culinary masterpieces.<\/p><p>💆 Spa Experience for Two 💆<br\/>Unwind and rejuvenate with a blissful spa experience for you and your companion. Feel pampered from head to toe as you embrace relaxation.<\/p><p>💳 $1000 Visa Gift Card 💳<br\/>To make your getaway even more memorable, we're including a $1000 Visa gift card. Treat yourself to something special and create lifelong memories.<\/p>"
+      }
+    },
+    "e6cab4ad-eaaf-4133-9672-ad20a474f2ce": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 5,
+        "spacing-above": false,
+        "spacing-below": true,
+        "overline": "",
+        "heading": "",
+        "addcusclass": "",
+        "text": "<p>NO PURCHASE NECESSARY. Open to legal residents of the USA. Must be 18 years or older to enter. Void where prohibited. Giveaway ends [End Date]. Winners will be randomly selected and announced on [Announcement Date]. This promotion is not sponsored, endorsed, or associated with Instagram or any other third party companies. The grand prize is subject to availability and certain terms and conditions. Prize substitutions may be made at the sponsor's discretion. By entering, participants agree to release and hold harmless the sponsor and its affiliates from any liability arising from or related to this giveaway.<\/p>"
+      }
+    },
+    "5147a72f-c90b-485d-87a8-1ba7dcdc556e": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "accent-2",
+        "light-text": false,
+        "container-width": 1,
+        "spacing-above": true,
+        "spacing-below": true,
+        "overline": "",
+        "heading": "How to enter",
+        "addcusclass": "",
+        "text": "<p>Entering is easy! Simply follow these steps:<\/p><p><strong>STEP 1:<br\/><\/strong>Enter your name, email address and phone number for a chance to win in the Evertone Escape to Malibu VIP Prize Giveaway <\/p><p><strong>STEP 2:<\/strong><br\/>Name\/ Phone number \/ Email address \/ Checking this box enters into giveaway and automatically subscribes (must check to enter) <\/p><p><strong>STEP 3:<\/strong><br\/>Send this link for 3 extra entries<br\/><a href=\"https:\/\/evertoneskin.com\/pages\/celebrity-escape-contest\" title=\"https:\/\/evertoneskin.com\/pages\/celebrity-escape-contest\">https:\/\/evertoneskin.com\/pages\/celebrity-escape-contest<\/a><\/p>"
+      }
+    },
+    "1632180071f18cee62": {
+      "type": "contact",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 3,
+        "spacing-above": true,
+        "spacing-below": false,
+        "heading": "",
+        "store-address": "",
+        "store-hours": "",
+        "show-social-sharing": false
+      }
+    },
+    "bf6c48f2-e225-479c-8a95-289afd85b97b": {
+      "type": "slideshow",
+      "disabled": true,
+      "blocks": {
+        "template--16134782714022__bf6c48f2-e225-479c-8a95-289afd85b97b-168912349189bd05e1-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Celebrity_Escape_malibu_7da78bad-796a-4259-aae6-2851a28f81bb.png",
+            "text-position": "bottom-left",
+            "text-width": "medium",
+            "overline": "",
+            "title": "",
+            "description": "",
+            "link-url": "",
+            "link-text": ""
+          }
+        },
+        "template--16134782714022__bf6c48f2-e225-479c-8a95-289afd85b97b-168912349189bd05e1-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "text-position": "bottom-left",
+            "text-width": "medium",
+            "overline": "Overline text",
+            "title": "Slide heading",
+            "description": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
+            "link-url": "\/",
+            "link-text": "View more"
+          }
+        },
+        "template--16134782714022__bf6c48f2-e225-479c-8a95-289afd85b97b-168912349189bd05e1-2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "text-position": "bottom-left",
+            "text-width": "medium",
+            "overline": "Overline text",
+            "title": "Slide heading",
+            "description": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
+            "link-url": "\/",
+            "link-text": "View more"
+          }
+        },
+        "template--16134782714022__bf6c48f2-e225-479c-8a95-289afd85b97b-168912349189bd05e1-3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "text-position": "bottom-left",
+            "text-width": "medium",
+            "overline": "Overline text",
+            "title": "Slide heading",
+            "description": "<p>Combine imagery with text to create stand-out campaign sections, eye-catching promotions, information blocks and more.<\/p>",
+            "link-url": "\/",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--16134782714022__bf6c48f2-e225-479c-8a95-289afd85b97b-168912349189bd05e1-0",
+        "template--16134782714022__bf6c48f2-e225-479c-8a95-289afd85b97b-168912349189bd05e1-1",
+        "template--16134782714022__bf6c48f2-e225-479c-8a95-289afd85b97b-168912349189bd05e1-2",
+        "template--16134782714022__bf6c48f2-e225-479c-8a95-289afd85b97b-168912349189bd05e1-3"
+      ],
+      "settings": {
+        "text-color": "auto",
+        "background-color": "none",
+        "spacing-above": false,
+        "spacing-below": false,
+        "spacing-around-blocks": false,
+        "image-height": 3,
+        "darken-image": false,
+        "blocks_per_slide": 1,
+        "blocks_per_slide_mobile": "1",
+        "box-around-text": false,
+        "mobile-overlay": false,
+        "auto-rotate": false,
+        "rotate-frequency": 3,
+        "transition_type": "slide"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "show-title": true,
+        "background-color": "light",
+        "light-text": false,
+        "container-width": 3,
+        "spacing-above": false,
+        "spacing-below": true
+      }
+    },
+    "02869abd-487e-4a13-920a-d59bf857367b": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "malibu-contest-best-sellers",
+        "background-color": "none",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true,
+        "featured-collection--image--show": false,
+        "featured-collection--description--show": false,
+        "display-type": "grid",
+        "products-per-row--desktop": "3",
+        "products-per-row--mobile": "1"
+      }
+    },
+    "c25c8c9b-5508-4170-935a-e114f51832df": {
+      "type": "text-columns-1",
+      "disabled": true,
+      "blocks": {
+        "template--16134782714022__c25c8c9b-5508-4170-935a-e114f51832df-1689134982bafa394a-0": {
+          "type": "image",
+          "settings": {
+            "product": "microcurrent-facial-toning-device-activating-serum-evertone-everlift",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        },
+        "template--16134782714022__c25c8c9b-5508-4170-935a-e114f51832df-1689134982bafa394a-1": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "<p>Explain a set of product features, add illustrations, infographics, logo lists, or link to pages.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        },
+        "template--16134782714022__c25c8c9b-5508-4170-935a-e114f51832df-1689134982bafa394a-2": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "<p>Explain a set of product features, add illustrations, infographics, logo lists, or link to pages.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        },
+        "template--16134782714022__c25c8c9b-5508-4170-935a-e114f51832df-1689134982bafa394a-3": {
+          "type": "image",
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "<p>Explain a set of product features, add illustrations, infographics, logo lists, or link to pages.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--16134782714022__c25c8c9b-5508-4170-935a-e114f51832df-1689134982bafa394a-0",
+        "template--16134782714022__c25c8c9b-5508-4170-935a-e114f51832df-1689134982bafa394a-1",
+        "template--16134782714022__c25c8c9b-5508-4170-935a-e114f51832df-1689134982bafa394a-2",
+        "template--16134782714022__c25c8c9b-5508-4170-935a-e114f51832df-1689134982bafa394a-3"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 1,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 2,
+        "aspect-ratio": "natural",
+        "image-width": 0,
+        "mobile-width": "2",
+        "text-alignment": "center",
+        "heading": "Show Top Sellers for purchase:",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "f133c4b4-8e43-4a76-b492-e73614b1404a": {
+      "type": "featured-product",
+      "blocks": {
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-0": {
+          "type": "overline",
+          "disabled": true,
+          "settings": {
+            "text": "Overline text"
+          }
+        },
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-1": {
+          "type": "heading",
+          "settings": {
+          }
+        },
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-2": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-4": {
+          "type": "options",
+          "disabled": true,
+          "settings": {
+            "variant-style": "buttons",
+            "swatches-enabled": true,
+            "size-chart-enabled": true,
+            "size-chart-option": "size",
+            "size-chart-content": ""
+          }
+        },
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-5": {
+          "type": "buy-buttons",
+          "settings": {
+            "smart-payment-enabled": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-0",
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-1",
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-2",
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-3",
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-4",
+        "template--16134782714022__f133c4b4-8e43-4a76-b492-e73614b1404a-16891352341fe67a6d-5"
+      ],
+      "settings": {
+        "custom_class": "",
+        "background-color": "none",
+        "container-width": 1,
+        "spacing-above": true,
+        "spacing-below": true,
+        "featured_product": "microcurrent-facial-toning-device-activating-serum-evertone-everlift",
+        "loop-enabled": false,
+        "cdnsenable": false
+      }
+    },
+    "598cc072-a245-4450-b953-9b9d5fdee22f": {
+      "type": "featured-text",
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "overline": "",
+        "heading": "WANT A FREE GIFT TODAY? ",
+        "addcusclass": "",
+        "text": "<p>All purchases over $50 get a FREE GUA SHA TOOL (Valued at $45)<\/p><h4><strong>For 25% OFF<\/strong><br\/>Use Code: <strong>GIVEAWAY25<\/strong><\/h4>"
+      }
+    }
+  },
+  "order": [
+    "f2c721c9-7ff5-4efd-bb5a-c28fbd119b32",
+    "16324378141979f11c",
+    "9c5a13e5-2152-4137-bce9-edf6835a0db3",
+    "e6cab4ad-eaaf-4133-9672-ad20a474f2ce",
+    "5147a72f-c90b-485d-87a8-1ba7dcdc556e",
+    "1632180071f18cee62",
+    "bf6c48f2-e225-479c-8a95-289afd85b97b",
+    "main",
+    "02869abd-487e-4a13-920a-d59bf857367b",
+    "c25c8c9b-5508-4170-935a-e114f51832df",
+    "f133c4b4-8e43-4a76-b492-e73614b1404a",
+    "598cc072-a245-4450-b953-9b9d5fdee22f"
+  ]
+}

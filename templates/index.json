@@ -21,14 +21,14 @@
         "template--15999947374758__e45edeec-f182-4574-97f6-c01b6808f524-16733632414d020c2a-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/4th-of-July-Banner-Desktop.jpg",
-            "mobile-image": "shopify:\/\/shop_images\/4th-of-July-Banner-Mobile.jpg",
+            "image": "shopify:\/\/shop_images\/Amazon_Prime_Sale_Desktop.jpg",
+            "mobile-image": "shopify:\/\/shop_images\/Amazon-Prime-Sale_Mobile.jpg",
             "text-position": "center",
             "text-width": "medium",
             "overline": "",
             "title": "",
             "description": "",
-            "link-url": "shopify:\/\/collections\/sale",
+            "link-url": "shopify:\/\/products\/microcurrent-facial-toning-device-activating-serum-evertone-everlift",
             "link-text": ""
           }
         },
@@ -103,23 +103,14 @@
       "type": "hero-section",
       "disabled": true,
       "settings": {
-        "desktop_img": "shopify:\/\/shop_images\/image_2023_06_06T14_10_36_710Z.png",
-        "mobile_img": "shopify:\/\/shop_images\/Summer-Sale_Mobile_39469e12-e400_2.jpg",
-        "heading": "SUMMER BUM SALE",
-        "heading-color": "#ffffff",
-        "headingmiddle": "30% OFF",
-        "headingmiddle-color": "#ffffff",
-        "headingmiddletwo": "SITEWIDE",
-        "headingmiddletwo-color": "#ffffff",
-        "colortext": "Summer ready, cellulite free!",
-        "colortext-color": "#14efd6",
-        "buttonlabel": "SHOP NOW",
-        "buttonlink": "shopify:\/\/products\/evertone-microcurrent-facial-toning-device",
-        "background-color": "#1ee3cc",
-        "aditional-text1": "",
-        "aditional-text1-color": "#ffffff",
-        "aditional-text2": "",
-        "aditional-text2-color": "#ffffff",
+        "desktop_img": "shopify:\/\/shop_images\/4th_of_July_Banner_Desktop.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/4th-of-July-Banner-Mobile.jpg",
+        "heading": "",
+        "headingmiddle": "",
+        "headingmiddletwo": "",
+        "colortext": "",
+        "buttonlabel": "",
+        "buttonlink": "shopify:\/\/products\/microcurrent-facial-toning-device-activating-serum-evertone-everlift",
         "alignment": "0 auto 0 0",
         "verticalalignment": "flex-start"
       }
@@ -451,7 +442,7 @@
         "background-color": "none",
         "light-text": false,
         "block-spacing": true,
-        "container-width": 2,
+        "container-width": 3,
         "spacing-above": true,
         "spacing-below": true,
         "width": 4,
@@ -577,12 +568,26 @@
             "link-url": "shopify:\/\/products\/complete-skin-recovery-bundle",
             "link-text": "SHOP NOW"
           }
+        },
+        "template--15942906708134__93a9413b-7385-40b4-b8f7-e5af66d8111c-166784650770b6da75-3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Add a title or tagline",
+            "description": "<p>Explain a set of product features, add illustrations, infographics, logo lists, or link to pages.<\/p>",
+            "link-url": "",
+            "link-text": "View more"
+          }
         }
       },
       "block_order": [
         "template--15942906708134__93a9413b-7385-40b4-b8f7-e5af66d8111c-166784650770b6da75-1",
         "template--15942906708134__93a9413b-7385-40b4-b8f7-e5af66d8111c-166784650770b6da75-0",
-        "template--15942906708134__93a9413b-7385-40b4-b8f7-e5af66d8111c-166784650770b6da75-2"
+        "template--15942906708134__93a9413b-7385-40b4-b8f7-e5af66d8111c-166784650770b6da75-2",
+        "template--15942906708134__93a9413b-7385-40b4-b8f7-e5af66d8111c-166784650770b6da75-3"
       ],
       "settings": {
         "background-color": "none",
@@ -646,7 +651,7 @@
             "image": "shopify:\/\/shop_images\/Bundles.jpg",
             "wide": false,
             "tall": false,
-            "retain-ratio": false,
+            "retain-ratio": true,
             "title": "Bundles",
             "link-url": "shopify:\/\/collections\/our-most-popular-bundles",
             "link-text": "SHOP NOW"
@@ -658,7 +663,7 @@
             "image": "shopify:\/\/shop_images\/web-4-Evertone_Skin_r1_89456.jpg",
             "wide": false,
             "tall": false,
-            "retain-ratio": false,
+            "retain-ratio": true,
             "title": "shop sale",
             "link-url": "shopify:\/\/collections\/sale",
             "link-text": "SHOP NOW"
@@ -670,7 +675,7 @@
             "image": "shopify:\/\/shop_images\/DSC09143_Adjusted_bfd03358-4725-4139-a799-6356269fafff.jpg",
             "wide": false,
             "tall": false,
-            "retain-ratio": false,
+            "retain-ratio": true,
             "title": "Anti-Stretch Mark",
             "link-url": "shopify:\/\/collections\/stretch-mark-treatments",
             "link-text": "SHOP NOW"
@@ -682,21 +687,10 @@
             "image": "shopify:\/\/shop_images\/DSC08371.jpg",
             "wide": false,
             "tall": false,
-            "retain-ratio": false,
+            "retain-ratio": true,
             "title": "Anti-Cellulite",
             "link-url": "shopify:\/\/collections\/cellulite-treatments",
             "link-text": "SHOP NOW"
-          }
-        },
-        "a559b9e3-904b-4d86-b20b-781c0cfbb56c": {
-          "type": "image",
-          "settings": {
-            "wide": false,
-            "tall": false,
-            "retain-ratio": false,
-            "title": "Grid image",
-            "link-url": "",
-            "link-text": "View more"
           }
         }
       },
@@ -704,15 +698,14 @@
         "c8581f2a-7f6a-4472-ac33-b941dbdd11fd",
         "overlay-block-1",
         "overlay-block-2",
-        "overlay-block-3",
-        "a559b9e3-904b-4d86-b20b-781c0cfbb56c"
+        "overlay-block-3"
       ],
       "settings": {
         "text-style": "light-with-overlay",
         "background-color": "none",
         "light-text": false,
         "mobile-overlay": true,
-        "container-width": 6,
+        "container-width": 5,
         "spacing": true,
         "spacing-above": true,
         "spacing-below": true,
@@ -720,6 +713,118 @@
         "mobile-width": "1",
         "heading": "",
         "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "be8e4b93-d010-427c-8d17-24457151f37c": {
+      "type": "text-columns",
+      "disabled": true,
+      "blocks": {
+        "template--15942906708134__be8e4b93-d010-427c-8d17-24457151f37c-16678488165157a069-0": {
+          "type": "image",
+          "settings": {
+            "product": "body-detoxifier",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "body detoxifier",
+            "description": "<p>Anti-Stretch Mark Masque<\/p>",
+            "link-url": "shopify:\/\/products\/body-detoxifier",
+            "link-text": "shop now"
+          }
+        },
+        "template--15942906708134__be8e4b93-d010-427c-8d17-24457151f37c-16678488165157a069-1": {
+          "type": "image",
+          "settings": {
+            "product": "keepin-it-taut",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Final Stretch",
+            "description": "<p>Anti-Stretch Mark Bundle<\/p>",
+            "link-url": "shopify:\/\/products\/keepin-it-taut",
+            "link-text": "shop now"
+          }
+        },
+        "template--15942906708134__be8e4b93-d010-427c-8d17-24457151f37c-16678488165157a069-2": {
+          "type": "image",
+          "settings": {
+            "product": "body-shaper",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "body shaper",
+            "description": "<p>Anti-Cellulite Cream<\/p>",
+            "link-url": "shopify:\/\/products\/body-shaper",
+            "link-text": "shop now"
+          }
+        },
+        "template--15942906708134__be8e4b93-d010-427c-8d17-24457151f37c-16678488165157a069-3": {
+          "type": "image",
+          "settings": {
+            "product": "body-firmer",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "body firmer",
+            "description": "<p>Anti-Cellulite Masque<\/p>",
+            "link-url": "shopify:\/\/products\/body-firmer",
+            "link-text": "shop now"
+          }
+        },
+        "384de0ee-07a0-4931-b494-6fafc2ba1369": {
+          "type": "image",
+          "settings": {
+            "product": "evertone-red-light-therapy-wand",
+            "smart-payment-enabled": true,
+            "show-image": true,
+            "title": "Evertone InfraWave",
+            "description": "<p>Red Light Therapy Wand<\/p>",
+            "link-url": "shopify:\/\/products\/evertone-red-light-therapy-wand",
+            "link-text": "View more"
+          }
+        }
+      },
+      "block_order": [
+        "template--15942906708134__be8e4b93-d010-427c-8d17-24457151f37c-16678488165157a069-0",
+        "template--15942906708134__be8e4b93-d010-427c-8d17-24457151f37c-16678488165157a069-1",
+        "template--15942906708134__be8e4b93-d010-427c-8d17-24457151f37c-16678488165157a069-2",
+        "template--15942906708134__be8e4b93-d010-427c-8d17-24457151f37c-16678488165157a069-3",
+        "384de0ee-07a0-4931-b494-6fafc2ba1369"
+      ],
+      "settings": {
+        "background-color": "none",
+        "light-text": false,
+        "block-spacing": true,
+        "container-width": 4,
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 4,
+        "aspect-ratio": "natural",
+        "image-width": 0,
+        "mobile-width": "2",
+        "text-alignment": "center",
+        "heading": "BEST SELLERS",
+        "subtitle": "",
+        "link-url": "",
+        "link-text": ""
+      }
+    },
+    "c2e15f0e-97b7-4117-bfea-0da450bbf639": {
+      "type": "featured-products",
+      "disabled": true,
+      "settings": {
+        "product-list": [
+          "body-detoxifier",
+          "body-firmer",
+          "body-shaper",
+          "bounce-back"
+        ],
+        "background-color": "none",
+        "light-text": false,
+        "spacing-above": true,
+        "spacing-below": true,
+        "display-type": "slideshow",
+        "products-per-row--desktop": "4",
+        "products-per-row--mobile": "1",
+        "heading": "BEST SELLERS",
         "link-url": "",
         "link-text": ""
       }
@@ -908,6 +1013,8 @@
     "732500e8-0d9f-4ebe-8b7f-3d7708bb2f74",
     "1668280723067aa2a6",
     "grid-with-overlay",
+    "be8e4b93-d010-427c-8d17-24457151f37c",
+    "c2e15f0e-97b7-4117-bfea-0da450bbf639",
     "2d84ce6c-f2b4-4411-a777-86f330838e47",
     "cb65772c-43b0-43e8-afb0-e7e557deaaa1",
     "featured-blog",
