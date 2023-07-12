@@ -17,13 +17,12 @@
     },
     "e45edeec-f182-4574-97f6-c01b6808f524": {
       "type": "slideshow",
-      "disabled": true,
       "blocks": {
         "template--15999947374758__e45edeec-f182-4574-97f6-c01b6808f524-16733632414d020c2a-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Summer-BUM-Sale-Banner_2400x1538_4a95005c-304e-4d1b-8cec-0210946d8b1a.jpg",
-            "mobile-image": "shopify:\/\/shop_images\/Summer-Bum-Sale_Mobile.jpg",
+            "image": "shopify:\/\/shop_images\/4th-of-July-Banner-Desktop.jpg",
+            "mobile-image": "shopify:\/\/shop_images\/4th-of-July-Banner-Mobile.jpg",
             "text-position": "center",
             "text-width": "medium",
             "overline": "",
@@ -102,6 +101,7 @@
     },
     "ff32fb73-d877-427f-86c2-6977fd5b40b3": {
       "type": "hero-section",
+      "disabled": true,
       "settings": {
         "desktop_img": "shopify:\/\/shop_images\/image_2023_06_06T14_10_36_710Z.png",
         "mobile_img": "shopify:\/\/shop_images\/Summer-Sale_Mobile_39469e12-e400_2.jpg",
