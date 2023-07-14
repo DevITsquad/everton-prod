@@ -106,7 +106,6 @@
     {% assign product_one = all_products[settings.free_product_one] %}
 
     {% comment %} <script src="jquery-3.6.4.min.js"></script> {% endcomment %}
-   
 
     {%- unless cart_items_titles contains product_one.title -%}
       <div class="col_md_12 cart__table" data-id="{{ product_one.id }}">
@@ -201,7 +200,17 @@
     {%- endunless -%}
 
     {% assign p_three = all_products[settings.fp_three] %}
-    {%- unless cart_items_titles contains p_three.title -%}
+    {% assign part_of_name = p_three.title | split: '/' | last %}
+    {% assign showItemFlag = false %}
+
+    
+    {%- for tittle in cart_items_titles -%}
+      {%- if tittle contains part_of_name -%}
+        {% assign showItemFlag = true %}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- unless cart_items_titles contains product_two.title and showItemFlag == true -%}
+    {%- unless  showItemFlag == true -%}
       <div class="col_md_12 cart__table" data-id="{{ p_three.id }}">
         <div class="product_box">
           <div class="product_img cart__image-wrapper">
@@ -251,6 +260,7 @@
           {% endcomment %}
         </div>
       </div>
+    {%- endunless -%}
     {%- endunless -%}
   </div>
 {% endif %}

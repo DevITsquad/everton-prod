@@ -9,6 +9,32 @@
   render 'section-assets', name: 'contact', type: 'style'
 -%}
 
+<style>
+
+  .contact--form-agree{
+    display:flex;
+  justify-content:center;  
+  align-items:center;
+  margin-bottom:15px;
+
+  }
+  #send_info[disabled]{
+    cursor: not-allowed;
+  }
+  #contact-agree{
+    min-width: 17px;
+    min-height: 17px;
+  }
+  .contact--form-agree label{
+    line-height:20px;
+    cursor:pointer;
+    user-select: none; 
+    text-transform: none;
+  }
+
+
+</style>
+
 <div class="contact--container">
   {%- if store_address != blank or store_hours != blank -%}
     <div class="contact--left-column">
@@ -55,7 +81,7 @@
           {% if form.errors contains 'name' %}
             aria-invalid="true"
           {% endif %}
-        />
+        >
 
         <label for="{{ form_id }}-contact-email" data-item="hidden-text">
           {{- contact_email_t -}}
@@ -72,30 +98,41 @@
             aria-invalid="true"
           {% endif %}
           required
-        />
+        >
+      </div>
+      <div class="contact--form-agree">
+        <input type="checkbox" name="contact[agree]" value="agree" id="contact-agree">
+        <label style="padding-bottom:0;" for="contact-agree"> By entering my email address and phone number, I agree to subscribe to Evertone SMS and email subscriptions and am aware I am entering the Evertone Giveaway </label>
       </div>
 
-      <label for="{{ form_id }}-contact-textarea" data-item="hidden-text">
-        {{- contact_message_t -}}
-      </label>
-      <textarea
-        class="{% if form.errors contains 'body' %}error{% endif %}"
-        id="{{ form_id }}-contact-textarea"
-        rows="5"
-        cols="60"
-        name="contact[body]"
-        placeholder="{{ contact_message_t }}"
-        required
-      >{{ contact.fields.body }}</textarea>
+
+      {% comment %}
+        <label for="{{ form_id }}-contact-textarea" data-item="hidden-text">
+          {{- contact_message_t -}}
+        </label>
+      {% endcomment %}
+      {% comment %}
+        <textarea
+          class="{% if form.errors contains 'body' %}error{% endif %}"
+          id="{{ form_id }}-contact-textarea"
+          rows="5"
+          cols="60"
+          name="contact[body]"
+          placeholder="{{ contact_message_t }}"
+          required
+        >{{ contact.fields.body }}</textarea>
+      {% endcomment %}
 
       <div class="contact--form-submit" data-item="{{ button_type }}">
-        <button type="submit" value="{{ contact_button_t }}">
+        <button id="send_info" type="submit" value="{{ contact_button_t }}">
           {{- contact_button_t -}}
         </button>
       </div>
 
       {%- if form.posted_successfully? or form.errors -%}
-        <script>window.location.hash = '#feedback-bar--contact-form';</script>
+        <script>
+          window.location.hash = '#feedback-bar--contact-form';
+        </script>
       {%- endif -%}
 
       <div data-item="hidden-text">
@@ -111,3 +148,6 @@
     {%- endif -%}
   </div>
 </div>
+
+
+

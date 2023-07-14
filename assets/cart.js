@@ -150,24 +150,25 @@ class Cart extends HTMLElement {
 
     const r = this.querySelector(".cart--total--price");
     a = t.querySelector(".cart--total--price");
-
-
-
     if (!r.querySelector('#stack-discounts-subtotal-value')) {
       r && a && r.replaceWith(a);
     }
-
-
+    let counterToHideBar = 0;
     const itemsInCart = document.querySelectorAll(".cart--item .cart--item--title a")
     const mayAlsoLikeItems = document.querySelectorAll(".col_md_12.cart__table .cart__product-title")
+    const mayAlsoLikeBlock = document.querySelector(".container_cp")
     itemsInCart.forEach(itemInCart => {
       mayAlsoLikeItems.forEach(mayAlsoLikeItem => {
         if (itemInCart.innerHTML == mayAlsoLikeItem.innerHTML || itemInCart.innerHTML == mayAlsoLikeItem.innerHTML.split('/')[1]) {
           mayAlsoLikeItem.closest('.col_md_12').style = "display:none;"
+          counterToHideBar++
         }
-      })
-    })
 
+      })
+      if (counterToHideBar === mayAlsoLikeItems.length) {
+        mayAlsoLikeBlock.style = "display:none;"
+      }
+    })
   }
   swapInImages(a, t) {
     const e = t.querySelectorAll(".cart--item");
@@ -186,13 +187,13 @@ class Cart extends HTMLElement {
     if (t.ok) return Cart.fetchTotals(), !0;
     throw new Error(t.statusText);
   }
-  static async fetchTotals(t = !1,isTrigger) {
+  static async fetchTotals(t = !1, isTrigger) {
     const e = await fetch(theme.urls.cart + ".js");
     if (!e.ok) throw new Error(e.statusText);
     var a = await e.json();
-    Cart.setItems(a.items,isTrigger), t || Cart.updateTotals(a);
+    Cart.setItems(a.items, isTrigger), t || Cart.updateTotals(a);
   }
-  static setItems(t,isTrigger = true) {
+  static setItems(t, isTrigger = true) {
     t = t.reverse()
 
     const e = {};
@@ -212,7 +213,7 @@ class Cart extends HTMLElement {
         if (document.querySelector(".cart--checkout-button button")) {
           document.querySelector(".cart--checkout-button button").addEventListener('click', function () {
             if (res['total_price'] <= 0)
-            location.reload();
+              location.reload();
           });
         }
 
@@ -242,14 +243,11 @@ class Cart extends HTMLElement {
             var target_title_four = title;
           }
         }
-
-
         if ((target_title_three == exc_onetitle) || (target_title_four == exc_twotitle)) {
           $(`.cart--item[data-variant-id="${fponeid}"] .cart--item--remove`).trigger('click');
           $(`.cart--item[data-variant-id="${fptwoid}"] .cart--item--remove`).trigger('click');
         }
         var cond = items.length;
-
         //popup closing logic
         $(".popup__custom__more100 span").click(function () {
           $(".active").removeClass('active');
@@ -257,8 +255,6 @@ class Cart extends HTMLElement {
         $(".popup__custom__less100 span").click(function () {
           $(".active").removeClass('active');
         });
-
-
         $(".popup__custom__more100 button").click(function () {
           $(".active").removeClass('active');
           sessionStorage.setItem("isShowAgain", "false");
@@ -288,8 +284,6 @@ class Cart extends HTMLElement {
           $(".msgthree").hide();
           $(".progress_wrap .bar").css("width", "33.333%");
           if ((target_title == hponetitle) || (target_title_two == hptwotitle)) {
-            //$(`.cart--item[data-variant-id="${fponeid}"] .cart--item--remove`).trigger('click');
-            //$(`.cart--item[data-variant-id="${fptwoid}"] .cart--item--remove`).trigger('click');
             var myarray = [fponeid, fptwoid];
             var qty = 0;
             var i = 0;
@@ -319,7 +313,7 @@ class Cart extends HTMLElement {
 
 
           if (isTrigger && sessionStorage.getItem("isShowAgain") != "false" && $(".off-canvas--right-sidebar[data-transition]").attr('data-transition') != 'at_start') {
-            console.log('first', $(".off-canvas--right-sidebar[data-transition]").attr('data-transition'))
+  
             $('.popup__custom__more100').removeClass('active');
             $('.popup__custom__less100').addClass('active')
             $('.popup__custom__wrapper').addClass('active')
@@ -328,23 +322,11 @@ class Cart extends HTMLElement {
 
           $(".progress_wrap .bar").css("width", "66.666%");
           if (target_title == hponetitle) {
-
           }
           else {
-
-
             var var_id = $('.hfp_one').attr("var_id");
             var qty = 1;
             var fpcmp = $('.hfp_one').attr("fpcmp");
-            // var form_data = {
-            //   id: var_id,
-            //   quantity: qty,
-            //   properties: {
-            //     'Compare_Price': fpcmp
-            //   }
-            // };
-
-
             $.ajax({
               url: "/cart/clear.js",
               type: "POST",
@@ -373,9 +355,6 @@ class Cart extends HTMLElement {
 
               }
             });
-
-
-
           }
           if (target_title_two == hptwotitle) {
             var var_id = $('.hfp_two').attr("var_id");
@@ -395,7 +374,6 @@ class Cart extends HTMLElement {
           }
         }
         else if (total_price > 10000) {
-          console.log('second', $(".off-canvas--right-sidebar[data-transition]").attr('data-transition'))
           if (isTrigger && sessionStorage.getItem("isShowAgain") != "false" && $(".off-canvas--right-sidebar[data-transition]").attr('data-transition') != 'at_start') {
             $('.popup__custom__less100').removeClass('active');
             $('.popup__custom__more100').addClass('active');
@@ -410,13 +388,9 @@ class Cart extends HTMLElement {
           $(".msgthree").show();
           $(".progress_wrap .bar").css("width", "100%");
           if ((target_title_three == exc_onetitle) || (target_title_four == exc_twotitle)) {
-
           }
           else {
             if ((target_title == hponetitle) && (target_title_two == undefined)) {
-
-
-
               var var_id = $('.hfp_two').attr("var_id");
               var qty = 1;
               var fpcmptwo = $('.hfp_two').attr("fpcmp");
@@ -430,10 +404,7 @@ class Cart extends HTMLElement {
                 },
                 ...(items.reverse())
                 ]
-
               };
-
-
               $.ajax({
                 url: "/cart/clear.js",
                 type: "POST",
@@ -450,21 +421,14 @@ class Cart extends HTMLElement {
                   });
                 }
               });
-
             }
             else if ((target_title == hponetitle) && (target_title_two == hptwotitle)) {
-
             }
             else {
-
-
-
-
               var cmpone = $('.hfp_one').attr("fpcmp");
               var cmptwo = $('.hfp_two').attr("fpcmp");
               var var_id_one = $('.hfp_one').attr("var_id");
               var var_id_two = $('.hfp_two').attr("var_id");
-
               var datanew = {
                 items: [{
                   quantity: 1,
@@ -479,7 +443,6 @@ class Cart extends HTMLElement {
                     'Compare_Price': cmptwo
                   }
                 }, ...filtredItems]
-
               };
               $.ajax({
                 url: "/cart/clear.js",
@@ -495,23 +458,12 @@ class Cart extends HTMLElement {
                       Cart.updateAllHtml();
                     }
                   });
-
                 }
               });
-              // $.ajax({
-              //   url: "/cart/add",
-              //   type: "POST",
-              //   data: datanew,
-              //   dataType: "JSON",
-              //   success: function (result) {
-              //     Cart.updateAllHtml();
-              //   }
-              // });
             }
           }
         }
       }
-
     });
   }
   static updateTotals({ item_count: a, total_price: e }) {
@@ -572,7 +524,7 @@ const observer = new MutationObserver((mutations) => {
       if (!isNaN(newDiscountValue) && newDiscountValue !== previousDiscountValue) {
         discount = newDiscountValue * 100;
         previousDiscountValue = newDiscountValue;
-        Cart.fetchTotals(!1,false);
+        Cart.fetchTotals(!1, false);
       }
     }
   });

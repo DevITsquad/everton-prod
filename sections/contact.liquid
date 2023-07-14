@@ -3,23 +3,23 @@
     "Variables"
   endcomment
 
-  assign bg_color = section.settings.background-color
-  assign container_width = section.settings.container-width
+  assign bg_color = section.settings['background-color']
+  assign container_width = section.settings['container-width']
   assign form_id = 'contact_form_' | append: section.id
-  assign facebook_url = settings.social--facebook--url
+  assign facebook_url = settings['social--facebook--url']
   assign heading = section.settings.heading
-  assign instagram_url = settings.social--instagram--url
-  assign light_text = section.settings.light-text
-  assign pinterest_url = settings.social--pinterest--url
-  assign show_social_sharing = section.settings.show-social-sharing
-  assign store_address = section.settings.store-address
-  assign store_hours = section.settings.store-hours
-  assign spacing_above = section.settings.spacing-above
-  assign spacing_below = section.settings.spacing-below
-  assign tiktok_url = settings.social--tiktok--url
-  assign twitter_url = settings.social--twitter--url
-  assign vimeo_url = settings.social--vimeo--url
-  assign youtube_url = settings.social--youtube--url
+  assign instagram_url = settings['social--instagram--url']
+  assign light_text = section.settings['light-text']
+  assign pinterest_url = settings['social--pinterest--url']
+  assign show_social_sharing = section.settings['show-social-sharing']
+  assign store_address = section.settings['store-address']
+  assign store_hours = section.settings['store-hours']
+  assign spacing_above = section.settings['spacing-above']
+  assign spacing_below = section.settings['spacing-below']
+  assign tiktok_url = settings['social--tiktok--url']
+  assign twitter_url = settings['social--twitter--url']
+  assign vimeo_url = settings['social--vimeo--url']
+  assign youtube_url = settings['social--youtube--url']
 
   if facebook_url == blank and instagram_url == blank and pinterest_url == blank and tiktok_url == blank and twitter_url == blank and vimeo_url == blank and youtube_url == blank
     assign show_social_sharing = false
@@ -49,14 +49,33 @@
       </div>
     {%- endunless -%}
 
-    {%-
-      render 'contact-form',
+    {%- render 'contact-form',
       store_address: store_address,
       store_hours: store_hours,
       form_id: form_id,
       button_type: button_type,
       show_social_sharing: show_social_sharing
     -%}
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const agreementCheckbox = document.getElementById('contact-agree');
+        const submitBtn = document.getElementById('send_info');
+      
+        if (agreementCheckbox && submitBtn) {
+          submitBtn.setAttribute('disabled',true);
+          agreementCheckbox.addEventListener('change', (e) => {
+
+            if (e.currentTarget.checked) {
+              submitBtn.removeAttribute('disabled');
+              console.log('abled')
+            } else {
+              submitBtn.setAttribute('disabled',true);
+              console.log('disabled')
+            }
+          });
+        }
+      });
+    </script>
   </div>
 </div>
 

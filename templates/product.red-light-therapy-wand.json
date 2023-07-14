@@ -302,9 +302,8 @@
     },
     "d7d83387-65a4-4851-acb4-f9271cb89656": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
-        "custom-liquid": "<div id=\"tolstoy-container\" style=\"line-height:0;overflow:hidden;height:100%;width:100%;text-align:center\">\n        <iframe id=\"tolstoy\" src=\"https:\/\/player.gotolstoy.com\/ufo7guo4sv0pw?host\"\n                style=\"width:100%;height:540px;max-width:960px\"\n                scrolling=\"no\" frameborder=\"0\" allow=\"autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;\">\n        <\/iframe>\n        <script src=\"https:\/\/widget.gotolstoy.com\/script.js\" defer><\/script>\n      <\/div>",
+        "custom-liquid": "<div id=\"tolstoy-container\" style=\"line-height:0;overflow:hidden;height:100%;width:100%;text-align:center\">\n        <iframe id=\"tolstoy\" src=\"https:\/\/player.gotolstoy.com\/zm4mutos0qeuz?host\"\n                style=\"width:100%;height:711px;max-width:400px\"\n                scrolling=\"no\" frameborder=\"0\" allow=\"autoplay *; clipboard-write *;camera *; microphone *; encrypted-media *; fullscreen *; display-capture *;\">\n        <\/iframe>\n        <script src=\"https:\/\/widget.gotolstoy.com\/script.js\" defer><\/script>\n      <\/div>",
         "background-color": "none",
         "light-text": false,
         "container-width": 3,
